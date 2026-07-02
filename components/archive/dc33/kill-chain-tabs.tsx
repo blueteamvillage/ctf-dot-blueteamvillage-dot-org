@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/archive/dc33/ui/card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/archive/dc33/ui/tabs"
+import { Badge } from "@/components/archive/dc33/ui/badge"
 import {
   Target,
   BookOpen,

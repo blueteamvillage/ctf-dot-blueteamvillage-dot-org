@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/archive/dc33/ui/card"
 import { Clock, Target, Shield, Zap, MapPin, Ticket } from "lucide-react"
 
 export function EventDetails() {

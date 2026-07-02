@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/archive/dc33/ui/card"
+import { Button } from "@/components/archive/dc33/ui/button"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/archive/dc33/ui/tabs"
 import { Save, Eye, Edit, FileText } from "lucide-react"
 
 const defaultContent = {

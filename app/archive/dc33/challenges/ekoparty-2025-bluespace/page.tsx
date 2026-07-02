@@ -3,8 +3,8 @@
 import { useState } from "react"
 import { Header } from "@/components/archive/dc33/header"
 import { Footer } from "@/components/archive/dc33/footer"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/archive/dc33/ui/card"
+import { Badge } from "@/components/archive/dc33/ui/badge"
 import { ekoPartyKillChains, OverviewContent, InstallationSteps } from "@/components/archive/dc33/ekoparty-tabs"
 import { KillChainTabs, projectObsidianKillChains } from "@/components/archive/dc33/kill-chain-tabs"
 import {

@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/archive/dc33/ui/card"
+import { Button } from "@/components/archive/dc33/ui/button"
+import { Badge } from "@/components/archive/dc33/ui/badge"
 import {
   Shield,
   AlertCircle,

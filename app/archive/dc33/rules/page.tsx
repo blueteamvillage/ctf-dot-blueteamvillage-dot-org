@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/archive/dc33/ui/card"
 import { AlertCircle, Users, Clock, Trophy } from "lucide-react"
 import { Header } from "@/components/archive/dc33/header"
 import { Footer } from "@/components/archive/dc33/footer"

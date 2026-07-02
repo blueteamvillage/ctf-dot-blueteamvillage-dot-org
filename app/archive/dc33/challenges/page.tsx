@@ -1,6 +1,6 @@
 import { Header } from "@/components/archive/dc33/header"
 import { Footer } from "@/components/archive/dc33/footer"
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/archive/dc33/ui/badge"
 import {
   Shield,
   Target,

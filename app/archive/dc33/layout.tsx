@@ -13,5 +13,6 @@ export default function ArchiveDc33Layout({
 }: {
   children: React.ReactNode
 }) {
-  return children
+  // .archive-dc33 pins the pre-DC34 font stack and text color (globals.css)
+  return <div className="archive-dc33">{children}</div>
 }

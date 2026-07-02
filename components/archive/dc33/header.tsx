@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Menu, X, Shield, Trophy, Files, MapPin, Users, Award } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/archive/dc33/ui/button"
 import { ArchiveBanner } from "@/components/archive/archive-banner"
 import Link from "next/link"
 import Image from "next/image"
