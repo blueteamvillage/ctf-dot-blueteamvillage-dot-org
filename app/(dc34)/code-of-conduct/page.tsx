@@ -1,7 +1,5 @@
 import type { Metadata } from "next"
 import { Heart, Shield, Users, AlertTriangle, CheckCircle, XCircle } from "lucide-react"
-import { Header } from "@/components/archive/dc33/header"
-import { Footer } from "@/components/archive/dc33/footer"
 
 export const metadata: Metadata = {
   title: "Code of Conduct - Blue Team Village CTF",
@@ -10,24 +8,23 @@ export const metadata: Metadata = {
 
 export default function CodeOfConductPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Header />
+    <div className="min-h-screen bg-navy text-white">
       <div className="max-w-4xl mx-auto px-4 py-24">
-        <div className="bg-gray-900/50 backdrop-blur-xs border border-gray-800 rounded-lg p-8">
+        <div className="bg-navy-card backdrop-blur-xs border border-white/10 rounded-lg p-8">
           {/* Header */}
           <div className="text-center mb-12">
             <div className="flex justify-center mb-4">
-              <div className="w-16 h-16 bg-linear-to-br from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
+              <div className="w-16 h-16 bg-linear-to-br from-teal-bright to-teal-dark rounded-lg flex items-center justify-center">
                 <Heart className="w-8 h-8 text-white" />
               </div>
             </div>
-            <h1 className="text-4xl font-bold bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4">
+            <h1 className="text-4xl font-bold bg-linear-to-r from-teal-bright to-mint bg-clip-text text-transparent mb-4">
               Code of Conduct
             </h1>
-            <p className="text-gray-400 text-lg">
+            <p className="text-haze text-lg">
               Blue Team Village CTF Competition - DEF CON 33
             </p>
-            <p className="text-gray-500 text-sm mt-2">
+            <p className="text-haze text-sm mt-2">
               Last updated: January 2025
             </p>
           </div>
@@ -38,15 +35,15 @@ export default function CodeOfConductPage() {
               {/* Introduction */}
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4 flex items-center">
-                  <Heart className="w-6 h-6 mr-2 text-cyan-400" />
+                  <Heart className="w-6 h-6 mr-2 text-teal-bright" />
                   Our Commitment
                 </h2>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-mist leading-relaxed">
                   Blue Team Village is dedicated to providing a welcoming, inclusive, and respectful environment 
                   for all participants in our CTF competition. We believe that cybersecurity should be accessible 
                   to everyone, regardless of background, experience level, or identity.
                 </p>
-                <p className="text-gray-300 leading-relaxed mt-4">
+                <p className="text-mist leading-relaxed mt-4">
                   This Code of Conduct applies to all participants, organizers, volunteers, sponsors, and attendees 
                   of the Blue Team Village CTF competition at DEF CON 33.
                 </p>
@@ -55,10 +52,10 @@ export default function CodeOfConductPage() {
               {/* Expected Behavior */}
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4 flex items-center">
-                  <CheckCircle className="w-6 h-6 mr-2 text-green-400" />
+                  <CheckCircle className="w-6 h-6 mr-2 text-mint" />
                   Expected Behavior
                 </h2>
-                <div className="text-gray-300 space-y-3">
+                <div className="text-mist space-y-3">
                   <p>We expect all participants to:</p>
                   <ul className="list-disc list-inside space-y-2 ml-4">
                     <li>Be respectful and considerate of others</li>
@@ -76,10 +73,10 @@ export default function CodeOfConductPage() {
               {/* Unacceptable Behavior */}
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4 flex items-center">
-                  <XCircle className="w-6 h-6 mr-2 text-red-400" />
+                  <XCircle className="w-6 h-6 mr-2 text-magenta" />
                   Unacceptable Behavior
                 </h2>
-                <div className="text-gray-300 space-y-3">
+                <div className="text-mist space-y-3">
                   <p>The following behaviors are considered unacceptable and will not be tolerated:</p>
                   <ul className="list-disc list-inside space-y-2 ml-4">
                     <li>Harassment, intimidation, or discrimination of any kind</li>
@@ -99,10 +96,10 @@ export default function CodeOfConductPage() {
               {/* Reporting Violations */}
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4 flex items-center">
-                  <AlertTriangle className="w-6 h-6 mr-2 text-yellow-400" />
+                  <AlertTriangle className="w-6 h-6 mr-2 text-gold" />
                   Reporting Violations
                 </h2>
-                <div className="text-gray-300 space-y-3">
+                <div className="text-mist space-y-3">
                   <p>
                     If you experience or witness unacceptable behavior, please report it immediately. 
                     You can report violations through any of the following channels:
@@ -123,10 +120,10 @@ export default function CodeOfConductPage() {
               {/* Consequences */}
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4 flex items-center">
-                  <Shield className="w-6 h-6 mr-2 text-cyan-400" />
+                  <Shield className="w-6 h-6 mr-2 text-teal-bright" />
                   Consequences of Violations
                 </h2>
-                <div className="text-gray-300 space-y-3">
+                <div className="text-mist space-y-3">
                   <p>
                     Participants who engage in unacceptable behavior may face consequences including:
                   </p>
@@ -147,7 +144,7 @@ export default function CodeOfConductPage() {
               {/* Competition-Specific Guidelines */}
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">Competition-Specific Guidelines</h2>
-                <div className="text-gray-300 space-y-3">
+                <div className="text-mist space-y-3">
                   <p>In addition to general conduct guidelines, we expect participants to:</p>
                   <ul className="list-disc list-inside space-y-2 ml-4">
                     <li>Respect the competition area and equipment</li>
@@ -164,10 +161,10 @@ export default function CodeOfConductPage() {
               {/* Inclusivity Statement */}
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4 flex items-center">
-                  <Users className="w-6 h-6 mr-2 text-cyan-400" />
+                  <Users className="w-6 h-6 mr-2 text-teal-bright" />
                   Inclusivity and Diversity
                 </h2>
-                <div className="text-gray-300 space-y-3">
+                <div className="text-mist space-y-3">
                   <p>
                     Blue Team Village is committed to fostering a diverse and inclusive cybersecurity community. 
                     We welcome participants of all backgrounds, including but not limited to:
@@ -190,7 +187,7 @@ export default function CodeOfConductPage() {
               {/* Support and Resources */}
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">Support and Resources</h2>
-                <div className="text-gray-300 space-y-3">
+                <div className="text-mist space-y-3">
                   <p>If you need support or have questions, we&apos;re here to help:</p>
                   <ul className="list-disc list-inside space-y-2 ml-4">
                     <li>Blue Team Village organizers are available throughout the competition</li>
@@ -204,7 +201,7 @@ export default function CodeOfConductPage() {
               {/* Contact Information */}
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">Contact Information</h2>
-                <div className="text-gray-300 space-y-3">
+                <div className="text-mist space-y-3">
                   <p>For questions about this Code of Conduct or to report violations:</p>
                   <ul className="list-none space-y-2 ml-4">
                                          <li>• Email: seceng@blueteamvillage.org</li>
@@ -218,7 +215,7 @@ export default function CodeOfConductPage() {
               {/* Emergency Contacts */}
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">Emergency Contacts</h2>
-                <div className="text-gray-300 space-y-3">
+                <div className="text-mist space-y-3">
                   <p>In case of emergency:</p>
                   <ul className="list-none space-y-2 ml-4">
                     <li>• Emergency Services: 911</li>
@@ -232,18 +229,17 @@ export default function CodeOfConductPage() {
           </div>
 
           {/* Footer */}
-          <div className="mt-12 pt-8 border-t border-gray-800 text-center">
-            <p className="text-gray-500 text-sm">
+          <div className="mt-12 pt-8 border-t border-white/10 text-center">
+            <p className="text-haze text-sm">
               By participating in the Blue Team Village CTF, you agree to follow this Code of Conduct 
               and help create a positive, inclusive environment for everyone.
             </p>
-            <p className="text-gray-500 text-sm mt-2">
+            <p className="text-haze text-sm mt-2">
               Thank you for helping us build a better cybersecurity community.
             </p>
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   )
 } 
