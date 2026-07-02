@@ -112,7 +112,7 @@ export default function NotFound() {
         {/* Footer Note */}
         <div className="mt-12 text-center">
           <p className="text-sm text-gray-500">
-            "Access Everywhere" - DEF CON 33 Theme • Blue Team Village CTF
+            &quot;Access Everywhere&quot; - DEF CON 33 Theme • Blue Team Village CTF
           </p>
         </div>
       </div>

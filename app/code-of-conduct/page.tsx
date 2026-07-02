@@ -151,10 +151,10 @@ export default function CodeOfConductPage() {
                   <p>In addition to general conduct guidelines, we expect participants to:</p>
                   <ul className="list-disc list-inside space-y-2 ml-4">
                     <li>Respect the competition area and equipment</li>
-                    <li>Not interfere with other teams' work or equipment</li>
+                    <li>Not interfere with other teams&apos; work or equipment</li>
                     <li>Follow all technical and safety guidelines</li>
                     <li>Ask for help when needed, and offer help when appropriate</li>
-                    <li>Celebrate others' successes and learn from their approaches</li>
+                    <li>Celebrate others&apos; successes and learn from their approaches</li>
                     <li>Share knowledge and techniques in a constructive manner</li>
                     <li>Respect intellectual property and competition materials</li>
                   </ul>
@@ -191,7 +191,7 @@ export default function CodeOfConductPage() {
               <section>
                 <h2 className="text-2xl font-semibold text-white mb-4">Support and Resources</h2>
                 <div className="text-gray-300 space-y-3">
-                  <p>If you need support or have questions, we're here to help:</p>
+                  <p>If you need support or have questions, we&apos;re here to help:</p>
                   <ul className="list-disc list-inside space-y-2 ml-4">
                     <li>Blue Team Village organizers are available throughout the competition</li>
                     <li>DEF CON has its own Code of Conduct and support systems</li>

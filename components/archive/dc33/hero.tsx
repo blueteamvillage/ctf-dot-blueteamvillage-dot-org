@@ -6,7 +6,7 @@ import { Calendar, MapPin, Users, Trophy, Target } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { CountdownTimer } from "./countdown-timer"
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export function Hero() {
   const [isCountdownComplete, setIsCountdownComplete] = useState(false)

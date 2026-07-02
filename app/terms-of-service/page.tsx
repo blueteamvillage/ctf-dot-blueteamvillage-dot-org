@@ -42,8 +42,8 @@ export default function TermsOfServicePage() {
                   1. Introduction
                 </h2>
                 <p className="text-gray-300 leading-relaxed">
-                  These Terms of Service ("Terms") govern your participation in the Blue Team Village Capture The Flag (CTF) 
-                  competition ("Competition") held during DEF CON 33. By participating in the Competition, you agree to be 
+                  These Terms of Service (&quot;Terms&quot;) govern your participation in the Blue Team Village Capture The Flag (CTF) 
+                  competition (&quot;Competition&quot;) held during DEF CON 33. By participating in the Competition, you agree to be 
                   bound by these Terms and all applicable laws and regulations.
                 </p>
               </section>
@@ -97,7 +97,7 @@ export default function TermsOfServicePage() {
                     <li>Any form of cheating or collusion between teams</li>
                     <li>Attempting to gain unauthorized access to systems outside the competition scope</li>
                     <li>Harassment, discrimination, or inappropriate behavior towards other participants</li>
-                    <li>Violation of DEF CON's Code of Conduct</li>
+                    <li>Violation of DEF CON&apos;s Code of Conduct</li>
                     <li>Use of illegal or unauthorized tools or techniques</li>
                     <li>Attempting to disrupt the competition or other participants</li>
                   </ul>
@@ -142,7 +142,7 @@ export default function TermsOfServicePage() {
                 <h2 className="text-2xl font-semibold text-white mb-4">7. Disclaimers</h2>
                 <div className="text-gray-300 space-y-3">
                   <p>
-                    The Competition is provided "as is" without warranties of any kind. Blue Team Village and its 
+                    The Competition is provided &quot;as is&quot; without warranties of any kind. Blue Team Village and its 
                     organizers are not responsible for:
                   </p>
                   <ul className="list-disc list-inside space-y-2 ml-4">
@@ -175,7 +175,7 @@ export default function TermsOfServicePage() {
                   </p>
                   <ul className="list-disc list-inside space-y-2 ml-4">
                     <li>Violation of these Terms</li>
-                    <li>Violation of DEF CON's Code of Conduct</li>
+                    <li>Violation of DEF CON&apos;s Code of Conduct</li>
                     <li>Inappropriate or disruptive behavior</li>
                     <li>Any other reason deemed appropriate by the organizers</li>
                   </ul>

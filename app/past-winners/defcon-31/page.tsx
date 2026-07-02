@@ -26,7 +26,7 @@ export default function Defcon31Page() {
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-cyan-300 mb-6">Project Obsidian CTF Winners</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Congratulations to the champions of 2023's Capture The Flag competition! Here, we highlight the exceptional teams and individuals who showcased their skills and emerged victorious.
+              Congratulations to the champions of 2023&apos;s Capture The Flag competition! Here, we highlight the exceptional teams and individuals who showcased their skills and emerged victorious.
             </p>
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function Defcon31Page() {
               <div>
                 <h3 className="text-lg font-semibold text-white mb-3">Project Obsidian</h3>
                 <p className="text-gray-300 mb-4">
-                  The DEF CON 31 CTF featured Project Obsidian, a comprehensive cybersecurity challenge that tested participants' skills in:
+                  The DEF CON 31 CTF featured Project Obsidian, a comprehensive cybersecurity challenge that tested participants&apos; skills in:
                 </p>
                 <ul className="text-gray-400 space-y-2">
                   <li>• Digital forensics and incident response</li>
