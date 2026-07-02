@@ -92,7 +92,7 @@ const CTFCard = ({ ctf }: { ctf: CTFData }) => {
  * 
  * @example
  * ```tsx
- * import { CTFShowcase, btvCTFs } from "@/components/ctf-showcase"
+ * import { CTFShowcase, btvCTFs } from "@/components/archive/dc33/ctf-showcase"
  * import { Building } from "lucide-react"
  * 
  * <CTFShowcase
@@ -121,7 +121,7 @@ const CTFCard = ({ ctf }: { ctf: CTFData }) => {
  *     teamSize: "1-2 Members",
  *     level: "Beginner",
  *     challenges: "10 Challenges",
- *     href: "/challenges/custom-ctf"
+ *     href: "/archive/dc33/challenges/custom-ctf"
  *   }
  * ]
  * 
@@ -173,7 +173,7 @@ export const btvCTFs: CTFData[] = [
     teamSize: "1-4 Members",
     level: "All Levels",
     challenges: "224 Challenges",
-    href: "/challenges/project-obsidian"
+    href: "/archive/dc33/challenges/project-obsidian"
   },
   {
     id: "venator-aurum",
@@ -188,7 +188,7 @@ export const btvCTFs: CTFData[] = [
     teamSize: "1-4 Members",
     level: "All Levels",
     challenges: "25 Puzzles",
-    href: "/challenges/venator-aurum"
+    href: "/archive/dc33/challenges/venator-aurum"
   }
 ]
 
@@ -206,7 +206,7 @@ export const guestCTFs: CTFData[] = [
     teamSize: "1-4 Members",
     level: "Professional",
     challenges: "Multiple Domains",
-    href: "/challenges/a-cyber-guru"
+    href: "/archive/dc33/challenges/a-cyber-guru"
   },
   {
     id: "cyberbit",
@@ -221,7 +221,7 @@ export const guestCTFs: CTFData[] = [
     teamSize: "Solo & Teams",
     level: "Advanced",
     challenges: "14 Missions",
-    href: "/challenges/cyberbit"
+    href: "/archive/dc33/challenges/cyberbit"
   },
   {
     id: "ekoparty-2025-bluespace",
@@ -236,6 +236,6 @@ export const guestCTFs: CTFData[] = [
     teamSize: "1-4 Members",
     level: "Intermediate",
     challenges: "Wazuh Setup",
-    href: "/challenges/ekoparty-2025-bluespace"
+    href: "/archive/dc33/challenges/ekoparty-2025-bluespace"
   }
 ] 

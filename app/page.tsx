@@ -1,53 +1,24 @@
-import { Header } from "@/components/header"
-import { Hero } from "@/components/hero"
-import { EventDetails } from "@/components/event-details"
-import { Rules } from "@/components/rules"
-import { Sponsors } from "@/components/sponsors"
-import { Footer } from "@/components/footer"
-import { CTFShowcase, btvCTFs, guestCTFs } from "@/components/ctf-showcase"
-import { Building, Star } from "lucide-react"
+import Link from "next/link"
 
+// Temporary placeholder — replaced by the DC34 home page in the site refresh.
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Header />
-      <Hero />
-      <EventDetails />
-      
-      {/* CTF Showcase Section */}
-      <section className="py-16 px-6 sm:px-8 bg-gradient-to-b from-gray-900 to-black">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Available CTFs
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose from our curated selection of Guest CTFs from our call for contests and Blue Team Village&apos;s signature CTFs.
-            </p>
-          </div>
-
-          <CTFShowcase
-            title="Blue Team Village CTFs"
-            icon={Building}
-            iconColor="text-purple-400"
-            titleColor="text-purple-300"
-            ctfs={btvCTFs}
-          />
-
-          <CTFShowcase
-            title="Guest CTFs"
-            subtitle="CTFs from our call for contests"
-            icon={Star}
-            iconColor="text-yellow-400"
-            titleColor="text-yellow-300"
-            ctfs={guestCTFs}
-          />
-        </div>
-      </section>
-      
-      <Rules />
-      <Sponsors />
-      <Footer />
-    </div>
+    <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center gap-6 px-6 text-center">
+      <p className="text-sm uppercase tracking-[0.25em] text-teal-400">
+        Blue Team Village · Project Obsidian
+      </p>
+      <h1 className="text-4xl md:text-6xl font-bold">
+        BTV CTF <span className="text-cyan-400">@</span> DEF CON 34
+      </h1>
+      <p className="text-gray-400 max-w-xl">
+        August 6–9, 2026 · Las Vegas. The new site is under construction.
+      </p>
+      <Link
+        href="/archive/dc33"
+        className="text-cyan-400 underline underline-offset-4 hover:text-cyan-300 transition-colors"
+      >
+        Browse the DEF CON 33 archive →
+      </Link>
+    </main>
   )
 }

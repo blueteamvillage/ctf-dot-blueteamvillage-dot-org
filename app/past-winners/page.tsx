@@ -2,8 +2,8 @@ import Link from "next/link"
 import { Trophy, Calendar, Users, Award } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Header } from "@/components/archive/dc33/header"
+import { Footer } from "@/components/archive/dc33/footer"
 import { DefconWinnersCard } from "@/components/defcon-winners-card"
 
 export default function PastWinnersPage() {

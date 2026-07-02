@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { Shield, FileText, AlertTriangle, Users, Trophy } from "lucide-react"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Header } from "@/components/archive/dc33/header"
+import { Footer } from "@/components/archive/dc33/footer"
 
 export const metadata: Metadata = {
   title: "Terms of Service - Blue Team Village CTF",

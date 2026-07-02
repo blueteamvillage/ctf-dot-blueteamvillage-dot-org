@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <NextLink href="/">
+              <NextLink href="/archive/dc33">
                 <Image
                   src="/obsidian.png"
                   alt="Project Obsidian Logo"
@@ -43,7 +43,7 @@ export function Footer() {
             <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/challenges" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
+                <a href="/archive/dc33/challenges" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
                   Challenges
                 </a>
               </li>
@@ -58,7 +58,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/rules" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
+                <a href="/archive/dc33/rules" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
                   Rules
                 </a>
               </li>
@@ -69,12 +69,12 @@ export function Footer() {
             <h4 className="text-lg font-semibold text-white mb-4">Resources</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/about" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
+                <a href="/archive/dc33/about" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
                   About
                 </a>
               </li>
               <li>
-                <a href="/challenges" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
+                <a href="/archive/dc33/challenges" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
                   Challenges
                 </a>
               </li>
@@ -84,7 +84,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/location" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
+                <a href="/archive/dc33/location" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
                   Location
                 </a>
               </li>
@@ -93,7 +93,7 @@ export function Footer() {
 
           {/* Blue Team Village Logo */}
           <div className="flex justify-center mb-6">
-            <a href="/">
+            <a href="/archive/dc33">
               <Image
                 src="/btv-logo.png"
                 alt="Blue Team Village Logo"

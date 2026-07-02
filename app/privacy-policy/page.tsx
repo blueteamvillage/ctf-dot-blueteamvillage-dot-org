@@ -1,8 +1,8 @@
 import { Shield, Lock, Eye, Database, Users, Calendar } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Header } from "@/components/archive/dc33/header"
+import { Footer } from "@/components/archive/dc33/footer"
 
 export default function PrivacyPolicyPage() {
   return (

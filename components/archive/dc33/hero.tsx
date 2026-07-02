@@ -52,14 +52,14 @@ export function Hero() {
               <p className="text-xs text-gray-400">Las Vegas, NV</p>
             </div>
           </Link>
-          <Link href="/location" className="block">
+          <Link href="/archive/dc33/location" className="block">
             <div className="bg-gray-900/50 backdrop-blur-sm border border-purple-500/30 rounded-lg p-4 hover:border-purple-400/50 transition-colors cursor-pointer">
               <MapPin className="w-8 h-8 text-purple-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">Blue Team Village</p>
               <p className="text-xs text-gray-400">DEF CON 33</p>
             </div>
           </Link>
-          <Link href="/challenges/project-obsidian" className="block">
+          <Link href="/archive/dc33/challenges/project-obsidian" className="block">
             <div className="bg-gray-900/50 backdrop-blur-sm border border-green-500/30 rounded-lg p-4 hover:border-green-400/50 transition-colors">
               <Users className="w-8 h-8 text-green-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">Team Based</p>
@@ -88,7 +88,7 @@ export function Hero() {
             size="lg"
             className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg shadow-lg"
           >
-            <Link href="/challenges">Getting Started</Link>
+            <Link href="/archive/dc33/challenges">Getting Started</Link>
           </Button> */}
           {/* <Button
             size="lg"

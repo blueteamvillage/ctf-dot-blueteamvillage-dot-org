@@ -1,12 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Header } from "@/components/archive/dc33/header"
+import { Footer } from "@/components/archive/dc33/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ekoPartyKillChains, OverviewContent, InstallationSteps } from "@/components/ekoparty-tabs"
-import { KillChainTabs, projectObsidianKillChains } from "@/components/kill-chain-tabs"
+import { ekoPartyKillChains, OverviewContent, InstallationSteps } from "@/components/archive/dc33/ekoparty-tabs"
+import { KillChainTabs, projectObsidianKillChains } from "@/components/archive/dc33/kill-chain-tabs"
 import {
   Shield,
   Target,

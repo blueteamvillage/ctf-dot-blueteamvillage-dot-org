@@ -3,8 +3,8 @@ import { Trophy, Calendar, Users, Award, ArrowLeft, Crown, Medal, Star, BarChart
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { WinnerCard } from "@/components/winner-card"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Header } from "@/components/archive/dc33/header"
+import { Footer } from "@/components/archive/dc33/footer"
 
 export default function Defcon33Page() {
   return (

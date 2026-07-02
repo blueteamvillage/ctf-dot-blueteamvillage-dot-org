@@ -1,7 +1,7 @@
 "use client"
 
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Header } from "@/components/archive/dc33/header"
+import { Footer } from "@/components/archive/dc33/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -18,7 +18,7 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import { KillChainTabs, projectObsidianKillChains } from "@/components/kill-chain-tabs"
+import { KillChainTabs, projectObsidianKillChains } from "@/components/archive/dc33/kill-chain-tabs"
 
 export default function ProjectObsidianPage() {
   const [isCountdownComplete, setIsCountdownComplete] = useState(false)

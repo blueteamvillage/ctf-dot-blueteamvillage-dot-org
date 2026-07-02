@@ -1,5 +1,5 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Header } from "@/components/archive/dc33/header"
+import { Footer } from "@/components/archive/dc33/footer"
 import { Badge } from "@/components/ui/badge"
 import {
   Shield,
@@ -9,7 +9,7 @@ import {
   Building,
   Star,
 } from "lucide-react"
-import { CTFShowcase, btvCTFs, guestCTFs } from "@/components/ctf-showcase"
+import { CTFShowcase, btvCTFs, guestCTFs } from "@/components/archive/dc33/ctf-showcase"
 
 export default function ChallengesPage() {
   return (
@@ -135,7 +135,7 @@ export default function ChallengesPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/challenges/project-obsidian">
+            <Link href="/archive/dc33/challenges/project-obsidian">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"

@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { Heart, Shield, Users, AlertTriangle, CheckCircle, XCircle } from "lucide-react"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+import { Header } from "@/components/archive/dc33/header"
+import { Footer } from "@/components/archive/dc33/footer"
 
 export const metadata: Metadata = {
   title: "Code of Conduct - Blue Team Village CTF",
