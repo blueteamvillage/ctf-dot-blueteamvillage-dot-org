@@ -7,8 +7,8 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-black text-white flex items-center justify-center overflow-hidden relative">
       {/* Animated background grid */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse" />
+      <div className="absolute inset-0 bg-linear-to-br from-black via-gray-900 to-black">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-size-[50px_50px] animate-pulse" />
       </div>
 
       {/* Glowing orbs */}
@@ -32,12 +32,12 @@ export default function NotFound() {
         <div className="mb-8">
           <div className="flex items-center justify-center mb-6">
             <AlertTriangle className="w-16 h-16 text-red-400 mr-4" />
-            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-red-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-6xl md:text-8xl font-bold bg-linear-to-r from-red-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
               404
             </h1>
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Page Not Found
           </h2>
           
@@ -48,7 +48,7 @@ export default function NotFound() {
         </div>
 
         {/* Error Details */}
-        <div className="bg-gray-900/50 backdrop-blur-sm border border-red-500/30 rounded-lg p-6 mb-8 max-w-2xl mx-auto">
+        <div className="bg-gray-900/50 backdrop-blur-xs border border-red-500/30 rounded-lg p-6 mb-8 max-w-2xl mx-auto">
           <div className="flex items-center justify-center mb-4">
             <Shield className="w-8 h-8 text-red-400 mr-2" />
             <h3 className="text-lg font-semibold text-red-300">Security Alert</h3>
@@ -66,7 +66,7 @@ export default function NotFound() {
         {/* Navigation Options */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 max-w-3xl mx-auto">
           <Link href="/" className="block">
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 hover:border-cyan-400/50 transition-colors">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-cyan-500/30 rounded-lg p-4 hover:border-cyan-400/50 transition-colors">
               <Home className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">Home Base</p>
               <p className="text-xs text-gray-400">Return to CTF</p>
@@ -74,7 +74,7 @@ export default function NotFound() {
           </Link>
           
           <Link href="/challenges" className="block">
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-purple-500/30 rounded-lg p-4 hover:border-purple-400/50 transition-colors">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-purple-500/30 rounded-lg p-4 hover:border-purple-400/50 transition-colors">
               <Search className="w-8 h-8 text-purple-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">Challenges</p>
               <p className="text-xs text-gray-400">Find CTFs</p>
@@ -82,7 +82,7 @@ export default function NotFound() {
           </Link>
           
           <Link href="https://blueteamvillage.org" className="block">
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-green-500/30 rounded-lg p-4 hover:border-green-400/50 transition-colors">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-green-500/30 rounded-lg p-4 hover:border-green-400/50 transition-colors">
               <Shield className="w-8 h-8 text-green-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">BTV Main</p>
               <p className="text-xs text-gray-400">Village HQ</p>
@@ -94,7 +94,7 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Button
             size="lg"
-            className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg shadow-lg"
+            className="bg-linear-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-lg shadow-lg"
           >
             <ArrowLeft className="w-5 h-5 mr-2" />
             <Link href="/">Go Home</Link>

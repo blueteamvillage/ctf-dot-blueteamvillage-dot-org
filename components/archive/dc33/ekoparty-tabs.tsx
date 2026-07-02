@@ -336,7 +336,7 @@ cp config/wazuh_indexer_ssl_certs/root-ca.key config/wazuh_indexer_ssl_certs/roo
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="text-gray-300">
-            Create <code className="bg-gray-800 px-2 py-1 rounded text-cyan-300">docker-compose.x86-simple.yml</code>:
+            Create <code className="bg-gray-800 px-2 py-1 rounded-sm text-cyan-300">docker-compose.x86-simple.yml</code>:
           </p>
           <div className="bg-gray-800/50 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
@@ -378,7 +378,7 @@ services:
           <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4">
             <h4 className="text-blue-300 font-semibold mb-2">Key Points:</h4>
             <ul className="text-sm text-gray-300 space-y-1">
-              <li>• <code className="bg-gray-800 px-1 rounded">platform: linux/amd64</code> forces x86_64 emulation for ARM Mac compatibility</li>
+              <li>• <code className="bg-gray-800 px-1 rounded-sm">platform: linux/amd64</code> forces x86_64 emulation for ARM Mac compatibility</li>
               <li>• OpenSearch Java options disable seccomp filter (critical for ARM Mac)</li>
               <li>• Service names match the official Wazuh Docker setup</li>
             </ul>
@@ -502,10 +502,10 @@ cd wazuh-backup-20251017-192456/
             <div className="bg-gray-800/50 rounded-lg p-3">
               <div className="space-y-2">
                 <div className="text-sm text-gray-300">
-                  <span className="text-cyan-300">username:</span> <code className="bg-gray-700 px-1 rounded">admin</code>
+                  <span className="text-cyan-300">username:</span> <code className="bg-gray-700 px-1 rounded-sm">admin</code>
                 </div>
                 <div className="text-sm text-gray-300">
-                  <span className="text-cyan-300">password:</span> <code className="bg-gray-700 px-1 rounded">SecretPassword</code>
+                  <span className="text-cyan-300">password:</span> <code className="bg-gray-700 px-1 rounded-sm">SecretPassword</code>
                 </div>
               </div>
             </div>

@@ -54,7 +54,7 @@ export function WinnerCard({
   const config = placeConfig[place]
 
   return (
-    <div className={`bg-gradient-to-r ${config.bgGradient} ${config.borderColor} rounded-lg p-10 pt-6 ${className}`}>
+    <div className={`bg-linear-to-r ${config.bgGradient} ${config.borderColor} rounded-lg p-10 pt-6 ${className}`}>
       <div className="flex items-center justify-between mb-3">
         <h3 className={`text-lg font-semibold ${config.textColor}`}>
           {config.emoji} {config.label}

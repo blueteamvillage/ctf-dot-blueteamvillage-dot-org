@@ -8,11 +8,11 @@ import { Footer } from "@/components/archive/dc33/footer"
 
 export default function Defcon33Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
+    <div className="min-h-screen bg-linear-to-br from-gray-900 via-black to-gray-900">
       <Header />
       {/* Hero Section */}
       <div className="relative pt-24 pb-16 px-4">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-purple-500/10 to-pink-500/10"></div>
         <div className="relative z-10 max-w-6xl mx-auto text-center">
           <div className="mb-8">
             <Link 
@@ -22,7 +22,7 @@ export default function Defcon33Page() {
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Past Winners
             </Link>
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-500 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-linear-to-r from-purple-400 via-pink-400 to-purple-500 bg-clip-text text-transparent">
               DEF CON 33
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-purple-300 mb-6">Project Obsidian CTF Winners</h2>

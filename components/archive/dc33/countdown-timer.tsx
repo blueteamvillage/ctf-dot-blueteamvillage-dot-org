@@ -40,7 +40,7 @@ export function CountdownTimer({ onCountdownComplete }: CountdownTimerProps) {
   }, [])
 
   return (
-    <div className="bg-gray-900/50 backdrop-blur-sm border border-yellow-500/30 rounded-lg p-6 mb-8">
+    <div className="bg-gray-900/50 backdrop-blur-xs border border-yellow-500/30 rounded-lg p-6 mb-8">
       <div className="text-center">
         <div className="flex items-center justify-center mb-4">
           <Clock className="w-6 h-6 text-yellow-400 mr-2" />

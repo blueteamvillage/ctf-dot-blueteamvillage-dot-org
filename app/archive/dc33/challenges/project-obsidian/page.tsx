@@ -38,9 +38,9 @@ export default function ProjectObsidianPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-12 px-4 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+      <section className="pt-24 pb-12 px-4 bg-linear-to-br from-black via-gray-900 to-black relative overflow-hidden">
         {/* Animated background */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-size-[50px_50px] animate-pulse" />
 
         {/* Glowing orbs */}
         <div className="absolute top-20 right-20 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-pulse" />
@@ -51,7 +51,7 @@ export default function ProjectObsidianPage() {
             <Badge className="bg-purple-500/20 text-purple-300 border-purple-500/30 mb-4">
               Blue Team Village Presents
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-linear-to-r from-purple-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
               Project Obsidian
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-cyan-300 mb-6">Flagship Incident Response CTF</h2>
@@ -62,19 +62,19 @@ export default function ProjectObsidianPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto">
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-purple-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-purple-500/30 rounded-lg p-4">
               <Shield className="w-6 h-6 text-purple-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">224 Challenges</p>
             </div>
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-cyan-500/30 rounded-lg p-4">
               <Clock className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">48 Hours</p>
             </div>
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-green-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-green-500/30 rounded-lg p-4">
               <Users className="w-6 h-6 text-green-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">1-4 Members</p>
             </div>
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-yellow-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-yellow-500/30 rounded-lg p-4">
               <Target className="w-6 h-6 text-yellow-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">All Levels</p>
             </div>
@@ -83,7 +83,7 @@ export default function ProjectObsidianPage() {
       </section>
 
       {/* Platform Access Section */}
-      <section className="py-12 px-6 sm:px-8 bg-gradient-to-b from-black to-gray-900">
+      <section className="py-12 px-6 sm:px-8 bg-linear-to-b from-black to-gray-900">
         <div className="max-w-4xl mx-auto text-center">
           {!isCountdownComplete ? (
             <>
@@ -175,7 +175,7 @@ export default function ProjectObsidianPage() {
                 </Card>
               </div>
 
-              <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/30 rounded-lg p-4">
+              <div className="bg-linear-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/30 rounded-lg p-4">
                 <h3 className="text-lg font-semibold text-purple-300 mb-3">Getting Started</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-gray-300">
                     <div>
@@ -199,7 +199,7 @@ export default function ProjectObsidianPage() {
 
 
       {/* Main Content Tabs */}
-      <section className="py-16 px-4 bg-gradient-to-b from-gray-900 to-black">
+      <section className="py-16 px-4 bg-linear-to-b from-gray-900 to-black">
         <div className="max-w-6xl mx-auto">
           <Tabs defaultValue="overview" className="w-full">
             {/* Kill Chain Tabs */}
@@ -211,7 +211,7 @@ export default function ProjectObsidianPage() {
                 {/* Introduction */}
                 <Card className="bg-gray-900/50 border-purple-500/30">
                   <CardHeader>
-                    <CardTitle className="text-3xl font-bold text-center bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    <CardTitle className="text-3xl font-bold text-center bg-linear-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
                       About Project Obsidian
                     </CardTitle>
                   </CardHeader>
@@ -223,9 +223,9 @@ export default function ProjectObsidianPage() {
                       defense skills.
                     </p>
 
-                    <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-lg p-6">
+                    <div className="bg-linear-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-lg p-6">
                       <div className="flex items-start space-x-3">
-                        <Zap className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
+                        <Zap className="w-6 h-6 text-yellow-400 mt-1 shrink-0" />
                         <div>
                           <h3 className="text-xl font-semibold text-yellow-300 mb-2">Enhanced Experience</h3>
                           <p className="text-gray-300">
@@ -290,7 +290,7 @@ export default function ProjectObsidianPage() {
                           href="https://s3.us-west-2.amazonaws.com/media.blueteamvillage.org/index.html" 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-sm text-cyan-400 hover:text-cyan-300 underline break-all hover:break-words"
+                          className="text-sm text-cyan-400 hover:text-cyan-300 underline break-all hover:wrap-break-word"
                         >
                           https://s3.us-west-2.amazonaws.com/media.blueteamvillage.org/index.html
                         </a>

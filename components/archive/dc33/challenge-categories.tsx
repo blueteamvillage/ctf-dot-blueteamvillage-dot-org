@@ -71,10 +71,10 @@ const iconColors = {
 
 export function ChallengeCategories() {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
+    <section className="py-20 px-4 bg-linear-to-b from-gray-900 to-black">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
             Challenge Categories
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">

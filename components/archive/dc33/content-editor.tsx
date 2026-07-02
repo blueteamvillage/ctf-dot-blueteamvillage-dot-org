@@ -198,7 +198,7 @@ export function ContentEditor() {
                   <textarea
                     value={sectionContent}
                     onChange={(e) => handleContentChange(section, e.target.value)}
-                    className="w-full h-96 bg-gray-800 text-white p-4 rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-none font-mono text-sm resize-none"
+                    className="w-full h-96 bg-gray-800 text-white p-4 rounded-lg border border-gray-600 focus:border-cyan-400 focus:outline-hidden font-mono text-sm resize-none"
                     placeholder={`Enter ${section} content in Markdown format...`}
                   />
                 )}

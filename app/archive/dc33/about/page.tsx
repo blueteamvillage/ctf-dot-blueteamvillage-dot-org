@@ -21,9 +21,9 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-12 px-4 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+      <section className="pt-20 pb-12 px-4 bg-linear-to-br from-black via-gray-900 to-black relative overflow-hidden">
         {/* Animated background */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-size-[50px_50px] animate-pulse" />
 
         {/* Glowing orbs */}
         <div className="absolute top-20 right-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl animate-pulse" />
@@ -34,7 +34,7 @@ export default function AboutPage() {
             <Badge className="bg-cyan-500/20 text-cyan-300 border-cyan-500/30 mb-4 inline-block">
               About Blue Team Village
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-green-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-linear-to-r from-cyan-400 via-purple-400 to-green-400 bg-clip-text text-transparent">
               About Us
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-purple-300 mb-6">Defending the Digital Frontier</h2>
@@ -44,19 +44,19 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto">
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-cyan-500/30 rounded-lg p-4">
               <Users className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">Global Community</p>
             </div>
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-purple-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-purple-500/30 rounded-lg p-4">
               <Target className="w-6 h-6 text-purple-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">Defense Focused</p>
             </div>
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-green-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-green-500/30 rounded-lg p-4">
               <Heart className="w-6 h-6 text-green-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">Inclusive</p>
             </div>
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-yellow-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-yellow-500/30 rounded-lg p-4">
               <Globe className="w-6 h-6 text-yellow-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">Worldwide</p>
             </div>
@@ -65,13 +65,13 @@ export default function AboutPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 px-4 bg-gradient-to-b from-gray-900 to-black">
+      <section className="py-16 px-4 bg-linear-to-b from-gray-900 to-black">
         <div className="max-w-6xl mx-auto space-y-16">
           
           {/* Our History */}
           <Card className="bg-gray-900/50 border-cyan-500/30">
             <CardHeader>
-              <CardTitle className="text-3xl font-bold text-center bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              <CardTitle className="text-3xl font-bold text-center bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Our History
               </CardTitle>
             </CardHeader>
@@ -88,9 +88,9 @@ export default function AboutPage() {
                   <strong className="text-cyan-300"> V3rbaal</strong>, and <strong className="text-cyan-300">H4r0ld</strong>. 
                   Planning for Defcon 26 was underway. The rest is history.
                 </p>
-                <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-lg p-6">
+                <div className="bg-linear-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-lg p-6">
                   <div className="flex items-start space-x-3">
-                    <Award className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                    <Award className="w-6 h-6 text-cyan-400 mt-1 shrink-0" />
                     <div>
                       <h3 className="text-xl font-semibold text-cyan-300 mb-2">From Twitter to Global Community</h3>
                       <p className="text-gray-300">
@@ -107,7 +107,7 @@ export default function AboutPage() {
           {/* Mission and Vision */}
           <Card className="bg-gray-900/50 border-purple-500/30">
             <CardHeader>
-              <CardTitle className="text-3xl font-bold text-center bg-gradient-to-r from-purple-400 to-green-400 bg-clip-text text-transparent">
+              <CardTitle className="text-3xl font-bold text-center bg-linear-to-r from-purple-400 to-green-400 bg-clip-text text-transparent">
                 Our Mission and Vision
               </CardTitle>
             </CardHeader>
@@ -140,7 +140,7 @@ export default function AboutPage() {
           {/* Our Community */}
           <Card className="bg-gray-900/50 border-green-500/30">
             <CardHeader>
-              <CardTitle className="text-3xl font-bold text-center bg-gradient-to-r from-green-400 to-yellow-400 bg-clip-text text-transparent">
+              <CardTitle className="text-3xl font-bold text-center bg-linear-to-r from-green-400 to-yellow-400 bg-clip-text text-transparent">
                 Our Community
               </CardTitle>
             </CardHeader>
@@ -221,7 +221,7 @@ export default function AboutPage() {
           {/* Donate Section */}
           <Card className="bg-gray-900/50 border-yellow-500/30">
             <CardHeader>
-              <CardTitle className="text-3xl font-bold text-center bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+              <CardTitle className="text-3xl font-bold text-center bg-linear-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
                 Support Blue Team Village
               </CardTitle>
             </CardHeader>
@@ -254,7 +254,7 @@ export default function AboutPage() {
                 
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+                  className="bg-linear-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
                 >
                   <Heart className="w-4 h-4 mr-2" />
                   Make a Tax-Deductible Donation
@@ -266,7 +266,7 @@ export default function AboutPage() {
       </section>
 
       {/* Call to Action */}
-      {/* <section className="py-16 px-4 bg-gradient-to-b from-gray-900 to-black">
+      {/* <section className="py-16 px-4 bg-linear-to-b from-gray-900 to-black">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Join Our Community</h2>
           <p className="text-xl text-gray-300 mb-8">
@@ -277,7 +277,7 @@ export default function AboutPage() {
             <Link href="/archive/dc33/challenges">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-linear-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Challenges

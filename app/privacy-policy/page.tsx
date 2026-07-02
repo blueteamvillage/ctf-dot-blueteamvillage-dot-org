@@ -6,18 +6,18 @@ import { Footer } from "@/components/archive/dc33/footer"
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
+    <div className="min-h-screen bg-linear-to-br from-gray-900 via-black to-gray-900">
       <Header />
       
       {/* Hero Section */}
       <div className="relative pt-24 pb-16 px-4">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-blue-500/10"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-green-500/10 to-blue-500/10"></div>
         <div className="relative z-10 max-w-6xl mx-auto text-center">
           <div className="mb-8">
             <Badge className="bg-green-500/20 text-green-300 border-green-500/30 mb-4">
               Privacy & Security
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-green-400 via-blue-400 to-green-500 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-linear-to-r from-green-400 via-blue-400 to-green-500 bg-clip-text text-transparent">
               Privacy Policy
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-blue-300 mb-6">Your Data, Your Control</h2>

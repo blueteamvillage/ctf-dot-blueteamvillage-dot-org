@@ -7,10 +7,10 @@ export default function RulesPage() {
   return (
     <div className="min-h-screen bg-black text-white pt-16">
       <Header />
-      <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
+      <section className="py-20 px-4 bg-linear-to-b from-black to-gray-900">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
               Rules & Guidelines
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -26,19 +26,19 @@ export default function RulesPage() {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-red-400 rounded-full mt-2 shrink-0" />
                   <p className="text-gray-300 text-sm">No attacking other teams or the competition infrastructure</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-red-400 rounded-full mt-2 shrink-0" />
                   <p className="text-gray-300 text-sm">No sharing flags or solutions with other teams</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-red-400 rounded-full mt-2 shrink-0" />
                   <p className="text-gray-300 text-sm">Respect all participants and organizers</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-red-400 rounded-full mt-2 shrink-0" />
                   <p className="text-gray-300 text-sm">Follow DEF CON code of conduct</p>
                 </div>
               </CardContent>
@@ -51,19 +51,19 @@ export default function RulesPage() {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 shrink-0" />
                   <p className="text-gray-300 text-sm">Teams can have 1-4 members maximum</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 shrink-0" />
                   <p className="text-gray-300 text-sm">Solo participation is encouraged and welcome</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 shrink-0" />
                   <p className="text-gray-300 text-sm">Team registration required before competition starts</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 shrink-0" />
                   <p className="text-gray-300 text-sm">All skill levels welcome - beginners encouraged!</p>
                 </div>
               </CardContent>
@@ -76,19 +76,19 @@ export default function RulesPage() {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 shrink-0" />
                   <p className="text-gray-300 text-sm">Competition runs for 48 hours straight</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 shrink-0" />
                   <p className="text-gray-300 text-sm">Challenges released in waves throughout the event</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 shrink-0" />
                   <p className="text-gray-300 text-sm">Scoreboard updates in real-time</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-green-400 rounded-full mt-2 shrink-0" />
                   <p className="text-gray-300 text-sm">Final submissions accepted until closing ceremony</p>
                 </div>
               </CardContent>
@@ -101,26 +101,26 @@ export default function RulesPage() {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 shrink-0" />
                   <p className="text-gray-300 text-sm">Points awarded based on challenge difficulty</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 shrink-0" />
                   <p className="text-gray-300 text-sm">Dynamic scoring - points decrease as more teams solve</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 shrink-0" />
                   <p className="text-gray-300 text-sm">Prizes for top 3 teams and special categories</p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 shrink-0" />
                   <p className="text-gray-300 text-sm">Recognition certificates for all participants</p>
                 </div>
               </CardContent>
             </Card>
           </div>
 
-          <div className="mt-12 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-lg p-6">
+          <div className="mt-12 bg-linear-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-lg p-6">
             <h3 className="text-xl font-bold text-cyan-300 mb-3">Important Notes</h3>
             <p className="text-gray-300 text-sm mb-2">
               This is a <strong>defensive security</strong> focused CTF. While some challenges may involve understanding

@@ -30,9 +30,9 @@ export default function ACyberGuruPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-12 px-4 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+      <section className="pt-24 pb-12 px-4 bg-linear-to-br from-black via-gray-900 to-black relative overflow-hidden">
         {/* Animated background */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-size-[50px_50px] animate-pulse" />
 
         {/* Glowing orbs */}
         <div className="absolute top-20 right-20 w-32 h-32 bg-red-500/20 rounded-full blur-xl animate-pulse" />
@@ -58,19 +58,19 @@ export default function ACyberGuruPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto">
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-red-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-red-500/30 rounded-lg p-4">
               <Target className="w-6 h-6 text-red-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">Real-World Scenarios</p>
             </div>
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-orange-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-orange-500/30 rounded-lg p-4">
               <Clock className="w-6 h-6 text-orange-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">High-Pressure</p>
             </div>
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-yellow-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-yellow-500/30 rounded-lg p-4">
               <Users className="w-6 h-6 text-yellow-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">Professional Focus</p>
             </div>
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-green-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-green-500/30 rounded-lg p-4">
               <Brain className="w-6 h-6 text-green-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">Advanced Skills</p>
             </div>
@@ -79,7 +79,7 @@ export default function ACyberGuruPage() {
       </section>
 
       {/* Main Content Tabs */}
-      <section className="py-16 px-4 bg-gradient-to-b from-gray-900 to-black">
+      <section className="py-16 px-4 bg-linear-to-b from-gray-900 to-black">
         <div className="max-w-6xl mx-auto">
           <Tabs defaultValue="overview" className="w-full">
             {/* Mobile Dropdown */}
@@ -166,7 +166,7 @@ export default function ACyberGuruPage() {
                 {/* Introduction */}
                 <Card className="bg-gray-900/50 border-red-500/30">
                   <CardHeader>
-                    <CardTitle className="text-3xl font-bold text-center bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+                    <CardTitle className="text-3xl font-bold text-center bg-linear-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
                       Professional Cybersecurity Challenge
                     </CardTitle>
                   </CardHeader>
@@ -178,9 +178,9 @@ export default function ACyberGuruPage() {
                       hunters, SOC analysts, and incident responders.
                     </p>
 
-                    <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/30 rounded-lg p-6">
+                    <div className="bg-linear-to-r from-orange-500/10 to-red-500/10 border border-orange-500/30 rounded-lg p-6">
                       <div className="flex items-start space-x-3">
-                        <AlertTriangle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />
+                        <AlertTriangle className="w-6 h-6 text-orange-400 mt-1 shrink-0" />
                         <div>
                           <h3 className="text-xl font-semibold text-orange-300 mb-2">Real-World Pressure</h3>
                           <p className="text-gray-300">
@@ -462,7 +462,7 @@ export default function ACyberGuruPage() {
       </section>
 
       {/* Call to Action */}
-      {/* <section className="py-16 px-4 bg-gradient-to-b from-gray-900 to-black">
+      {/* <section className="py-16 px-4 bg-linear-to-b from-gray-900 to-black">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Ready for the Challenge?</h2>
           <p className="text-xl text-gray-300 mb-8">
@@ -473,7 +473,7 @@ export default function ACyberGuruPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+              className="bg-linear-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
             >
               Register for CTF
             </Button>

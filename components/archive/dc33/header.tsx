@@ -36,7 +36,7 @@ export function Header() {
                 height={32}
                 className="rounded-lg"
               />
-              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 BTV CTF
               </span>
             </Link>

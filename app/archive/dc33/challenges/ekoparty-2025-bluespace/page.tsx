@@ -29,9 +29,9 @@ export default function EkopartyBluespacePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-12 px-4 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+      <section className="pt-24 pb-12 px-4 bg-linear-to-br from-black via-gray-900 to-black relative overflow-hidden">
         {/* Animated background */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-size-[50px_50px] animate-pulse" />
 
         {/* Glowing orbs */}
         <div className="absolute top-20 right-20 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse" />
@@ -42,7 +42,7 @@ export default function EkopartyBluespacePage() {
             <Badge className="bg-blue-500/20 text-blue-300 border-blue-500/30 mb-4">
               Ekoparty 2025 CTF
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-linear-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
               Ekoparty Bluespace
             </h1>
             {/* <h2 className="text-2xl md:text-3xl font-semibold text-cyan-300 mb-6">Wazuh SIEM Challenge</h2> */}
@@ -52,19 +52,19 @@ export default function EkopartyBluespacePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto">
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-blue-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-blue-500/30 rounded-lg p-4">
               <Shield className="w-6 h-6 text-blue-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">Wazuh SIEM</p>
             </div>
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-cyan-500/30 rounded-lg p-4">
               <Clock className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">Self-Paced</p>
             </div>
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-green-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-green-500/30 rounded-lg p-4">
               <Users className="w-6 h-6 text-green-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">1-4 Members</p>
             </div>
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-yellow-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-yellow-500/30 rounded-lg p-4">
               <Target className="w-6 h-6 text-yellow-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">Intermediate</p>
             </div>
@@ -73,7 +73,7 @@ export default function EkopartyBluespacePage() {
       </section>
 
       {/* Main Content Tabs */}
-      <section className="py-16 px-4 bg-gradient-to-b from-gray-900 to-black">
+      <section className="py-16 px-4 bg-linear-to-b from-gray-900 to-black">
         <div className="max-w-6xl mx-auto">
           {/* Kill Chain Tabs */}
           <KillChainTabs killChains={ekoPartyKillChains} />
@@ -81,7 +81,7 @@ export default function EkopartyBluespacePage() {
           {/* Introduction */}
           <Card className="bg-gray-900/50 border-blue-500/30 mb-16">
             <CardHeader>
-              <CardTitle className="text-3xl font-bold text-center bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <CardTitle className="text-3xl font-bold text-center bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Ekoparty 2025 - Bluespace Challenge
               </CardTitle>
             </CardHeader>
@@ -90,9 +90,9 @@ export default function EkopartyBluespacePage() {
                 Welcome to the Bluespace challenge! Developed by BTV's Project Obsidian team, this CTF offers an immersive incident response exercise designed to challenge and engage participants of all skill levels. Dive into a detailed, realistic scenario that tests your ability to handle complex security incidents and sharpen your cyber defense skills.
               </p>
 
-              <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-lg p-6">
+              <div className="bg-linear-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-lg p-6">
                 <div className="flex items-start space-x-3">
-                  <AlertTriangle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                  <AlertTriangle className="w-6 h-6 text-cyan-400 mt-1 shrink-0" />
                   <div>
                     <h3 className="text-xl font-semibold text-cyan-300 mb-2">ARM Mac Compatibility</h3>
                     <p className="text-gray-300">

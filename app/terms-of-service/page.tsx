@@ -13,15 +13,15 @@ export default function TermsOfServicePage() {
     <div className="min-h-screen bg-black text-white">
       <Header />
       <div className="max-w-4xl mx-auto px-4 py-24">
-        <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-lg p-8">
+        <div className="bg-gray-900/50 backdrop-blur-xs border border-gray-800 rounded-lg p-8">
           {/* Header */}
           <div className="text-center mb-12">
             <div className="flex justify-center mb-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
+              <div className="w-16 h-16 bg-linear-to-br from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
                 <FileText className="w-8 h-8 text-white" />
               </div>
             </div>
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4">
+            <h1 className="text-4xl font-bold bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-4">
               Terms of Service
             </h1>
             <p className="text-gray-400 text-lg">

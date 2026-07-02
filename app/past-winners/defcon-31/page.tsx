@@ -5,10 +5,10 @@ import { Badge } from "@/components/ui/badge"
 
 export default function Defcon31Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
+    <div className="min-h-screen bg-linear-to-br from-gray-900 via-black to-gray-900">
       {/* Hero Section */}
       <div className="relative pt-24 pb-16 px-4">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-blue-500/10 to-cyan-500/10"></div>
         <div className="relative z-10 max-w-6xl mx-auto text-center">
           <div className="mb-8">
             <Link 
@@ -21,7 +21,7 @@ export default function Defcon31Page() {
             <Badge className="bg-blue-500/20 text-blue-300 border-blue-500/30 mb-4">
               DEF CON 31 Champions
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-linear-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
               DEF CON 31
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-cyan-300 mb-6">Project Obsidian CTF Winners</h2>
@@ -36,10 +36,10 @@ export default function Defcon31Page() {
       <div className="max-w-6xl mx-auto px-4 pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {/* 1st Place */}
-          <Card className="bg-gradient-to-br from-yellow-500/10 to-yellow-600/10 border-yellow-500/30">
+          <Card className="bg-linear-to-br from-yellow-500/10 to-yellow-600/10 border-yellow-500/30">
             <CardHeader className="text-center">
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 bg-linear-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center">
                   <Crown className="w-8 h-8 text-white" />
                 </div>
               </div>
@@ -62,10 +62,10 @@ export default function Defcon31Page() {
           </Card>
 
           {/* 2nd Place */}
-          <Card className="bg-gradient-to-br from-gray-500/10 to-gray-600/10 border-gray-500/30">
+          <Card className="bg-linear-to-br from-gray-500/10 to-gray-600/10 border-gray-500/30">
             <CardHeader className="text-center">
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 bg-linear-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center">
                   <Medal className="w-8 h-8 text-white" />
                 </div>
               </div>
@@ -81,10 +81,10 @@ export default function Defcon31Page() {
           </Card>
 
           {/* 3rd Place */}
-          <Card className="bg-gradient-to-br from-orange-500/10 to-orange-600/10 border-orange-500/30">
+          <Card className="bg-linear-to-br from-orange-500/10 to-orange-600/10 border-orange-500/30">
             <CardHeader className="text-center">
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 bg-linear-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center">
                   <Star className="w-8 h-8 text-white" />
                 </div>
               </div>

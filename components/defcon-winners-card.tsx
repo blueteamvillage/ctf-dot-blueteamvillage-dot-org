@@ -126,7 +126,7 @@ export function DefconWinnersCard({
           return (
             <div 
               key={winner.place}
-              className={`bg-gradient-to-r ${placeColors.bg} ${placeColors.border} rounded-lg p-4`}
+              className={`bg-linear-to-r ${placeColors.bg} ${placeColors.border} rounded-lg p-4`}
             >
               <div className="flex items-center justify-between mb-2">
                 <h3 className={`text-lg font-semibold ${placeColors.text}`}>

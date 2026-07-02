@@ -3,10 +3,10 @@ import { Clock, Target, Shield, Zap, MapPin, Ticket } from "lucide-react"
 
 export function EventDetails() {
   return (
-    <section className="py-20 px-6 sm:px-8 bg-gradient-to-b from-black to-gray-900">
+    <section className="py-20 px-6 sm:px-8 bg-linear-to-b from-black to-gray-900">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Event Details
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -16,7 +16,7 @@ export function EventDetails() {
         </div>
 
         {/* In-Person Notice */}
-        <div className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border-2 border-blue-400/50 rounded-lg p-6 mb-8">
+        <div className="bg-linear-to-r from-blue-500/20 to-cyan-500/20 border-2 border-blue-400/50 rounded-lg p-6 mb-8">
           <div className="flex items-center justify-center mb-4">
             <MapPin className="w-8 h-8 text-blue-400 mr-3" />
             <h3 className="text-2xl font-bold text-blue-300">In-Person Event</h3>
@@ -76,7 +76,7 @@ export function EventDetails() {
           </Card>
         </div>
 
-        <div className="bg-gray-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-8">
+        <div className="bg-gray-900/30 backdrop-blur-xs border border-cyan-500/20 rounded-lg p-8">
           <h3 className="text-2xl font-bold text-cyan-300 mb-4">What to Expect</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>

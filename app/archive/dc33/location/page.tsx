@@ -13,9 +13,9 @@ export default function LocationPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-12 px-4 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+      <section className="pt-24 pb-12 px-4 bg-linear-to-br from-black via-gray-900 to-black relative overflow-hidden">
         {/* Animated background */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-size-[50px_50px] animate-pulse" />
 
         {/* Glowing orbs */}
         <div className="absolute top-20 right-20 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-pulse" />
@@ -26,7 +26,7 @@ export default function LocationPage() {
             <Badge className="bg-purple-500/20 text-purple-300 border-purple-500/30 mb-4">
               Event Location
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-linear-to-r from-purple-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
               Blue Team Village Location
             </h1>
             <h2 className="text-2xl md:text-3xl font-semibold text-cyan-300 mb-6">DEF CON 33 - Las Vegas Convention Center</h2>
@@ -36,15 +36,15 @@ export default function LocationPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 max-w-4xl mx-auto">
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-purple-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-purple-500/30 rounded-lg p-4">
               <MapPin className="w-6 h-6 text-purple-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">West Hall Level 2</p>
             </div>
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-cyan-500/30 rounded-lg p-4">
               <Calendar className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">August 8-10, 2025</p>
             </div>
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-green-500/30 rounded-lg p-4">
+            <div className="bg-gray-900/50 backdrop-blur-xs border border-green-500/30 rounded-lg p-4">
               <Clock className="w-6 h-6 text-green-400 mx-auto mb-2" />
               <p className="text-sm text-gray-300">24/7 CTF Access</p>
             </div>
@@ -53,10 +53,10 @@ export default function LocationPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-16 px-4 bg-gradient-to-b from-gray-900 to-black">
+      <section className="py-16 px-4 bg-linear-to-b from-gray-900 to-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Venue Map
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -101,7 +101,7 @@ export default function LocationPage() {
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <MapPin className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                    <MapPin className="w-5 h-5 text-cyan-400 mt-1 shrink-0" />
                     <div>
                       <h4 className="text-cyan-300 font-semibold">Address</h4>
                       <p className="text-gray-300 text-sm">
@@ -112,7 +112,7 @@ export default function LocationPage() {
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <Clock className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                    <Clock className="w-5 h-5 text-cyan-400 mt-1 shrink-0" />
                     <div>
                       <h4 className="text-cyan-300 font-semibold">Hours</h4>
                       <p className="text-gray-300 text-sm">
@@ -132,7 +132,7 @@ export default function LocationPage() {
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <div className="w-5 h-5 bg-green-400 rounded-full mt-1 flex-shrink-0" />
+                    <div className="w-5 h-5 bg-green-400 rounded-full mt-1 shrink-0" />
                     <div>
                       <h4 className="text-green-300 font-semibold">CTF Setup</h4>
                       <p className="text-gray-300 text-sm">
@@ -141,7 +141,7 @@ export default function LocationPage() {
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-5 h-5 bg-green-400 rounded-full mt-1 flex-shrink-0" />
+                    <div className="w-5 h-5 bg-green-400 rounded-full mt-1 shrink-0" />
                     <div>
                       <h4 className="text-green-300 font-semibold">Support Staff</h4>
                       <p className="text-gray-300 text-sm">
@@ -150,7 +150,7 @@ export default function LocationPage() {
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-5 h-5 bg-green-400 rounded-full mt-1 flex-shrink-0" />
+                    <div className="w-5 h-5 bg-green-400 rounded-full mt-1 shrink-0" />
                     <div>
                       <h4 className="text-green-300 font-semibold">Equipment</h4>
                       <p className="text-gray-300 text-sm">
@@ -166,7 +166,7 @@ export default function LocationPage() {
       </section>
 
       {/* Call to Action */}
-      {/* <section className="py-16 px-4 bg-gradient-to-b from-gray-900 to-black">
+      {/* <section className="py-16 px-4 bg-linear-to-b from-gray-900 to-black">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Ready to Join Us?</h2>
           <p className="text-xl text-gray-300 mb-8">
@@ -177,7 +177,7 @@ export default function LocationPage() {
             <Link href="/archive/dc33/challenges">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-linear-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Challenges
