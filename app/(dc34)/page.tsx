@@ -61,7 +61,7 @@ export default async function HomePage() {
             Supported by
           </p>
           <h2 className="mt-2 text-3xl font-black text-white">Sponsors</h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm text-mist">
+          {/* <p className="mx-auto mt-3 max-w-xl text-sm text-mist">
             DEF CON 34 sponsors will be announced soon. Interested in
             sponsoring Blue Team Village?{" "}
             <a
@@ -73,7 +73,7 @@ export default async function HomePage() {
               Get in touch
             </a>
             .
-          </p>
+          </p> */}
         </div>
         <SponsorGrid sponsors={sponsors} />
       </section>
