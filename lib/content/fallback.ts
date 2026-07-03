@@ -30,8 +30,8 @@ export const fallbackSiteSettings: SiteSettings = {
 
 export const fallbackEventInfo: EventInfo = {
   name: "DEF CON 34",
-  dates: "August 6–9, 2026",
-  startsAt: "2026-08-06T10:00:00-07:00",
+  dates: "August 7–9, 2026",
+  startsAt: "2026-08-07T10:00:00-07:00",
   venue: "Las Vegas Convention Center · Las Vegas, NV",
   status: "upcoming",
   badgeRequired: true,

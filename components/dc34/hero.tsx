@@ -28,18 +28,8 @@ export function Hero({
         </h1>
         <p className="mx-auto max-w-2xl text-lg leading-relaxed text-mist">
           {event.tagline} Pull down a container, work out what the malware did,
-          and prove it — flag by flag.
+          and prove it. Flag by flag!
         </p>
-      </div>
-
-      <TerminalPrompt command="btv-ctf init --theme agency" />
-
-      <div className="flex flex-wrap items-center justify-center gap-3">
-        <PillBadge>{event.dates} · Las Vegas</PillBadge>
-        <PillBadge>
-          Platform: <span className="text-teal-bright">{settings.ctfPlatformName}</span>
-        </PillBadge>
-        <PillBadge>Theme: Agency</PillBadge>
       </div>
 
       <div className="flex items-center justify-center gap-5" aria-hidden>
@@ -49,6 +39,17 @@ export function Hero({
       </div>
 
       <Countdown startsAt={event.startsAt} />
+
+      <div className="flex flex-wrap items-center justify-center gap-3">
+        <PillBadge>{event.dates} · Las Vegas</PillBadge>
+        <PillBadge>
+          Platform: <span className="text-teal-bright">{settings.ctfPlatformName}</span>
+        </PillBadge>
+        <PillBadge>Theme: Agency</PillBadge>
+      </div>
+
+      {/* <TerminalPrompt command="ctf init August 07" /> */}
+
 
       <div className="flex flex-col gap-3 sm:flex-row">
         <Button asChild size="lg">

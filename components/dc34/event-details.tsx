@@ -1,4 +1,4 @@
-import { Shield, Skull, Globe, Zap, Smartphone, ListChecks, Server, Flag } from "lucide-react"
+import { Shield, Skull, Zap, Smartphone, ListChecks, Server, Flag } from "lucide-react"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { GradientDivider } from "@/components/dc34/gradient-divider"
@@ -32,66 +32,45 @@ export function EventDetails({
 }) {
   return (
     <section className="relative z-20 mx-auto max-w-6xl space-y-6 px-6">
-      {/* Forensic focus + single source of truth */}
-      <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2.5 text-xl">
-              <Shield className="h-5 w-5 text-teal-bright" aria-hidden />
-              Forensic Investigation Focus
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-6">
-            <p className="leading-relaxed text-mist">
-              The mission centers on identifying{" "}
-              <strong className="text-white">malware activity</strong> within
-              container images and cloud infrastructure attack vectors.
-            </p>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-lg border border-white/[0.06] bg-navy-deep p-4">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-mint">
-                  Option A: Safe
-                </p>
-                <p className="mt-2 font-bold text-white">Forensic Snapshot</p>
-                <p className="mt-1 text-sm leading-relaxed text-mist">
-                  Safe, post-analysis images. Evidence baked in read-only —
-                  nothing detonates.
-                </p>
-              </div>
-              <div className="rounded-lg border border-magenta/30 bg-magenta/[0.06] p-4">
-                <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-magenta">
-                  <Skull className="h-3.5 w-3.5" aria-hidden />
-                  Option B: Advanced
-                </p>
-                <p className="mt-2 font-bold text-white">Live Malware</p>
-                <p className="mt-1 text-sm leading-relaxed text-mist">
-                  Real samples detonating in an egress-denied Kubernetes
-                  sandbox. Read the warnings first.
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card className="bg-teal-dark/30 border-teal/20">
-          <CardContent className="flex h-full flex-col items-center justify-center gap-4 text-center">
-            <span className="inline-flex h-12 w-12 items-center justify-center rounded-full border-2 border-teal/40 bg-navy-deep text-teal-bright">
-              <Globe className="h-6 w-6" aria-hidden />
-            </span>
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-mist">
-                Single source of truth
+      {/* Forensic focus */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2.5 text-xl">
+            <Shield className="h-5 w-5 text-teal-bright" aria-hidden />
+            Forensic Investigation Focus
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <p className="leading-relaxed text-mist">
+            The mission centers on identifying{" "}
+            <strong className="text-white">malware activity</strong> within
+            container images and cloud infrastructure attack vectors.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="rounded-lg border border-white/[0.06] bg-navy-deep p-4">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-mint">
+                Option A: Safe
               </p>
-              <p className="mt-2 font-mono text-lg font-bold text-white">
-                ctf.blueteamvillage.org
+              <p className="mt-2 font-bold text-white">Forensic Snapshot</p>
+              <p className="mt-1 text-sm leading-relaxed text-mist">
+                Safe, post-analysis images. Evidence baked in read-only —
+                nothing detonates.
               </p>
             </div>
-            <p className="rounded-md border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-mist">
-              Mobile-responsive hub
-            </p>
-          </CardContent>
-        </Card>
-      </div>
+            <div className="rounded-lg border border-magenta/30 bg-magenta/[0.06] p-4">
+              <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-magenta">
+                <Skull className="h-3.5 w-3.5" aria-hidden />
+                Option B: Advanced
+              </p>
+              <p className="mt-2 font-bold text-white">Live Malware</p>
+              <p className="mt-1 text-sm leading-relaxed text-mist">
+                Real samples detonating in an egress-denied Kubernetes
+                sandbox. Read the warnings first.
+              </p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
 
       {/* Tiers + stack + ops requirements */}
       <div className="grid gap-6 lg:grid-cols-3">
