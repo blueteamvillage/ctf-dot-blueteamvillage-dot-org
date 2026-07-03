@@ -213,10 +213,24 @@ export const fallbackSetupSections: SetupSection[] = [
 ]
 
 export const fallbackSponsors: Sponsor[] = [
-  { name: "Your logo here", tier: "blue", url: "", blurb: "Blue-tier sponsorship — TBD", order: 1, active: true },
-  { name: "Your logo here", tier: "platinum", url: "", blurb: "Platinum-tier sponsorship — TBD", order: 2, active: true },
-  { name: "Your logo here", tier: "gold", url: "", blurb: "Gold-tier sponsorship — TBD", order: 3, active: true },
-  { name: "Your logo here", tier: "community", url: "", blurb: "Community supporter — TBD", order: 4, active: true },
+  {
+    name: "HackTheBox",
+    tier: "platinum",
+    url: "https://www.hackthebox.com/",
+    blurb:
+      "Equip threat-ready cyber teams for an AI-accelerated landscape with hands-on labs, assessments, and pathways that build top performing teams.",
+    logo: {
+      url: "https://images.ctfassets.net/mgfsp0s6h7v2/6mxNhdwA95hwceRpnRhmGA/e5a06bee47e3510f485005e797527c55/Hack_The_Box_Logo_2.png",
+      alt: "Hack The Box",
+      width: 4267,
+      height: 2560,
+    },
+    order: 1,
+    active: true,
+  },
+  { name: "Your logo here", tier: "blue", url: "", blurb: "Blue-tier sponsorship — TBD", logo: null, order: 2, active: true },
+  { name: "Your logo here", tier: "platinum", url: "", blurb: "Platinum-tier sponsorship — TBD", logo: null, order: 3, active: true },
+  { name: "Your logo here", tier: "gold", url: "", blurb: "Gold-tier sponsorship — TBD", logo: null, order: 4, active: true },
 ]
 
 export const fallbackFaqItems: FaqItem[] = [

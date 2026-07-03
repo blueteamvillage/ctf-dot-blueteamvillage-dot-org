@@ -37,7 +37,7 @@ Layout lives in code; changeable content lives in Contentful
 | `challengeTrack` | `/challenges` tracks | body is Markdown |
 | `scenario` | `/challenges/converged-frontier` list | **titles + one-liners only** (see guardrail) |
 | `setupSection` | `/setup` numbered steps | `tier: advanced` renders the live-malware warning |
-| `sponsor` | home-page sponsor grid | `active: false` hides without deleting |
+| `sponsor` | home-page sponsor grid | `active: false` hides without deleting; optional `logo` asset renders on a white chip (any wordmark color works) |
 | `faqItem` | `/faq` | answer is Markdown |
 
 How it flows:

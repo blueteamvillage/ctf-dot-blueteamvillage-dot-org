@@ -48,11 +48,20 @@ export interface SetupSection {
 
 export type SponsorTier = "blue" | "platinum" | "gold" | "community"
 
+export interface SponsorLogo {
+  url: string
+  alt: string
+  /** Natural dimensions of the asset, for next/image aspect ratio. */
+  width: number
+  height: number
+}
+
 export interface Sponsor {
   name: string
   tier: SponsorTier
   url: string
   blurb: string
+  logo: SponsorLogo | null
   order: number
   active: boolean
 }

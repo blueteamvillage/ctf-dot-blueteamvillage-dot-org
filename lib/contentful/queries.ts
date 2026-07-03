@@ -18,6 +18,7 @@ import type {
   SetupSection,
   SiteSettings,
   Sponsor,
+  SponsorLogo,
 } from "@/lib/contentful/types"
 
 /*
@@ -70,6 +71,37 @@ const num = (fields: Fields, key: string, fallback: number): number =>
 
 const byOrder = <T extends { order: number }>(items: T[]): T[] =>
   [...items].sort((a, b) => a.order - b.order)
+
+/** Shape of an Asset link after the client's include-based link resolution. */
+type ResolvedAsset = {
+  fields?: {
+    title?: unknown
+    file?: {
+      url?: unknown
+      details?: { image?: { width?: unknown; height?: unknown } }
+    }
+  }
+}
+
+const asset = (fields: Fields, key: string): SponsorLogo | null => {
+  const file = (fields[key] as ResolvedAsset | undefined)?.fields?.file
+  const image = file?.details?.image
+  if (
+    typeof file?.url !== "string" ||
+    typeof image?.width !== "number" ||
+    typeof image?.height !== "number"
+  ) {
+    return null
+  }
+  const title = (fields[key] as ResolvedAsset).fields?.title
+  return {
+    // Delivery API returns protocol-relative asset URLs
+    url: file.url.startsWith("//") ? `https:${file.url}` : file.url,
+    alt: typeof title === "string" ? title : "",
+    width: image.width,
+    height: image.height,
+  }
+}
 
 export function getSiteSettings(): Promise<SiteSettings> {
   return withFallback(
@@ -197,6 +229,7 @@ export function getSponsors(): Promise<Sponsor[]> {
             : "community") as Sponsor["tier"],
           url: str(fields, "url", ""),
           blurb: str(fields, "blurb", ""),
+          logo: asset(fields, "logo"),
           order: num(fields, "order", i + 1),
           active: bool(fields, "active", true),
         }))
