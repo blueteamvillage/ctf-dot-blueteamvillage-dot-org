@@ -214,23 +214,78 @@ export const fallbackSetupSections: SetupSection[] = [
 
 export const fallbackSponsors: Sponsor[] = [
   {
-    name: "HackTheBox",
+    name: "Hack The Box",
     tier: "platinum",
     url: "https://www.hackthebox.com/",
     blurb:
       "Equip threat-ready cyber teams for an AI-accelerated landscape with hands-on labs, assessments, and pathways that build top performing teams.",
     logo: {
       url: "https://images.ctfassets.net/mgfsp0s6h7v2/6mxNhdwA95hwceRpnRhmGA/e5a06bee47e3510f485005e797527c55/Hack_The_Box_Logo_2.png",
-      alt: "Hack The Box",
+      alt: "Hack the Box",
       width: 4267,
       height: 2560,
     },
     order: 1,
     active: true,
   },
-  { name: "Your logo here", tier: "blue", url: "", blurb: "Blue-tier sponsorship — TBD", logo: null, order: 2, active: true },
-  { name: "Your logo here", tier: "platinum", url: "", blurb: "Platinum-tier sponsorship — TBD", logo: null, order: 3, active: true },
-  { name: "Your logo here", tier: "gold", url: "", blurb: "Gold-tier sponsorship — TBD", logo: null, order: 4, active: true },
+  {
+    name: "TryHackMe",
+    tier: "gold",
+    url: "https://tryhackme.com/",
+    blurb: "Hands-on cyber security training through real-world scenarios",
+    logo: {
+      url: "https://images.ctfassets.net/mgfsp0s6h7v2/3LAThx0ryfYlWHsslU7JJa/718fc1dd76a23e1d4b5cc9adaf487958/image.png",
+      alt: "TryHackMe",
+      width: 439,
+      height: 247,
+    },
+    order: 2,
+    active: true,
+  },
+  {
+    name: "Expel",
+    tier: "gold",
+    url: "https://expel.com/",
+    blurb:
+      "Agentic MDR means AI speed, without tradeoffs. Tech makes you fast. Humans make you accurate. You keep your tools, your visibility, and your control.",
+    logo: {
+      url: "https://images.ctfassets.net/mgfsp0s6h7v2/75AbHB4jIG9ZTjLNaJchpg/e48b157b673291681b96eab4c28c9a00/image.png",
+      alt: "Expel",
+      width: 251,
+      height: 80,
+    },
+    order: 2,
+    active: true,
+  },
+  {
+    name: "Detection Engineering Weekly",
+    tier: "gold",
+    url: "https://www.detectionengineering.net/",
+    blurb: "The latest news and how-tos in detection engineering",
+    logo: {
+      url: "https://images.ctfassets.net/mgfsp0s6h7v2/7hdWHGpOSrzt0290ZUvFde/8659038ea2910a205c75e417f9c025a6/3deba0ef-a8ae-4617-b3c3-231a8636dc72_512x512.webp",
+      alt: "Detection Engineering Weekly",
+      width: 512,
+      height: 512,
+    },
+    order: 2,
+    active: true,
+  },
+  {
+    name: "DeepTempo",
+    tier: "gold",
+    url: "https://www.deeptempo.ai/",
+    blurb:
+      "DeepTempo helps security teams identify modern attacks earlier using AI-powered behavioral detection. Built to work alongside existing SIEM, NDR, and telemetry environments, DeepTempo detects attacker intent and suspicious behavioral patterns that traditional rules, signatures, and static baselines often miss.",
+    logo: {
+      url: "https://images.ctfassets.net/mgfsp0s6h7v2/yA1vIIjgc7cXjDum3uLiL/0e801561ea38b7be2c73a20be763ba6a/image.png",
+      alt: "DeepTempo",
+      width: 570,
+      height: 142,
+    },
+    order: 3,
+    active: true,
+  },
 ]
 
 export const fallbackFaqItems: FaqItem[] = [

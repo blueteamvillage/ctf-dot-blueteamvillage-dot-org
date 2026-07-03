@@ -53,7 +53,7 @@ export function SponsorGrid({ sponsors }: { sponsors: Sponsor[] }) {
         )
         return sponsor.url ? (
           <a
-            key={`${sponsor.tier}-${sponsor.order}`}
+            key={sponsor.name}
             href={sponsor.url}
             target="_blank"
             rel="noopener noreferrer"
@@ -62,7 +62,7 @@ export function SponsorGrid({ sponsors }: { sponsors: Sponsor[] }) {
             {card}
           </a>
         ) : (
-          <div key={`${sponsor.tier}-${sponsor.order}`}>{card}</div>
+          <div key={sponsor.name}>{card}</div>
         )
       })}
     </div>
