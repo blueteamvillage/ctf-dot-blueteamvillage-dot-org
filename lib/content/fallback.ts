@@ -24,7 +24,7 @@ export const fallbackSiteSettings: SiteSettings = {
     "Challenge container images stay private on GitHub until the CTF opens — build your sandbox now, pull at the village.",
   announcementUrl: "/setup",
   ctfPlatformName: "MetaCTF",
-  ctfPlatformUrl: "https://compete.metactf.com/634/",
+  ctfPlatformUrl: "https://mctf.io/btv",
   discordUrl: "https://discord.gg/blueteamvillage",
   downloadsUrl: "https://s3.us-west-2.amazonaws.com/media.blueteamvillage.org/index.html",
 }
