@@ -64,6 +64,11 @@ export function Hero({
           </a>
         </Button>
       </div>
+
+      <p className="text-sm text-haze">
+        This site is updated in the run-up to the con — check back for the
+        latest setup steps, challenge details, and event info.
+      </p>
     </section>
   )
 }
