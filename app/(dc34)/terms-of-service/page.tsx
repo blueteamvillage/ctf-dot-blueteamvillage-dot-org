@@ -3,7 +3,7 @@ import { Shield, FileText, AlertTriangle, Users, Trophy } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Terms of Service - Blue Team Village CTF",
-  description: "Terms of Service for Blue Team Village's CTF competition at DEF CON 33.",
+  description: "Terms of Service for Blue Team Village's CTF competition at DEF CON 34.",
 }
 
 export default function TermsOfServicePage() {
@@ -22,10 +22,10 @@ export default function TermsOfServicePage() {
               Terms of Service
             </h1>
             <p className="text-haze text-lg">
-              Blue Team Village CTF Competition - DEF CON 33
+              Blue Team Village CTF Competition - DEF CON 34
             </p>
             <p className="text-haze text-sm mt-2">
-              Last updated: January 2025
+              Last updated: July 2026
             </p>
           </div>
 
@@ -40,7 +40,7 @@ export default function TermsOfServicePage() {
                 </h2>
                 <p className="text-mist leading-relaxed">
                   These Terms of Service (&quot;Terms&quot;) govern your participation in the Blue Team Village Capture The Flag (CTF) 
-                  competition (&quot;Competition&quot;) held during DEF CON 33. By participating in the Competition, you agree to be 
+                  competition (&quot;Competition&quot;) held during DEF CON 34. By participating in the Competition, you agree to be
                   bound by these Terms and all applicable laws and regulations.
                 </p>
               </section>
@@ -55,7 +55,7 @@ export default function TermsOfServicePage() {
                   <p>To participate in the Competition, you must:</p>
                   <ul className="list-disc list-inside space-y-2 ml-4">
                     <li>Be at least 18 years of age or have parental/guardian consent</li>
-                    <li>Be physically present at DEF CON 33 in Las Vegas, Nevada</li>
+                    <li>Be physically present at DEF CON 34 in Las Vegas, Nevada</li>
                     <li>Register through the official CTF platform</li>
                     <li>Comply with all DEF CON and venue rules and regulations</li>
                     <li>Not be a member of the Blue Team Village CTF organizing team</li>
@@ -122,15 +122,25 @@ export default function TermsOfServicePage() {
                 <h2 className="text-2xl font-semibold text-white mb-4">6. Privacy and Data Collection</h2>
                 <div className="text-mist space-y-3">
                   <p>
-                    By participating in the Competition, you consent to the collection and processing of your personal 
-                    data as described in our Privacy Policy. This includes:
+                    This website itself has no accounts, forms, or cookies, and collects only anonymous,
+                    aggregate analytics plus short-lived server logs — see our{" "}
+                    <a href="/privacy-policy" className="text-teal-bright hover:text-mint underline">Privacy Policy</a>{" "}
+                    for the details.
+                  </p>
+                  <p>
+                    Registration and competition activity are handled separately on the MetaCTF platform. By
+                    registering and competing there, you consent to MetaCTF processing the data needed to run the
+                    Competition — for example:
                   </p>
                   <ul className="list-disc list-inside space-y-2 ml-4">
-                    <li>Registration information (name, email, team affiliation)</li>
-                    <li>Competition activity and performance data</li>
-                    <li>Photographs and video recordings for promotional purposes</li>
-                    <li>Technical logs and analytics data</li>
+                    <li>Registration information (such as name, email, and team affiliation)</li>
+                    <li>Competition activity, submissions, and scoreboard data</li>
                   </ul>
+                  <p>
+                    That processing is governed by MetaCTF&apos;s own privacy policy. Separately, activity at the
+                    physical Blue Team Village may be photographed or recorded by DEF CON or the Village for
+                    promotional purposes, subject to DEF CON&apos;s policies.
+                  </p>
                 </div>
               </section>
 
