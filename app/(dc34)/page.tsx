@@ -2,6 +2,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 import { EventDetails } from "@/components/dc34/event-details"
+import { EventSchema } from "@/components/dc34/event-schema"
 import { GradientDivider } from "@/components/dc34/gradient-divider"
 import { Hero } from "@/components/dc34/hero"
 import { SponsorGrid } from "@/components/dc34/sponsor-grid"
@@ -23,6 +24,8 @@ export default async function HomePage() {
 
   return (
     <>
+      <EventSchema event={event} />
+
       <Hero event={event} settings={settings} />
 
       <EventDetails event={event} settings={settings} />
