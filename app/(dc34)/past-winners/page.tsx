@@ -143,32 +143,8 @@ export default function PastWinnersPage() {
             ]}
           />
         </div>
-
-        {/* Call to Action */}
-        {/* <div className="text-center mt-16">
-          <div className="bg-linear-to-r from-teal/10 to-teal-dark/10 border border-teal/30 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Ready to Join the Challenge?</h3>
-            <p className="text-mist mb-6 max-w-2xl mx-auto">
-              Think you have what it takes to be the next champion? Register now for DEF CON 33 and compete against the best cybersecurity professionals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="https://ctfd.dc33.blueteamvillage.org/register"
-                className="bg-linear-to-r from-teal to-teal-dark hover:from-teal hover:to-teal-dark text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Register for CTF
-              </Link>
-              <Link 
-                href="/challenges"
-                className="bg-navy-deep hover:bg-gray-700 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300"
-              >
-                View Challenges
-              </Link>
-            </div>
-          </div>
-        </div> */}
       </div>
 
     </div>
   )
-} 
+}

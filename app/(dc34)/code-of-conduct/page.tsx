@@ -3,7 +3,7 @@ import { Heart, Shield, Users, AlertTriangle, CheckCircle, XCircle } from "lucid
 
 export const metadata: Metadata = {
   title: "Code of Conduct - Blue Team Village CTF",
-  description: "Code of Conduct for Blue Team Village's CTF competition at DEF CON 33.",
+  description: "Code of Conduct for Blue Team Village's CTF competition at DEF CON 34.",
 }
 
 export default function CodeOfConductPage() {
@@ -22,10 +22,10 @@ export default function CodeOfConductPage() {
               Code of Conduct
             </h1>
             <p className="text-haze text-lg">
-              Blue Team Village CTF Competition - DEF CON 33
+              Blue Team Village CTF Competition - DEF CON 34
             </p>
             <p className="text-haze text-sm mt-2">
-              Last updated: January 2025
+              Last updated: July 2026
             </p>
           </div>
 
@@ -45,7 +45,7 @@ export default function CodeOfConductPage() {
                 </p>
                 <p className="text-mist leading-relaxed mt-4">
                   This Code of Conduct applies to all participants, organizers, volunteers, sponsors, and attendees 
-                  of the Blue Team Village CTF competition at DEF CON 33.
+                  of the Blue Team Village CTF competition at DEF CON 34.
                 </p>
               </section>
 
