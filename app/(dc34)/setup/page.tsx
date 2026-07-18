@@ -28,12 +28,13 @@ export default async function SetupPage() {
       </p>
       <h1 className="mt-2 text-4xl font-black text-white md:text-5xl">Setup</h1>
       <p className="mt-4 leading-relaxed text-mist">
-        Everything runs locally in Kubernetes. Build the sandbox at home —
-        DEF CON internet goes down, your investigation shouldn&apos;t.
+        Everything runs locally in Kubernetes — macOS, Windows, or Linux.
+        Build the sandbox at home — DEF CON internet goes down, your
+        investigation shouldn&apos;t.
       </p>
 
       <div className="mt-6">
-        <TerminalPrompt command="make up" />
+        <TerminalPrompt command="make tools && make up" />
       </div>
 
       <div className="mt-8 flex flex-wrap gap-3">
