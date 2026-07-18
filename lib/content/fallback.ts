@@ -26,7 +26,6 @@ export const fallbackSiteSettings: SiteSettings = {
   ctfPlatformName: "MetaCTF",
   ctfPlatformUrl: "https://mctf.io/btv",
   discordUrl: "https://discord.gg/blueteamvillage",
-  downloadsUrl: "https://github.com/orgs/blueteamvillage/packages",
 }
 
 export const fallbackEventInfo: EventInfo = {

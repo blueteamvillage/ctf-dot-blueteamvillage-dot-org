@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { AlertTriangle, Download, Github, Lock } from "lucide-react"
+import { AlertTriangle, Github, Lock } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Markdown } from "@/components/dc34/markdown"
@@ -44,14 +44,6 @@ export default async function SetupPage() {
             Sandbox repo
           </a>
         </Button>
-        {settings.downloadsUrl && (
-          <Button asChild variant="outline">
-            <a href={settings.downloadsUrl} target="_blank" rel="noopener noreferrer">
-              <Download aria-hidden />
-              Container downloads
-            </a>
-          </Button>
-        )}
         <Button asChild variant="outline">
           <a href={settings.ctfPlatformUrl} target="_blank" rel="noopener noreferrer">
             Open {settings.ctfPlatformName}

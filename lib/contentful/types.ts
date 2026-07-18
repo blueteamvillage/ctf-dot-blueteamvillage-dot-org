@@ -5,7 +5,6 @@ export interface SiteSettings {
   ctfPlatformName: string
   ctfPlatformUrl: string
   discordUrl: string
-  downloadsUrl: string
 }
 
 export interface EventInfo {

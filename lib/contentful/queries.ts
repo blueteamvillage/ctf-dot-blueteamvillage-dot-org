@@ -117,7 +117,6 @@ export function getSiteSettings(): Promise<SiteSettings> {
         ctfPlatformName: str(fields, "ctfPlatformName", fb.ctfPlatformName),
         ctfPlatformUrl: str(fields, "ctfPlatformUrl", fb.ctfPlatformUrl),
         discordUrl: str(fields, "discordUrl", fb.discordUrl),
-        downloadsUrl: str(fields, "downloadsUrl", fb.downloadsUrl),
       }
     },
     fallbackSiteSettings
