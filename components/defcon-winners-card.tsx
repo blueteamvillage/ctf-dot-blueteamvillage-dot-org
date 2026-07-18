@@ -29,34 +29,34 @@ export function DefconWinnersCard({
 }: DefconWinnersCardProps) {
   const colorClasses = {
     cyan: {
-      title: "text-cyan-300",
-      border: "hover:border-cyan-500/30",
-      badge: "bg-cyan-500/20 text-cyan-300 border-cyan-500/30",
-      link: "text-cyan-400 hover:text-cyan-300"
+      title: "text-teal-bright",
+      border: "hover:border-teal/30",
+      badge: "bg-teal/20 text-teal-bright border-teal/30",
+      link: "text-teal-bright hover:text-teal-bright"
     },
     purple: {
-      title: "text-purple-300",
-      border: "hover:border-purple-500/30",
-      badge: "bg-purple-500/20 text-purple-300 border-purple-500/30",
-      link: "text-purple-400 hover:text-purple-300"
+      title: "text-mint",
+      border: "hover:border-teal-dark/30",
+      badge: "bg-teal-dark/20 text-mint border-teal-dark/30",
+      link: "text-mint hover:text-mint"
     },
     green: {
-      title: "text-green-300",
-      border: "hover:border-green-500/30",
-      badge: "bg-green-500/20 text-green-300 border-green-500/30",
-      link: "text-green-400 hover:text-green-300"
+      title: "text-mint",
+      border: "hover:border-mint/30",
+      badge: "bg-mint/20 text-mint border-mint/30",
+      link: "text-mint hover:text-mint"
     },
     blue: {
-      title: "text-blue-300",
-      border: "hover:border-blue-500/30",
-      badge: "bg-blue-500/20 text-blue-300 border-blue-500/30",
-      link: "text-blue-400 hover:text-blue-300"
+      title: "text-teal-bright",
+      border: "hover:border-teal/30",
+      badge: "bg-teal/20 text-teal-bright border-teal/30",
+      link: "text-teal-bright hover:text-teal-bright"
     },
     orange: {
-      title: "text-orange-300",
-      border: "hover:border-orange-500/30",
-      badge: "bg-orange-500/20 text-orange-300 border-orange-500/30",
-      link: "text-orange-400 hover:text-orange-300"
+      title: "text-gold",
+      border: "hover:border-gold/30",
+      badge: "bg-gold/20 text-gold border-gold/30",
+      link: "text-gold hover:text-gold"
     }
   }
 
@@ -84,29 +84,29 @@ export function DefconWinnersCard({
   const getPlaceColorClasses = (color: string) => {
     const colorMap = {
       yellow: {
-        bg: "from-yellow-500/10 to-yellow-600/10",
-        border: "border-yellow-500/30",
-        text: "text-yellow-300",
-        badge: "bg-yellow-500/20 text-yellow-300 border-yellow-500/30"
+        bg: "from-gold/10 to-gold/10",
+        border: "border-gold/30",
+        text: "text-gold",
+        badge: "bg-gold/20 text-gold border-gold/30"
       },
       gray: {
         bg: "from-gray-500/10 to-gray-600/10",
         border: "border-gray-500/30",
-        text: "text-gray-300",
-        badge: "bg-gray-500/20 text-gray-300 border-gray-500/30"
+        text: "text-mist",
+        badge: "bg-gray-500/20 text-mist border-gray-500/30"
       },
       orange: {
-        bg: "from-orange-500/10 to-orange-600/10",
-        border: "border-orange-500/30",
-        text: "text-orange-300",
-        badge: "bg-orange-500/20 text-orange-300 border-orange-500/30"
+        bg: "from-gold/10 to-gold/10",
+        border: "border-gold/30",
+        text: "text-gold",
+        badge: "bg-gold/20 text-gold border-gold/30"
       }
     }
     return colorMap[color as keyof typeof colorMap] || colorMap.gray
   }
 
   return (
-    <Card className={`bg-gray-900/50 border-gray-700 ${colorClasses[themeColor].border} transition-colors`}>
+    <Card className={`bg-navy-card border-white/10 ${colorClasses[themeColor].border} transition-colors`}>
       <CardHeader>
         <div className="flex items-center justify-between">
           <CardTitle className={`text-2xl font-bold ${colorClasses[themeColor].title}`}>
@@ -126,7 +126,7 @@ export function DefconWinnersCard({
           return (
             <div 
               key={winner.place}
-              className={`bg-gradient-to-r ${placeColors.bg} ${placeColors.border} rounded-lg p-4`}
+              className={`bg-linear-to-r ${placeColors.bg} ${placeColors.border} rounded-lg p-4`}
             >
               <div className="flex items-center justify-between mb-2">
                 <h3 className={`text-lg font-semibold ${placeColors.text}`}>
@@ -140,16 +140,16 @@ export function DefconWinnersCard({
                 {winner.displayName || winner.teamName}
               </div>
               {winner.points && (
-                <div className="text-yellow-400 text-sm font-medium mt-1">
+                <div className="text-gold text-sm font-medium mt-1">
                   {winner.points} points
                 </div>
               )}
               {winner.usernames && winner.usernames.length > 0 ? (
-                <div className="text-gray-400 text-sm mt-1">
+                <div className="text-haze text-sm mt-1">
                   {winner.usernames.join(', ')}
                 </div>
               ) : winner.members ? (
-                <div className="text-gray-400 text-sm mt-1">
+                <div className="text-haze text-sm mt-1">
                   {winner.members}
                 </div>
               ) : null}
