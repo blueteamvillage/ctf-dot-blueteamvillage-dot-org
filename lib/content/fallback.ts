@@ -19,9 +19,10 @@ import type {
  */
 
 export const fallbackSiteSettings: SiteSettings = {
-  announcementEnabled: false,
-  announcementText: "",
-  announcementUrl: "",
+  announcementEnabled: true,
+  announcementText:
+    "Challenge container images stay private on GitHub until the CTF opens — build your sandbox now, pull at the village.",
+  announcementUrl: "/setup",
   ctfPlatformName: "MetaCTF",
   ctfPlatformUrl: "https://compete.metactf.com/634/",
   discordUrl: "https://discord.gg/blueteamvillage",
@@ -149,34 +150,44 @@ export const fallbackScenarios: Scenario[] = [
 
 export const fallbackSetupSections: SetupSection[] = [
   {
-    title: "Prerequisites",
+    title: "Build the sandbox (before the con)",
     tier: "everyone",
     order: 1,
     body: [
-      "Everything runs locally in Kubernetes — download once, investigate offline. Install:",
+      "Everything runs in a local Kubernetes sandbox you build yourself from the [btv-k8s-sandbox-infrastructure](https://github.com/blueteamvillage/btv-k8s-sandbox-infrastructure) repo. One command stands up the whole stack — a colima VM, a single-node minikube cluster (`dc34`), plus Cilium (networking + policy), Tetragon (eBPF runtime telemetry), Kyverno (guardrails), and metrics-server:",
       "",
-      "- **Docker** — loads the provided image archives",
-      "- **minikube** — local Kubernetes cluster (use a profile/context named `dc34`)",
-      "- **kubectl** — pointed at the `dc34` context",
-      "- **colima** — Linux VM backend if you're on macOS / Apple Silicon",
-      "- **make** — the provided `Makefile` wraps load, deploy, status, and exec",
+      "```",
+      "git clone https://github.com/blueteamvillage/btv-k8s-sandbox-infrastructure.git",
+      "cd btv-k8s-sandbox-infrastructure",
+      "make up",
+      "```",
       "",
-      "On Apple Silicon, use minikube's Docker runtime: `eval $(minikube -p dc34 docker-env)`.",
+      "macOS with [Homebrew](https://brew.sh) is the paved path — `make up` installs the rest for you (minikube, kubectl, helm, helmfile, k9s, colima, docker CLI). Budget ~4 CPU cores, 8 GB RAM, and a few GB of disk for the VM. On Linux or Windows (WSL2), install minikube/kubectl/helm/helmfile yourself and start the same `dc34` minikube profile — ask in the BTV Discord if you get stuck.",
+      "",
+      "Do this **before** you get to the venue — the first run takes several minutes, and DEF CON internet is famously unreliable. `make stop` pauses the cluster with state preserved; `make up` resumes it.",
     ].join("\n"),
   },
   {
-    title: "Download & load the containers",
+    title: "Get the challenge images (at the village)",
     tier: "everyone",
     order: 2,
     body: [
-      "Challenge images ship as OCI image-layout `.tar.gz` archives with SHA-256 checksums. Grab the bundle for your track from the downloads link (also pinned on the MetaCTF platform), verify, and load — don't extract:",
+      "Challenges are distributed as container images from the Blue Team Village registry on GitHub:",
       "",
       "```",
-      "shasum -a 256 -c converged-frontier-participant-beginner-images.tar.gz.sha256",
-      "gunzip -c converged-frontier-participant-beginner-images.tar.gz | docker load",
+      "ghcr.io/blueteamvillage/challenge-<NNN>",
       "```",
       "",
-      "Do this **before** you get to the venue if you can — DEF CON internet is famously unreliable, and the archives are large.",
+      "Some challenges also ship **`-beginner`** and **`-pro`** difficulty variants — pick the track that fits you.",
+      "",
+      "**The images are private until the CTF opens at DEF CON 34.** You can't pull them ahead of time — that's by design. At the village you'll receive credentials to authenticate (you'll need a GitHub account):",
+      "",
+      "```",
+      "docker login ghcr.io -u <your-github-username>",
+      "# paste the token provided by the organizers when prompted",
+      "```",
+      "",
+      "Build the sandbox at home, and you'll be ready to pull and play the moment doors open.",
     ].join("\n"),
   },
   {
@@ -184,15 +195,15 @@ export const fallbackSetupSections: SetupSection[] = [
     tier: "everyone",
     order: 3,
     body: [
-      "Deploy the scenario pods into the `converged-frontier` namespace and start digging:",
+      "Each challenge ships with its own deployment instructions when it's released at the event. Deploy into your `dc34` cluster and start digging:",
       "",
       "```",
-      "make deploy        # or: kubectl apply -k .",
-      "make status",
-      "kubectl exec -it <your-scenario-pod> -n converged-frontier -- sh",
+      "kubectl --context dc34 get pods -A",
+      "k9s --context dc34",
+      "kubectl --context dc34 logs -n kube-system ds/tetragon -c export-stdout -f",
       "```",
       "",
-      "Inside the pod, the evidence lives at `/challenge/` — start with `README.md` and `forensic-report.md`, then work through `evidence/`. Submit your findings as flags on MetaCTF.",
+      "Tetragon streams kernel-level events — process execs, network connections — from every workload in the sandbox. That's telemetry you can hunt in. Submit your findings as flags on MetaCTF.",
     ].join("\n"),
   },
   {
@@ -207,7 +218,7 @@ export const fallbackSetupSections: SetupSection[] = [
       "- Samples ship in encrypted, password-protected archives — your AV/EDR *will* (correctly) flag them",
       "- Never extract samples outside the isolated sandbox",
       "- Never push these images to a public registry",
-      "- Sandbox stack (Cilium, Tetragon, Kyverno) is provisioned via helm/helmfile — full instructions ship with the environment repo",
+      "- The sandbox guardrails (restricted Pod Security, default-deny networking, resource caps) come pre-provisioned by `make up` — they're features, not bugs",
     ].join("\n"),
   },
 ]
@@ -292,7 +303,7 @@ export const fallbackFaqItems: FaqItem[] = [
   {
     question: "Do I need to be at DEF CON to play?",
     answer:
-      "The CTF is run for DEF CON 34 attendees at the Blue Team Village. Challenge submission happens on MetaCTF, and the container bundles are downloadable ahead of time — check the rules page for eligibility details.",
+      "The CTF is run for DEF CON 34 attendees at the Blue Team Village. Challenge submission happens on MetaCTF, and the sandbox environment is buildable ahead of time — but the challenge images stay private on GitHub until the CTF opens, and pull credentials are handed out at the village. Check the rules page for eligibility details.",
     order: 1,
   },
   {
@@ -310,7 +321,7 @@ export const fallbackFaqItems: FaqItem[] = [
   {
     question: "What should I install before the con?",
     answer:
-      "Docker, minikube, kubectl, and make (plus colima on macOS). Then download and `docker load` the challenge bundles **before** you arrive — DEF CON internet is unreliable and the archives are large. The setup page has the full walkthrough.",
+      "Clone [btv-k8s-sandbox-infrastructure](https://github.com/blueteamvillage/btv-k8s-sandbox-infrastructure) and run `make up` **before** you arrive — on macOS it installs the tooling (minikube, kubectl, helm, colima) and builds the sandbox cluster for you. The challenge images themselves are private on GitHub until the CTF opens; you'll get pull credentials at the village. The setup page has the full walkthrough.",
     order: 4,
   },
   {

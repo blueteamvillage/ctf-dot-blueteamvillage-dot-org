@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { AlertTriangle, Download } from "lucide-react"
+import { AlertTriangle, Download, Github, Lock } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Markdown } from "@/components/dc34/markdown"
@@ -9,8 +9,11 @@ import { getSetupSections, getSiteSettings } from "@/lib/contentful/queries"
 export const metadata: Metadata = {
   title: "Setup | BTV CTF @ DEF CON 34",
   description:
-    "Step-by-step environment setup: install the tooling, download and load the challenge containers, and deploy the scenario pods — before the con.",
+    "Step-by-step environment setup: build the local Kubernetes sandbox before the con. Challenge images stay private on GitHub until the CTF opens.",
 }
+
+const sandboxRepoUrl =
+  "https://github.com/blueteamvillage/btv-k8s-sandbox-infrastructure"
 
 export default async function SetupPage() {
   const [sections, settings] = await Promise.all([
@@ -25,17 +28,23 @@ export default async function SetupPage() {
       </p>
       <h1 className="mt-2 text-4xl font-black text-white md:text-5xl">Setup</h1>
       <p className="mt-4 leading-relaxed text-mist">
-        Everything runs locally in Kubernetes. Do the downloads at home —
+        Everything runs locally in Kubernetes. Build the sandbox at home —
         DEF CON internet goes down, your investigation shouldn&apos;t.
       </p>
 
       <div className="mt-6">
-        <TerminalPrompt command="minikube start -p dc34" />
+        <TerminalPrompt command="make up" />
       </div>
 
       <div className="mt-8 flex flex-wrap gap-3">
+        <Button asChild>
+          <a href={sandboxRepoUrl} target="_blank" rel="noopener noreferrer">
+            <Github aria-hidden />
+            Sandbox repo
+          </a>
+        </Button>
         {settings.downloadsUrl && (
-          <Button asChild>
+          <Button asChild variant="outline">
             <a href={settings.downloadsUrl} target="_blank" rel="noopener noreferrer">
               <Download aria-hidden />
               Container downloads
@@ -47,6 +56,22 @@ export default async function SetupPage() {
             Open {settings.ctfPlatformName}
           </a>
         </Button>
+      </div>
+
+      <div
+        className="mt-8 flex gap-3 rounded-lg border border-gold/40 bg-gold/[0.08] p-4"
+        role="note"
+      >
+        <Lock className="h-5 w-5 shrink-0 text-gold" aria-hidden />
+        <p className="text-sm leading-relaxed text-fog">
+          <strong className="text-gold">
+            Challenge images are private until the con.
+          </strong>{" "}
+          The container packages at <code>ghcr.io/blueteamvillage</code> stay
+          private until the CTF opens at DEF CON 34 — you can&apos;t pull them
+          ahead of time, and that&apos;s by design. Build the sandbox now;
+          you&apos;ll get pull credentials at the village.
+        </p>
       </div>
 
       <ol className="mt-12 space-y-10">
