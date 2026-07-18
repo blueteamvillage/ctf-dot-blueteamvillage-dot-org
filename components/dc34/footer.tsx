@@ -91,6 +91,16 @@ export function Footer({ settings }: { settings: SiteSettings }) {
                   </a>
                 </li>
               )}
+              <li>
+                <a
+                  href="https://s3.us-west-2.amazonaws.com/media.blueteamvillage.org/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-mist transition-colors hover:text-teal-bright"
+                >
+                  BTV content library
+                </a>
+              </li>
               {socialLinks.map((link) => (
                 <li key={link.href}>
                   <a

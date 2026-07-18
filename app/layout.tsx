@@ -17,15 +17,58 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "BTV CTF @ DEF CON 34 | Blue Team Village",
   description:
-    "Central hub for the forensic analysis of malware in containerized environments — Blue Team Village's Project Obsidian CTF at DEF CON 34, August 6–9, 2026, Las Vegas.",
+    "Central hub for the forensic analysis of malware in containerized environments — Blue Team Village's Project Obsidian CTF at DEF CON 34, August 7–9, 2026, Las Vegas.",
   metadataBase: new URL("https://ctf.blueteamvillage.org"),
+  applicationName: "Blue Team Village CTF",
+  keywords: [
+    "Blue Team Village",
+    "BTV CTF",
+    "DEF CON 34",
+    "Project Obsidian",
+    "capture the flag",
+    "malware forensics",
+    "container forensics",
+    "Kubernetes",
+    "incident response",
+    "DFIR",
+  ],
+  authors: [{ name: "Blue Team Village", url: "https://blueteamvillage.org" }],
+  creator: "Blue Team Village",
+  publisher: "Blue Team Village",
   openGraph: {
     title: "BTV CTF @ DEF CON 34",
     description:
       "Pull down a container, work out what the malware did, and prove it — flag by flag. Project Obsidian at DEF CON 34.",
     url: "https://ctf.blueteamvillage.org",
     siteName: "Blue Team Village CTF",
+    locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/obsidian.png",
+        width: 400,
+        height: 400,
+        alt: "Project Obsidian — Blue Team Village CTF at DEF CON 34",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BTV CTF @ DEF CON 34",
+    description:
+      "Pull down a container, work out what the malware did, and prove it — flag by flag. Project Obsidian at DEF CON 34.",
+    images: ["/obsidian.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   icons: {
     icon: [

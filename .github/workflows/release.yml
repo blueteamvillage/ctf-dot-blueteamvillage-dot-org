@@ -1,0 +1,81 @@
+name: Release
+
+# Tag a release from the current default branch. Run manually from the
+# Actions tab: provide a semver tag (e.g. v1.2.0). The workflow verifies the
+# site builds, then creates the git tag and a GitHub Release with generated
+# notes. Only official actions/* are used to keep the supply chain minimal.
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release tag (semver, e.g. v1.2.0)"
+        required: true
+        type: string
+      prerelease:
+        description: "Mark as a pre-release"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      # Route the untrusted dispatch input through the environment and always
+      # reference it quoted ("$VERSION") — never inline ${{ inputs.version }}
+      # in a run: block, which would allow shell injection.
+      VERSION: ${{ inputs.version }}
+    steps:
+      - name: Validate tag format
+        run: |
+          if [[ ! "$VERSION" =~ ^v[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.]+)?$ ]]; then
+            echo "::error::'$VERSION' is not a valid semver tag (expected vMAJOR.MINOR.PATCH)."
+            exit 1
+          fi
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fail if tag already exists
+        run: |
+          if git rev-parse "$VERSION" >/dev/null 2>&1; then
+            echo "::error::Tag $VERSION already exists."
+            exit 1
+          fi
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Enable pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@10.33.0 --activate
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build (release gate)
+        run: pnpm build
+
+      - name: Create tag and GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_SHA: ${{ github.sha }}
+          PRERELEASE_FLAG: ${{ inputs.prerelease && '--prerelease' || '' }}
+        run: |
+          gh release create "$VERSION" \
+            --target "$TARGET_SHA" \
+            --title "$VERSION" \
+            --generate-notes \
+            $PRERELEASE_FLAG
