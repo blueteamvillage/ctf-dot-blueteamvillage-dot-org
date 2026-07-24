@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Scale, ShieldCheck, Users, Flag, Ban, Trophy } from "lucide-react"
+import { Scale, ShieldCheck, Users, Flag, Ban, Trophy, MapPin } from "lucide-react"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { getSiteSettings } from "@/lib/contentful/queries"
@@ -27,9 +27,17 @@ export default async function RulesPage() {
       icon: Users,
       title: "Teams",
       items: [
-        "Play solo or in a team; register your team on the platform before submitting flags together.",
+        "Teams are 1 to 4 players — play solo or with up to three teammates. Register your team on the platform before submitting flags together.",
         "One account per person. Don't share accounts or submit flags on someone else's behalf.",
         "Collaboration inside a team is the point. Sharing flags or solutions across teams is not.",
+      ],
+    },
+    {
+      icon: MapPin,
+      title: "On site",
+      items: [
+        "This is a DEF CON village contest — you must be on site at DEF CON to play.",
+        "Must be present to win. Winners are announced and prizes handed out in person at the village when the CTF closes.",
       ],
     },
     {
