@@ -3,6 +3,10 @@ import { AlertTriangle, Download, Github } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Markdown } from "@/components/dc34/markdown"
+import {
+  SANDBOX_REPO_URL,
+  SandboxRepoCallout,
+} from "@/components/dc34/sandbox-repo-callout"
 import { TerminalPrompt } from "@/components/dc34/terminal-prompt"
 import { getSetupSections, getSiteSettings } from "@/lib/contentful/queries"
 
@@ -11,9 +15,6 @@ export const metadata: Metadata = {
   description:
     "Step-by-step environment setup: build the local Kubernetes sandbox before the con. Challenge images are public on GitHub — pull them before you travel.",
 }
-
-const sandboxRepoUrl =
-  "https://github.com/blueteamvillage/btv-k8s-sandbox-infrastructure"
 
 export default async function SetupPage() {
   const [sections, settings] = await Promise.all([
@@ -39,7 +40,7 @@ export default async function SetupPage() {
 
       <div className="mt-8 flex flex-wrap gap-3">
         <Button asChild>
-          <a href={sandboxRepoUrl} target="_blank" rel="noopener noreferrer">
+          <a href={SANDBOX_REPO_URL} target="_blank" rel="noopener noreferrer">
             <Github aria-hidden />
             Sandbox repo
           </a>
@@ -67,6 +68,8 @@ export default async function SetupPage() {
           isn&apos;t something you want between you and a challenge.
         </p>
       </div>
+
+      <SandboxRepoCallout className="mt-8" />
 
       <ol className="mt-12 space-y-10">
         {sections.map((section, index) => (
