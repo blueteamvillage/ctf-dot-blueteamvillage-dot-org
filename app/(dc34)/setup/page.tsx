@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { AlertTriangle, Github, Lock } from "lucide-react"
+import { AlertTriangle, Download, Github } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Markdown } from "@/components/dc34/markdown"
@@ -9,7 +9,7 @@ import { getSetupSections, getSiteSettings } from "@/lib/contentful/queries"
 export const metadata: Metadata = {
   title: "Setup | BTV CTF @ DEF CON 34",
   description:
-    "Step-by-step environment setup: build the local Kubernetes sandbox before the con. Challenge images stay private on GitHub until the CTF opens.",
+    "Step-by-step environment setup: build the local Kubernetes sandbox before the con. Challenge images are public on GitHub — pull them before you travel.",
 }
 
 const sandboxRepoUrl =
@@ -55,15 +55,16 @@ export default async function SetupPage() {
         className="mt-8 flex gap-3 rounded-lg border border-gold/40 bg-gold/[0.08] p-4"
         role="note"
       >
-        <Lock className="h-5 w-5 shrink-0 text-gold" aria-hidden />
+        <Download className="h-5 w-5 shrink-0 text-gold" aria-hidden />
         <p className="text-sm leading-relaxed text-fog">
           <strong className="text-gold">
-            Challenge images are private until the con.
+            Pull the challenge images before you travel.
           </strong>{" "}
-          The container packages at <code>ghcr.io/blueteamvillage</code> stay
-          private until the CTF opens at DEF CON 34 — you can&apos;t pull them
-          ahead of time, and that&apos;s by design. Build the sandbox now;
-          you&apos;ll get pull credentials at the village.
+          {/* JSX trims the space before a line break, so it has to be explicit. */}
+          The container packages at <code>ghcr.io/blueteamvillage</code>{" "}
+          are public — no login, no credentials to collect at the village. Pre-pull
+          them at home and side-load them into your cluster; DEF CON Wi-Fi
+          isn&apos;t something you want between you and a challenge.
         </p>
       </div>
 
