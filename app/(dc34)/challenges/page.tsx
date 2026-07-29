@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 import { Markdown } from "@/components/dc34/markdown"
+import { SandboxRepoCallout } from "@/components/dc34/sandbox-repo-callout"
 import { TrackCard } from "@/components/dc34/track-card"
 import { getTracks } from "@/lib/contentful/queries"
 
@@ -27,6 +28,8 @@ export default async function ChallengesPage() {
         Expert — and everything runs locally, so an internet outage can&apos;t
         stop your investigation.
       </p>
+
+      <SandboxRepoCallout className="mt-8 max-w-2xl" />
 
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {tracks.map((track) => (
