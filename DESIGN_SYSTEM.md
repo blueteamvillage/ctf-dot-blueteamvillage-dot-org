@@ -147,7 +147,7 @@ All animations are slow, infinite loops. Defined as keyframes; applied inline.
 ## 7. Voice & Content
 
 - Use **terminal/CLI phrasing** for utility text: `owasp-ctf init --theme agency`.
-- Dates as ranges with en-dashes: `August 6–9, 2026`.
+- Dates as ranges with en-dashes: `August 7–9, 2026`.
 - Separate meta items with a muted middle-dot `·` (zinc-600).
 - Security-domain iconography: clock, shield, lock, people.
 

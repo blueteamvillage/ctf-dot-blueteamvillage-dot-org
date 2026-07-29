@@ -1,7 +1,7 @@
 # Blue Team Village CTF — DEF CON 34
 
 The official site for Blue Team Village's Project Obsidian CTF at DEF CON 34
-(August 6–9, 2026, Las Vegas): the central hub for the forensic analysis of
+(August 7–9, 2026, Las Vegas): the central hub for the forensic analysis of
 malware in containerized environments. Built to be extremely lightweight and
 mobile-first — it has to keep working on DEF CON's unreliable internet.
 
