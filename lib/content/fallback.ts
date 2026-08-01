@@ -21,7 +21,7 @@ import type {
 export const fallbackSiteSettings: SiteSettings = {
   announcementEnabled: true,
   announcementText:
-    "Challenge container images are public on GitHub — build your sandbox and pull the images before you travel.",
+    "Challenge images unlock when the village opens on Friday, August 7 — build your sandbox before you travel so the images are all that's left to pull.",
   announcementUrl: "/setup",
   ctfPlatformName: "MetaCTF",
   ctfPlatformUrl: "https://mctf.io/btv",
@@ -193,20 +193,26 @@ export const fallbackSetupSections: SetupSection[] = [
     tier: "everyone",
     order: 2,
     body: [
-      "Challenges are distributed as public container images from the Blue Team Village org on GitHub — one image per challenge, `ghcr.io/blueteamvillage/challenge-<NNN>`. Browse the full set on the [packages page](https://github.com/orgs/blueteamvillage/packages). Standalone challenges also ship **`-beginner`** and **`-pro`** variants; pick the track that fits you.",
+      "Challenges are distributed as container images from the Blue Team Village org on GitHub — one image per challenge, `ghcr.io/blueteamvillage/challenge-<NNN>`. Browse the full set on the [packages page](https://github.com/orgs/blueteamvillage/packages). Standalone challenges also ship **`-beginner`** and **`-pro`** variants; pick the track that fits you.",
       "",
-      "**No login, no credentials.** The packages are public, so there's nothing to authenticate against and nothing to collect at the village. Applying a challenge manifest pulls the image for you — the pod spec references it directly, and `imagePullPolicy: IfNotPresent` falls back to the public package whenever it isn't already cached locally:",
+      "**The images unlock on day one.** The packages stay private until the village opens on Friday, August 7, 2026, then flip public for the rest of the con. There are still no credentials involved — nothing to collect at the village, and nothing to authenticate against once they're live. It does mean you can't pre-pull at home, so the packages page will show you an empty list until then. Don't read that as a problem.",
+      "",
+      "**So do the slow part before you travel.** Building the cluster is the long pole — tool installs, a Docker-backed VM, Cilium and Tetragon coming up. Get all of that done and tested at home, and on day one the images are the only thing left to fetch.",
+      "",
+      "Once they're live, applying a challenge manifest pulls the image for you — the pod spec references it directly, and `imagePullPolicy: IfNotPresent` reuses whatever is already cached locally:",
       "",
       "```",
       "kubectl --context dc34 apply -f challenges/challenge-000.pod.yaml",
       "```",
       "",
-      "**Pull ahead of time anyway.** DEF CON internet is famously unreliable, so pre-pull at home and side-load into your `dc34` cluster — then the con network never sits between you and a challenge:",
+      "**Pull early, and pull only what you need.** Everyone in the village will be pulling over the same Wi-Fi at the same time, so fetch the challenge you're actually starting on rather than the whole catalogue. If you want a specific image resident in the cluster before you begin, pull it once and side-load it:",
       "",
       "```",
       "docker pull ghcr.io/blueteamvillage/challenge-000:latest",
       "minikube -p dc34 image load ghcr.io/blueteamvillage/challenge-000:latest",
       "```",
+      "",
+      "Images are cached after the first pull, so this only costs you once per challenge. Ask in the BTV Discord or at the village desk if a pull is failing — don't sit and retry.",
     ].join("\n"),
   },
   {
@@ -330,7 +336,7 @@ export const fallbackFaqItems: FaqItem[] = [
   {
     question: "Do I need to be at DEF CON to play?",
     answer:
-      "The CTF is run for DEF CON 34 attendees at the Blue Team Village, and flag submission happens on MetaCTF. You can build the whole environment ahead of time: the sandbox repo and the challenge images are both public, so there are no credentials to collect at the village. Check the rules page for eligibility details.",
+      "The CTF is run for DEF CON 34 attendees at the Blue Team Village, and flag submission happens on MetaCTF. The sandbox repo is public, so you can build the whole environment ahead of time; the challenge images unlock when the village opens on Friday, August 7. There are no credentials to collect either way. Check the rules page for eligibility details.",
     order: 1,
   },
   {
@@ -348,25 +354,31 @@ export const fallbackFaqItems: FaqItem[] = [
   {
     question: "What should I install before the con?",
     answer:
-      "Clone [btv-k8s-sandbox-infrastructure](https://github.com/blueteamvillage/btv-k8s-sandbox-infrastructure) **before** you arrive and follow the install path for your OS — `make tools && make up` on macOS, `windows\\start.cmd` on Windows, or the documented minikube/helmfile commands on Linux. The tooling installs itself; you end up with the same `dc34` sandbox cluster everywhere. The challenge images are public on GitHub, so pull them before you travel rather than depending on con Wi-Fi. The setup page has the full walkthrough.",
+      "Clone [btv-k8s-sandbox-infrastructure](https://github.com/blueteamvillage/btv-k8s-sandbox-infrastructure) **before** you arrive and follow the install path for your OS — `make tools && make up` on macOS, `windows\\start.cmd` on Windows, or the documented minikube/helmfile commands on Linux. The tooling installs itself; you end up with the same `dc34` sandbox cluster everywhere. The challenge images don't unlock until the village opens on Friday, August 7, so you can't pre-pull those — which is exactly why the cluster itself should be built and tested before you travel. The setup page has the full walkthrough.",
     order: 4,
+  },
+  {
+    question: "When do the challenge images go live?",
+    answer:
+      "When the village opens on Friday, August 7, 2026. Until then the packages are private, so the [packages page](https://github.com/orgs/blueteamvillage/packages) will look empty and `docker pull` will fail with a permissions error — that's expected, not a problem with your setup. Once they flip public they stay public for the rest of the con, and there are no credentials at any point. Build and test the sandbox at home so day one is just pulling images.",
+    order: 5,
   },
   {
     question: "Where do I submit flags?",
     answer:
       "On MetaCTF — this is our first year on the platform (we used CTFd previously). The link is on the home page; registration details land closer to the event.",
-    order: 5,
+    order: 6,
   },
   {
     question: "Can I play solo or do I need a team?",
     answer:
       "Both work. Team size limits and scoring details are on the rules page.",
-    order: 6,
+    order: 7,
   },
   {
     question: "Where was last year's site?",
     answer:
       "The DEF CON 33 site is preserved in the [archive](/archive/dc33) exactly as it shipped.",
-    order: 7,
+    order: 8,
   },
 ]

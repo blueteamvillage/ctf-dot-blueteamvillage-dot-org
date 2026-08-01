@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { AlertTriangle, Download, Github } from "lucide-react"
+import { AlertTriangle, CalendarClock, Github } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Markdown } from "@/components/dc34/markdown"
@@ -13,7 +13,7 @@ import { getSetupSections, getSiteSettings } from "@/lib/contentful/queries"
 export const metadata: Metadata = {
   title: "Setup | BTV CTF @ DEF CON 34",
   description:
-    "Step-by-step environment setup: build the local Kubernetes sandbox before the con. Challenge images are public on GitHub — pull them before you travel.",
+    "Step-by-step environment setup: build the local Kubernetes sandbox before the con. Challenge images unlock when the village opens on Friday, August 7, 2026.",
 }
 
 export default async function SetupPage() {
@@ -56,16 +56,18 @@ export default async function SetupPage() {
         className="mt-8 flex gap-3 rounded-lg border border-gold/40 bg-gold/[0.08] p-4"
         role="note"
       >
-        <Download className="h-5 w-5 shrink-0 text-gold" aria-hidden />
+        <CalendarClock className="h-5 w-5 shrink-0 text-gold" aria-hidden />
         <p className="text-sm leading-relaxed text-fog">
           <strong className="text-gold">
-            Pull the challenge images before you travel.
+            Build the sandbox before you travel — the images unlock on day one.
           </strong>{" "}
           {/* JSX trims the space before a line break, so it has to be explicit. */}
           The container packages at <code>ghcr.io/blueteamvillage</code>{" "}
-          are public — no login, no credentials to collect at the village. Pre-pull
-          them at home and side-load them into your cluster; DEF CON Wi-Fi
-          isn&apos;t something you want between you and a challenge.
+          stay private until the village opens on Friday, August 7, then flip
+          public for the rest of the con — no login, no credentials to collect
+          at any point. That means you can&apos;t pre-pull them at home, so get
+          the cluster built and tested now; on day one the images are the only
+          thing left to fetch.
         </p>
       </div>
 
