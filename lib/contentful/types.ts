@@ -33,7 +33,10 @@ export interface ChallengeTrack {
 
 export interface Scenario {
   title: string
-  oneLiner: string
+  /** What was observed — the briefing a responder walks in with. */
+  situation: string
+  /** What the investigation has to establish. */
+  objective: string
   order: number
 }
 

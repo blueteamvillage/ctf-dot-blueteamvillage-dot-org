@@ -70,13 +70,19 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  // The real BTV mark. favicon.svg is btv_logo.svg with the artboard padding
+  // cropped out of the viewBox — uncropped, the logo covers about half the
+  // canvas and renders as a smudge in a browser tab. app/favicon.ico carries
+  // the 16/32/48/256 raster fallback and is picked up by Next's file
+  // convention. The Apple icon is pre-composited on navy because iOS drops
+  // transparency and would otherwise flatten it onto white.
   icons: {
     icon: [
-      { url: '/favicon-detailed.svg', type: 'image/svg+xml' },
       { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-256.png', type: 'image/png', sizes: '256x256' },
     ],
-    shortcut: '/favicon-detailed.svg',
-    apple: '/favicon-detailed.svg',
+    shortcut: '/favicon.svg',
+    apple: '/apple-touch-icon.png',
   },
 };
 
