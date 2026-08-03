@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
+import { AiAssistCallout } from "@/components/dc34/ai-assist-callout"
 import { Markdown } from "@/components/dc34/markdown"
 import { SandboxRepoCallout } from "@/components/dc34/sandbox-repo-callout"
 import { TrackCard } from "@/components/dc34/track-card"
@@ -30,6 +31,7 @@ export default async function ChallengesPage() {
       </p>
 
       <SandboxRepoCallout className="mt-8 max-w-2xl" />
+      <AiAssistCallout className="mt-6 max-w-2xl" />
 
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {tracks.map((track) => (

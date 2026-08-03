@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { AlertTriangle, CalendarClock, Github } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import { AiAssistCallout } from "@/components/dc34/ai-assist-callout"
 import { Markdown } from "@/components/dc34/markdown"
 import {
   SANDBOX_REPO_URL,
@@ -104,6 +105,10 @@ export default async function SetupPage() {
           </li>
         ))}
       </ol>
+
+      {/* Optional tooling, so it sits after the required steps rather than
+          pushing step 01 further down the page. */}
+      <AiAssistCallout className="mt-12" />
     </div>
   )
 }
