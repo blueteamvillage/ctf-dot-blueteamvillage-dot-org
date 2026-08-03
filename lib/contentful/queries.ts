@@ -184,7 +184,8 @@ export function getScenarios(): Promise<Scenario[]> {
       return byOrder(
         items.map((fields, i) => ({
           title: str(fields, "title", ""),
-          oneLiner: str(fields, "oneLiner", ""),
+          situation: str(fields, "situation", ""),
+          objective: str(fields, "objective", ""),
           order: num(fields, "order", i + 1),
         }))
       )

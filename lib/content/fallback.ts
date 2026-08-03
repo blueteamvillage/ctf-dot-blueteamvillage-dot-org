@@ -84,65 +84,91 @@ export const fallbackTracks: ChallengeTrack[] = [
   },
 ]
 
+/*
+ * Scenario briefings are deliberately neutral: they describe what was observed
+ * and what has to be established, without naming the cause. The earlier
+ * one-line summaries gave the answer away ("a valid signature does not prove a
+ * trustworthy release path"), which is the finding, not the brief.
+ */
 export const fallbackScenarios: Scenario[] = [
   {
     title: "S01 · Cloud-to-OT Control Plane Compromise",
-    oneLiner:
-      "How cloud control-plane abuse produced a downstream OT effect without any direct intrusion into the OT network.",
+    situation:
+      "An OT gateway began issuing unexpected control traffic shortly after a new cloud-managed deployment was pushed to the site. Initial review suggests the activity originated through the cloud control plane rather than from a workstation inside the plant network.",
+    objective:
+      "Correlate identity, deployment, IoT registry, gateway, and packet-capture evidence to determine how the change reached the controller and what action occurred.",
     order: 1,
   },
   {
     title: "S02 · The Silent Historian",
-    oneLiner:
-      "Reconcile telemetry gaps against gateway and process-state evidence when the system of record itself can't be trusted.",
+    situation:
+      "External monitoring detected a pressure anomaly, but the historian — the primary operational system of record — shows normal values throughout the same period. A remote management session and subsequent host activity occurred near the affected window.",
+    objective:
+      "Determine whether the physical process changed, whether the historian data remained trustworthy, and how remote access may have been used to alter or conceal the event.",
     order: 2,
   },
   {
     title: "S03 · The Poisoned Pipeline",
-    oneLiner:
-      "A CI/CD and signed-artifact investigation: a valid signature does not prove a trustworthy release path.",
+    situation:
+      "An edge-system update passed through the organization's normal CI/CD workflow and was deployed using trusted infrastructure. Soon afterward, downstream telemetry began behaving unexpectedly.",
+    objective:
+      "Trace the build, signing, artifact-integrity, deployment, and telemetry records to determine whether the delivered package matched what the pipeline was expected to produce, and where the chain of trust failed.",
     order: 3,
   },
   {
     title: "S04 · The Exposed Controller",
-    oneLiner:
-      "Separate an authentication failure from an asset-inventory failure on an externally exposed controller.",
+    situation:
+      "An externally reachable industrial-management interface recorded a successful authentication followed by configuration activity and an operator alert. There is no obvious evidence of a prolonged password attack.",
+    objective:
+      "Determine how the interface was accessed, whether the authentication was legitimate, what controller parameters changed, and what observable effect followed inside the operational environment.",
     order: 4,
   },
   {
     title: "S05 · The Frosted Loop",
-    oneLiner:
-      "A process-control disruption correlated across gateway, register, sensor, firewall, dashboard, and maintenance evidence.",
+    situation:
+      "A refrigeration-control loop began drifting outside its normal temperature and pressure range even though the network traffic appeared valid for the industrial protocol in use. No obvious malformed command or conventional exploit is present.",
+    objective:
+      "Correlate controller events, sensor readings, authorization context, and process timelines to determine how valid-looking activity produced an unauthorized operational change.",
     order: 5,
   },
   {
     title: "S06 · The Ghost VPN",
-    oneLiner:
-      "Appliance-mediated compromise: separate legitimate remote access from persistence and misuse.",
+    situation:
+      "A remote-access appliance recorded a successful privileged VPN session followed by internal discovery, engineering-document access, and activity near OT-adjacent systems. The session used valid credentials, and the initial access does not resemble a conventional software exploit.",
+    objective:
+      "Establish how the account was used, what operational knowledge was exposed, and how the activity progressed beyond the remote-access boundary.",
     order: 6,
   },
   {
     title: "S07 · The Living Tenant",
-    oneLiner:
-      "Windows-native living-off-the-land activity across identity, VPN, RDP/WinRM/SMB, scheduled tasks, shares, and backups.",
+    situation:
+      "A valid administrative account connected during an unusual time window and began accessing systems through normal remote-management and file-sharing protocols. The traffic resembles legitimate administrative work, but the account behavior, accessed resources, and persistence indicators do not match the expected user profile.",
+    objective:
+      "Distinguish routine administration from adversary activity conducted through trusted credentials and familiar tools.",
     order: 7,
   },
   {
     title: "S08 · The Carrier Shadow",
-    oneLiner:
-      "A telecom-layer compromise that degrades OT visibility and SCADA polling continuity.",
+    situation:
+      "A remote field site experienced a temporary loss of SCADA visibility after activity involving its cellular carrier connection. During the gap, the historian continued to display apparently normal values.",
+    objective:
+      "Correlate carrier, gateway, SCADA polling, historian, and timing evidence to determine whether the continuity was genuine, inferred, or deliberately used to conceal activity during the loss of visibility.",
     order: 8,
   },
   {
     title: "S09 · The Vendor Tunnel",
-    oneLiner:
-      "Vendor-mediated access with downstream customer impact — scope the incident across both environments.",
+    situation:
+      "A trusted vendor's remote-management platform was used to access customer endpoints outside the expected support pattern. Suspicious endpoint activity and staging behavior followed, but the connection arrived through an approved administrative channel.",
+    objective:
+      "Determine how the vendor relationship was abused, which endpoint actions were performed, and how trusted RMM access altered the normal authentication and detection path.",
     order: 9,
   },
   {
     title: "S10 · The Hypervisor Blackout",
-    oneLiner:
-      "A virtualization control-plane disruption where guest-OS encryption is a symptom, not the scope.",
+    situation:
+      "Multiple virtual machines across more than one host went offline during a coordinated infrastructure event. Backup and snapshot activity occurred near the outage, followed by guest-system encryption indicators and widespread service disruption.",
+    objective:
+      "Reconstruct the sequence across the virtualization, storage, backup, and guest layers to determine why the impact occurred simultaneously and whether recovery options were deliberately removed.",
     order: 10,
   },
 ]

@@ -47,7 +47,10 @@ export default async function ConvergedFrontierPage() {
         <PillBadge>Offline · runs in local Kubernetes</PillBadge>
       </div>
 
-      <div className="mt-10">
+      {/* Gives the h3 scenario headings a parent, so the outline no longer
+          jumps h1 -> h3. */}
+      <h2 className="mt-12 text-2xl font-black text-white">The ten scenarios</h2>
+      <div className="mt-6">
         <ScenarioList scenarios={scenarios} />
       </div>
 
