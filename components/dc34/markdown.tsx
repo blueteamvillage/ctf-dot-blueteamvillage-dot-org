@@ -72,6 +72,17 @@ export function Markdown({ children }: { children: string }) {
         ),
         h2: (props) => <h2 className="mt-6 text-xl font-bold text-white" {...omitNode(props)} />,
         h3: (props) => <h3 className="mt-6 text-lg font-bold text-white" {...omitNode(props)} />,
+        img: ({ alt, ...props }) => (
+          // Contentful bodies reference static screenshots of unknown
+          // dimensions, so next/image (which requires them) isn't an option.
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            alt={alt ?? ""}
+            loading="lazy"
+            className="mt-4 w-full rounded-lg border border-white/[0.06]"
+            {...omitNode(props)}
+          />
+        ),
       }}
     >
       {children}
