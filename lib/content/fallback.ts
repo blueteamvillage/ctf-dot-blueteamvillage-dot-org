@@ -60,9 +60,13 @@ export const fallbackTracks: ChallengeTrack[] = [
     title: "Cloud Attack Forensics",
     slug: "cloud-attack-forensics",
     summary:
-      "Reconstruct what happened during real attack vectors against cloud infrastructure.",
+      "Reconstruct a ten-technique AWS intrusion from a single native CloudTrail corpus. Contributed by the DEF CON Cloud Village.",
     body: [
-      "A second set of challenges focuses on attack vectors against cloud infrastructure. Piece together control-plane events, identity activity, and service telemetry to determine how an attacker moved — and prove it with evidence.",
+      "**Contributed by the [DEF CON Cloud Village](https://www.cloud-village.org/dc34)** — the track opens with a challenge built through our collaboration with Cloud Village.",
+      "",
+      "**GroundLink Intrusion: Ten Techniques** (case ID `IR-GL10`) is a pure AWS log-forensics investigation. The evidence is one sanitized, native CloudTrail corpus — 211 records in a single gzipped file. Ten of them belong to the threat actor `H3XN0V4`'s three sessions and form the incident chain; the other 201 are routine activity and decoys. No malware, nothing detonates — you read logs with `jq`. Ten auto-scored flags, 2,000 points total, ramping from Beginner to Advanced.",
+      "",
+      "The catch: every record in the corpus succeeded, so there's nothing to filter on by outcome. All 211 records share one source IP, so IP is not a pivot. The whole incident spans about two minutes, so chronology alone won't separate signal from noise. And the interesting API calls each have successful look-alikes made by other principals. What's left is identity chaining and request-parameter correlation.",
     ].join("\n"),
     skillTiers: ["Beginner", "Intermediate", "Expert"],
     icon: "cloud",
@@ -441,5 +445,11 @@ export const fallbackFaqItems: FaqItem[] = [
     answer:
       "The DEF CON 33 site is preserved in the [archive](/archive/dc33) exactly as it shipped.",
     order: 8,
+  },
+  {
+    question: "Do the cloud challenges need an AWS account or cloud access?",
+    answer:
+      "No. **GroundLink Intrusion** — contributed by the [DEF CON Cloud Village](https://www.cloud-village.org/dc34) — ships its sanitized CloudTrail evidence inside the challenge image, read-only at `/forensics`. The whole investigation is offline `jq` work in your local sandbox; no AWS account, credentials, or internet required.",
+    order: 9,
   },
 ]

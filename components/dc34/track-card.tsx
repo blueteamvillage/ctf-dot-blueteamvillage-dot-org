@@ -17,9 +17,11 @@ const tones = { container: "teal", cloud: "mint", campaign: "gold" } as const
 export function TrackCard({
   track,
   href,
+  linkLabel = "View scenarios",
 }: {
   track: ChallengeTrack
   href?: string
+  linkLabel?: string
 }) {
   return (
     <Card className="gap-4">
@@ -43,7 +45,7 @@ export function TrackCard({
             href={href}
             className="inline-flex items-center gap-1.5 text-sm font-bold text-teal-bright transition-colors hover:text-mint"
           >
-            View scenarios
+            {linkLabel}
             <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
         )}
