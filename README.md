@@ -55,6 +55,12 @@ How it flows:
      deploy-hook URL → trigger on **Entry publish / unpublish** events only.
    After that, editors publish in Contentful and Vercel rebuilds the site.
 
+The announcement banner at the top of every DC34 page is controlled by the
+`siteSettings` entry (`announcementEnabled` + text/URL). `ANNOUNCEMENT_BANNER=on|off`
+overrides that toggle at build time — useful for hiding the banner on a preview
+or killing it without a content publish; unset defers to Contentful. Like all
+content, a change only lands on the next build.
+
 Credentials: env vars only (see `.env.example`), set in Vercel project
 settings. Never commit tokens.
 
