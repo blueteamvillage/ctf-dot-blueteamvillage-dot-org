@@ -19,6 +19,7 @@ const ROUTES: Entry[] = [
   { path: "/setup", priority: 0.9, changeFrequency: "weekly" },
   { path: "/challenges", priority: 0.9, changeFrequency: "weekly" },
   { path: "/challenges/converged-frontier", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/challenges/groundlink-intrusion", priority: 0.8, changeFrequency: "weekly" },
   { path: "/faq", priority: 0.7, changeFrequency: "weekly" },
   { path: "/rules", priority: 0.7, changeFrequency: "monthly" },
   { path: "/about", priority: 0.6, changeFrequency: "monthly" },

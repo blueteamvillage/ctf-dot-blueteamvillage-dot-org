@@ -13,6 +13,7 @@ import {
   getSponsors,
   getTracks,
 } from "@/lib/contentful/queries"
+import { TRACK_LINKS } from "@/lib/track-links"
 
 export default async function HomePage() {
   const [event, settings, tracks, sponsors] = await Promise.all([
@@ -51,7 +52,8 @@ export default async function HomePage() {
             <TrackCard
               key={track.slug}
               track={track}
-              href={track.slug === "converged-frontier" ? "/challenges/converged-frontier" : undefined}
+              href={TRACK_LINKS[track.slug]?.href}
+              linkLabel={TRACK_LINKS[track.slug]?.cardLabel}
             />
           ))}
         </div>

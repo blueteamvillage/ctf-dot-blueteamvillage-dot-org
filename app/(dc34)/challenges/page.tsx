@@ -7,6 +7,7 @@ import { Markdown } from "@/components/dc34/markdown"
 import { SandboxRepoCallout } from "@/components/dc34/sandbox-repo-callout"
 import { TrackCard } from "@/components/dc34/track-card"
 import { getTracks } from "@/lib/contentful/queries"
+import { TRACK_LINKS } from "@/lib/track-links"
 
 export const metadata: Metadata = {
   title: "Challenges | BTV CTF @ DEF CON 34",
@@ -38,7 +39,8 @@ export default async function ChallengesPage() {
           <TrackCard
             key={track.slug}
             track={track}
-            href={track.slug === "converged-frontier" ? "/challenges/converged-frontier" : undefined}
+            href={TRACK_LINKS[track.slug]?.href}
+            linkLabel={TRACK_LINKS[track.slug]?.cardLabel}
           />
         ))}
       </div>
@@ -50,12 +52,12 @@ export default async function ChallengesPage() {
             <div className="mt-4">
               <Markdown>{track.body}</Markdown>
             </div>
-            {track.slug === "converged-frontier" && (
+            {TRACK_LINKS[track.slug] && (
               <Link
-                href="/challenges/converged-frontier"
+                href={TRACK_LINKS[track.slug].href}
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-teal-bright transition-colors hover:text-mint"
               >
-                Browse the ten scenarios
+                {TRACK_LINKS[track.slug].bodyLabel}
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
             )}
