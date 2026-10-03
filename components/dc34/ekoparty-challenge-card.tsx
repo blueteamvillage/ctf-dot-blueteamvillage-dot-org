@@ -40,10 +40,16 @@ export function EkopartyChallengeCard({
   const description =
     lang === "es" ? challenge.descriptionEs : challenge.descriptionEn
 
-  // A challenge is only launchable once it is marked available AND has a URL.
-  // Both conditions, so a half-finished Contentful edit can't open a door.
+  /*
+   * A challenge is only launchable when it is marked available AND carries an
+   * https URL. All three conditions, so a half-finished Contentful edit can't
+   * open a door — and the scheme check matters because React does not
+   * sanitize href, so an unvalidated CMS string would let a "javascript:" URL
+   * run in the page origin when a participant clicks Launch.
+   */
   const launchable =
-    challenge.availability === "available" && challenge.skillbitUrl !== ""
+    challenge.availability === "available" &&
+    challenge.skillbitUrl.startsWith("https://")
 
   return (
     <article className="flex flex-col rounded-lg border border-white/[0.06] bg-navy-card p-5 transition-colors hover:border-teal/30">
