@@ -1,7 +1,8 @@
-import { Trophy, Users, Award } from "lucide-react"
+import { Trophy, Users, Award, Hourglass, ArrowRight } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { DefconWinnersCard } from "@/components/defcon-winners-card"
+import Link from "next/link"
 
 export default function PastWinnersPage() {
   return (
@@ -70,6 +71,47 @@ export default function PastWinnersPage() {
       {/* Winners Grid */}
       <div className="max-w-6xl mx-auto px-4 pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* DEF CON 34 — results pending. Deliberately not a
+              DefconWinnersCard: that component needs three named teams, and
+              inventing placeholder podium entries would read as real. */}
+          <Card className="bg-navy-card border-white/10 border-dashed">
+            <CardHeader>
+              <div className="flex items-center justify-between">
+                <CardTitle className="text-2xl font-bold text-teal-bright">
+                  DEF CON 34
+                </CardTitle>
+                <Badge className="bg-gold/20 text-gold border-gold/30">
+                  <Hourglass className="w-3 h-3 mr-1" />
+                  2026
+                </Badge>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-mist">
+                The competition has wrapped. Final standings and participation
+                numbers are being verified and will be published here.
+              </p>
+              <div className="grid grid-cols-3 gap-3">
+                {["1st", "2nd", "3rd"].map((slot) => (
+                  <div
+                    key={slot}
+                    className="rounded-lg border border-dashed border-white/10 bg-white/[0.02] p-4 text-center"
+                  >
+                    <div className="text-xs text-haze">{slot}</div>
+                    <div className="mt-1 text-2xl font-bold text-haze">—</div>
+                  </div>
+                ))}
+              </div>
+              <Link
+                href="/past-winners/defcon-34"
+                className="inline-flex items-center text-teal-bright transition-colors hover:text-mint"
+              >
+                View Full Results
+                <ArrowRight className="w-4 h-4 ml-1" aria-hidden />
+              </Link>
+            </CardContent>
+          </Card>
+
           {/* DEF CON 33 */}
           <DefconWinnersCard
             year={2025}

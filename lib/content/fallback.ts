@@ -1,5 +1,6 @@
 import type {
   ChallengeTrack,
+  EkopartyChallenge,
   EventInfo,
   FaqItem,
   Scenario,
@@ -21,8 +22,8 @@ import type {
 export const fallbackSiteSettings: SiteSettings = {
   announcementEnabled: true,
   announcementText:
-    "Challenge images unlock when the village opens on Friday, August 7 — build your sandbox before you travel so the images are all that's left to pull.",
-  announcementUrl: "/setup",
+    "DEF CON 34 has wrapped. Next up: BTV CTF @ EkoParty 2026 at BlueSpace, Buenos Aires — October 7–9.",
+  announcementUrl: "/challenges/ekoparty-2026-bluespace",
   ctfPlatformName: "MetaCTF",
   ctfPlatformUrl: "https://mctf.io/btv",
   discordUrl: "https://discord.gg/blueteamvillage",
@@ -33,7 +34,8 @@ export const fallbackEventInfo: EventInfo = {
   dates: "August 7–9, 2026",
   startsAt: "2026-08-07T10:00:00-07:00",
   venue: "Las Vegas Convention Center · Las Vegas, NV",
-  status: "upcoming",
+  // DEF CON 34 is over. This drives the post-event state in the Hero.
+  status: "closed",
   badgeRequired: true,
   tagline:
     "Central hub for the forensic analysis of malware in containerized environments.",
@@ -451,5 +453,281 @@ export const fallbackFaqItems: FaqItem[] = [
     answer:
       "No. **GroundLink Intrusion** — contributed by the [DEF CON Cloud Village](https://www.cloud-village.org/dc34) — ships its sanitized CloudTrail evidence inside the challenge image, read-only at `/forensics`. The whole investigation is offline `jq` work in your local sandbox; no AWS account, credentials, or internet required.",
     order: 9,
+  },
+]
+
+/*
+ * EkoParty 2026 — the 16 DEF CON-derived challenges (2,700 points total:
+ * 2,100 across malware forensics, 600 across the INC-030 capstone).
+ *
+ * Descriptions are player-facing briefs only: they say what to investigate,
+ * never what the answer is. Every entry ships as "coming-soon" with an empty
+ * skillbitUrl — a challenge is listed before it is launchable, and the button
+ * stays disabled until its evidence, grader, flag and SkillBit import pass
+ * validation. Flipping one live is a Contentful edit plus a redeploy.
+ *
+ * OSINT/GEOSINT is a separate track and is deliberately NOT in this list: its
+ * scoring and submission model isn't confirmed, so it stays out of both the
+ * 16-challenge count and the 2,700-point total.
+ */
+export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
+  {
+    challengeId: 409,
+    scenario: "INC-000",
+    title: "Ghost in the shm",
+    track: "malware-forensics",
+    difficulty: "Beginner",
+    points: 100,
+    descriptionEn:
+      "Something is running on this host that left almost nothing on disk. Walk the running processes and their backing files to work out what is executing and where it lives.",
+    descriptionEs:
+      "Algo se está ejecutando en este host y casi no dejó rastro en disco. Recorré los procesos en ejecución y sus archivos de respaldo para determinar qué se está ejecutando y dónde reside.",
+    environment: "Docker",
+    availability: "coming-soon",
+    skillbitUrl: "",
+    order: 1,
+  },
+  {
+    challengeId: 414,
+    scenario: "INC-000",
+    title: "ID me baby, yeah!",
+    track: "malware-forensics",
+    difficulty: "Advanced",
+    points: 500,
+    descriptionEn:
+      "Attribute the activity on this host. Correlate process ancestry, ownership and on-disk artifacts until you can name the thing responsible with confidence.",
+    descriptionEs:
+      "Atribuí la actividad en este host. Correlacioná la ascendencia de procesos, la propiedad de archivos y los artefactos en disco hasta poder identificar con confianza al responsable.",
+    environment: "Docker",
+    availability: "coming-soon",
+    skillbitUrl: "",
+    order: 2,
+  },
+  {
+    challengeId: 420,
+    scenario: "INC-002",
+    title: "Name that botnet",
+    track: "malware-forensics",
+    difficulty: "Advanced",
+    points: 100,
+    descriptionEn:
+      "The sample on this host belongs to a known family. Examine its indicators and behaviour, then match them against publicly documented malware families to identify it.",
+    descriptionEs:
+      "La muestra en este host pertenece a una familia conocida. Examiná sus indicadores y su comportamiento, y compará con familias de malware documentadas públicamente para identificarla.",
+    environment: "Docker",
+    availability: "coming-soon",
+    skillbitUrl: "",
+    order: 3,
+  },
+  {
+    challengeId: 633,
+    scenario: "INC-003",
+    title: "Preload path planted",
+    track: "malware-forensics",
+    difficulty: "Intermediate",
+    points: 100,
+    descriptionEn:
+      "A library is being loaded into processes that never asked for it. Trace the loader configuration on this host to find how that was arranged.",
+    descriptionEs:
+      "Se está cargando una biblioteca en procesos que nunca la solicitaron. Rastreá la configuración del cargador dinámico en este host para descubrir cómo se logró.",
+    environment: "Docker",
+    availability: "coming-soon",
+    skillbitUrl: "",
+    order: 4,
+  },
+  {
+    challengeId: 421,
+    scenario: "INC-010",
+    title: "ASEP with a fake name",
+    track: "malware-forensics",
+    difficulty: "Beginner",
+    points: 100,
+    descriptionEn:
+      "One of this host's auto-start entries is impersonating something legitimate. Review the persistence mechanisms and pick out the one that does not belong.",
+    descriptionEs:
+      "Una de las entradas de autoarranque de este host se hace pasar por algo legítimo. Revisá los mecanismos de persistencia e identificá el que no corresponde.",
+    environment: "Docker",
+    availability: "coming-soon",
+    skillbitUrl: "",
+    order: 5,
+  },
+  {
+    challengeId: 422,
+    scenario: "INC-010",
+    title: "Where does init point?",
+    track: "malware-forensics",
+    difficulty: "Beginner",
+    points: 100,
+    descriptionEn:
+      "Follow the boot and service configuration on this host and establish what actually gets executed at start-up.",
+    descriptionEs:
+      "Seguí la configuración de arranque y de servicios de este host y establecé qué se ejecuta realmente al iniciar.",
+    environment: "Docker",
+    availability: "coming-soon",
+    skillbitUrl: "",
+    order: 6,
+  },
+  {
+    challengeId: 428,
+    scenario: "INC-019",
+    title: ".env of your nightmares",
+    track: "malware-forensics",
+    difficulty: "Beginner",
+    points: 100,
+    descriptionEn:
+      "Application configuration on this host was left somewhere it should not have been. Audit the configuration files and determine what was exposed.",
+    descriptionEs:
+      "La configuración de una aplicación quedó en un lugar donde no debería estar. Auditá los archivos de configuración de este host y determiná qué quedó expuesto.",
+    environment: "Docker",
+    availability: "coming-soon",
+    skillbitUrl: "",
+    order: 7,
+  },
+  {
+    challengeId: 427,
+    scenario: "INC-019",
+    title: "Script that started it",
+    track: "malware-forensics",
+    difficulty: "Beginner",
+    points: 100,
+    descriptionEn:
+      "Work backwards from the activity on this host to the script that kicked it off, and establish how it was invoked.",
+    descriptionEs:
+      "Trabajá hacia atrás desde la actividad observada en este host hasta el script que la inició, y establecé cómo fue invocado.",
+    environment: "Docker",
+    availability: "coming-soon",
+    skillbitUrl: "",
+    order: 8,
+  },
+  {
+    challengeId: 665,
+    scenario: "INC-020",
+    title: "Azazel control plane",
+    track: "malware-forensics",
+    difficulty: "Advanced",
+    points: 400,
+    descriptionEn:
+      "This host is running a userland rootkit. Work out how the operator reaches it and what the control path looks like from the outside.",
+    descriptionEs:
+      "Este host ejecuta un rootkit de espacio de usuario. Determiná cómo lo alcanza el operador y cómo se ve la ruta de control desde el exterior.",
+    environment: "Docker",
+    availability: "coming-soon",
+    skillbitUrl: "",
+    order: 9,
+  },
+  {
+    challengeId: 658,
+    scenario: "INC-022",
+    title: "Beacon that never lands",
+    track: "malware-forensics",
+    difficulty: "Advanced",
+    points: 500,
+    descriptionEn:
+      "An implant on this host keeps calling out and never gets an answer. Reconstruct its beaconing configuration from the artifacts it left behind.",
+    descriptionEs:
+      "Un implante en este host sigue intentando comunicarse y nunca recibe respuesta. Reconstruí su configuración de beaconing a partir de los artefactos que dejó.",
+    environment: "Docker",
+    availability: "coming-soon",
+    skillbitUrl: "",
+    order: 10,
+  },
+
+  /* INC-030 capstone — Northbridge Logistics. Difficulty is still unassigned
+   * for all six; they surface as "TBA" until the spreadsheet is finalised. */
+  {
+    challengeId: 717,
+    scenario: "INC-030",
+    title: "F-01 · Baseline Drift: Quiet Beacon",
+    track: "incident-response",
+    difficulty: "TBA",
+    points: 100,
+    descriptionEn:
+      "Compare current activity against the environment's baseline and isolate the low-and-slow outbound traffic hiding inside normal network noise.",
+    descriptionEs:
+      "Compará la actividad actual con la línea base del entorno y aislá el tráfico saliente lento y discreto que se esconde dentro del ruido normal de la red.",
+    environment: "Docker",
+    availability: "coming-soon",
+    skillbitUrl: "",
+    order: 11,
+  },
+  {
+    challengeId: 719,
+    scenario: "INC-030",
+    title: "F-03 · Initial Access: Compromised User",
+    track: "incident-response",
+    difficulty: "TBA",
+    points: 100,
+    descriptionEn:
+      "Correlate identity and authentication evidence to establish which account the intruder took control of.",
+    descriptionEs:
+      "Correlacioná la evidencia de identidad y autenticación para establecer de qué cuenta tomó control el intruso.",
+    environment: "Docker",
+    availability: "coming-soon",
+    skillbitUrl: "",
+    order: 12,
+  },
+  {
+    challengeId: 720,
+    scenario: "INC-030",
+    title: "F-04 · Initial Access: First Success",
+    track: "incident-response",
+    difficulty: "TBA",
+    points: 100,
+    descriptionEn:
+      "Pin down the moment the attacker first got in. Separate the successful attempt from the noise around it and fix it on the timeline.",
+    descriptionEs:
+      "Determiná el momento exacto en que el atacante ingresó por primera vez. Separá el intento exitoso del ruido que lo rodea y ubicalo en la línea de tiempo.",
+    environment: "Docker",
+    availability: "coming-soon",
+    skillbitUrl: "",
+    order: 13,
+  },
+  {
+    challengeId: 721,
+    scenario: "INC-030",
+    title: "F-05 · Initial Access: Entry Vector",
+    track: "incident-response",
+    difficulty: "TBA",
+    points: 100,
+    descriptionEn:
+      "Establish how the intruder reached the environment in the first place — which exposed service or path carried them in.",
+    descriptionEs:
+      "Establecé cómo llegó el intruso al entorno en primer lugar: qué servicio expuesto o qué ruta le permitió entrar.",
+    environment: "Docker",
+    availability: "coming-soon",
+    skillbitUrl: "",
+    order: 14,
+  },
+  {
+    challengeId: 722,
+    scenario: "INC-030",
+    title: "F-06 · Foothold: Stager Hash",
+    track: "incident-response",
+    difficulty: "TBA",
+    points: 100,
+    descriptionEn:
+      "Recover the first-stage payload dropped on the compromised host and produce the identifier that uniquely fingerprints it.",
+    descriptionEs:
+      "Recuperá la carga útil de primera etapa depositada en el host comprometido y obtené el identificador que la caracteriza de forma única.",
+    environment: "Docker",
+    availability: "coming-soon",
+    skillbitUrl: "",
+    order: 15,
+  },
+  {
+    challengeId: 782,
+    scenario: "INC-030",
+    title: "F-13 · Movement: Lateral Method",
+    track: "incident-response",
+    difficulty: "TBA",
+    points: 100,
+    descriptionEn:
+      "Follow the intruder off the first host and determine the technique they used to reach the next one.",
+    descriptionEs:
+      "Seguí al intruso más allá del primer host y determiná la técnica que usó para alcanzar el siguiente.",
+    environment: "Docker",
+    availability: "coming-soon",
+    skillbitUrl: "",
+    order: 16,
   },
 ]
