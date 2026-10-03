@@ -6,6 +6,7 @@ import type { SiteSettings } from "@/lib/contentful/types"
 
 const siteLinks = [
   { href: "/challenges", label: "Challenges" },
+  { href: "/challenges/ekoparty-2026-bluespace", label: "EkoParty 2026" },
   { href: "/setup", label: "Setup" },
   { href: "/rules", label: "Rules" },
   { href: "/faq", label: "FAQ" },

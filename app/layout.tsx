@@ -15,15 +15,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BTV CTF @ DEF CON 34 | Blue Team Village",
+  title: "Blue Team Village CTF",
   description:
-    "Central hub for the forensic analysis of malware in containerized environments — Blue Team Village's Project Obsidian CTF at DEF CON 34, August 7–9, 2026, Las Vegas.",
+    "Blue Team Village's capture-the-flag competitions — malware forensics, container and cloud investigation, and incident response. Next up: BTV CTF @ EkoParty 2026, BlueSpace Buenos Aires, October 7–9.",
   metadataBase: new URL("https://ctf.blueteamvillage.org"),
   applicationName: "Blue Team Village CTF",
   keywords: [
     "Blue Team Village",
     "BTV CTF",
     "DEF CON 34",
+    "EkoParty 2026",
+    "BlueSpace",
     "Project Obsidian",
     "capture the flag",
     "malware forensics",
@@ -36,9 +38,9 @@ export const metadata: Metadata = {
   creator: "Blue Team Village",
   publisher: "Blue Team Village",
   openGraph: {
-    title: "BTV CTF @ DEF CON 34",
+    title: "Blue Team Village CTF",
     description:
-      "Pull down a container, work out what the malware did, and prove it — flag by flag. Project Obsidian at DEF CON 34.",
+      "Pull down a container, work out what the malware did, and prove it — flag by flag. Next: BTV CTF @ EkoParty 2026, Buenos Aires.",
     url: "https://ctf.blueteamvillage.org",
     siteName: "Blue Team Village CTF",
     locale: "en_US",
@@ -54,9 +56,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BTV CTF @ DEF CON 34",
+    title: "Blue Team Village CTF",
     description:
-      "Pull down a container, work out what the malware did, and prove it — flag by flag. Project Obsidian at DEF CON 34.",
+      "Pull down a container, work out what the malware did, and prove it — flag by flag. Next: BTV CTF @ EkoParty 2026, Buenos Aires.",
     images: ["/obsidian.png"],
   },
   robots: {

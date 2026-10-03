@@ -74,3 +74,47 @@ export interface FaqItem {
   answer: string
   order: number
 }
+
+/*
+ * EkoParty 2026 (BlueSpace Argentina). Deliberately separate from the DEF CON
+ * models: this event grades on Beginner/Intermediate/Advanced (not SkillTier's
+ * "Expert"), carries a "TBA" state for the capstone questions whose difficulty
+ * is still unassigned, and ships paired en/es copy.
+ *
+ * Content guardrail (unchanged, and it matters more here): player-facing
+ * framing only. No answers, accepted flag variants, grader JSON, QA state,
+ * repair/review assignments, priority labels, or container credentials.
+ */
+
+export type EkopartyTrack =
+  | "malware-forensics"
+  | "incident-response"
+  | "osint"
+
+export type EkopartyDifficulty =
+  | "Beginner"
+  | "Intermediate"
+  | "Advanced"
+  | "TBA"
+
+/** Public-facing availability. Internal spreadsheet labels never reach here. */
+export type Availability = "available" | "coming-soon" | "unavailable"
+
+export interface EkopartyChallenge {
+  /** Spreadsheet challenge ID, e.g. 409. */
+  challengeId: number
+  /** Scenario identifier, e.g. "INC-000". */
+  scenario: string
+  title: string
+  track: EkopartyTrack
+  difficulty: EkopartyDifficulty
+  points: number
+  descriptionEn: string
+  descriptionEs: string
+  /** Required environment, e.g. "Docker" or "Browser". */
+  environment: string
+  availability: Availability
+  /** Empty until the challenge passes validation and is imported. */
+  skillbitUrl: string
+  order: number
+}
