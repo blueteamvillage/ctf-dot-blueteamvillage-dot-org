@@ -198,7 +198,7 @@ const en = {
   skillbit: {
     eyebrow: "Scoring and submission",
     heading: "SkillBit Access",
-    body: "Registration, challenge launch, flag submission, scoring, and the leaderboard all run through SkillBit. You need an account before the competition opens.",
+    body: "Registration is open now. Challenge launch, flag submission, scoring, and the leaderboard all run through SkillBit. You need an account before the competition opens.",
     cta: "Open SkillBit",
   },
 
@@ -452,7 +452,7 @@ const es: EkopartyCopy = {
   skillbit: {
     eyebrow: "Puntaje y envíos",
     heading: "Acceso a SkillBit",
-    body: "La inscripción, el lanzamiento de desafíos, el envío de flags, el puntaje y la tabla de posiciones funcionan a través de SkillBit. Necesitás una cuenta antes de que abra la competencia.",
+    body: "La inscripción ya está abierta. El lanzamiento de desafíos, el envío de flags, el puntaje y la tabla de posiciones funcionan a través de SkillBit. Necesitás una cuenta antes de que abra la competencia.",
     cta: "Abrir SkillBit",
   },
 

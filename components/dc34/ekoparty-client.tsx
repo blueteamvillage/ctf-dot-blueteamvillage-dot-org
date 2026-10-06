@@ -39,12 +39,8 @@ import type { EkopartyChallenge } from "@/lib/contentful/types"
 const SKILLBIT_URL = "https://mctf.io/ekoparty26"
 const DISCORD_URL = "https://discord.gg/blueteamvillage"
 
-/*
- * The GEOSINT environment URL hasn't been published yet. Leaving it empty
- * renders the OSINT CTA disabled rather than shipping a dead link — fill it
- * in here when the environment is live.
- */
-const GEOSINT_URL = ""
+/* Leaving this empty renders the OSINT CTA disabled rather than a dead link. */
+const GEOSINT_URL = "https://geosint.blueteamvillage.org/"
 
 const FILTER_IDS: EkopartyFilter[] = [
   "all",

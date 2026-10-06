@@ -456,19 +456,20 @@ export const fallbackFaqItems: FaqItem[] = [
   },
 ]
 
+const GEOSINT_URL = "https://geosint.blueteamvillage.org/"
+
 /*
- * EkoParty 2026 — the 16 DEF CON-derived challenges (2,700 points total:
- * 2,100 across malware forensics, 600 across the INC-030 capstone).
+ * EkoParty 2026 — 24 challenges, 3,900 points total: the 16 DEF CON-derived
+ * challenges (2,100 across malware forensics, 600 across the INC-030
+ * capstone) plus 8 "Dropped Pin" OSINT/GEOSINT challenges at 150 points each.
  *
  * Descriptions are player-facing briefs only: they say what to investigate,
- * never what the answer is. Every entry ships as "coming-soon" with an empty
+ * never what the answer is. Every malware/capstone entry ships as "coming-soon" with an empty
  * skillbitUrl — a challenge is listed before it is launchable, and the button
  * stays disabled until its evidence, grader, flag and SkillBit import pass
  * validation. Flipping one live is a Contentful edit plus a redeploy.
  *
- * OSINT/GEOSINT is a separate track and is deliberately NOT in this list: its
- * scoring and submission model isn't confirmed, so it stays out of both the
- * 16-challenge count and the 2,700-point total.
+ * The OSINT entries launch the browser-based GEOSINT environment and are live.
  */
 export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
   {
@@ -729,5 +730,133 @@ export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
     availability: "coming-soon",
     skillbitUrl: "",
     order: 16,
+  },
+  {
+    challengeId: 801,
+    scenario: "OSINT",
+    title: "Dropped Pin 1",
+    track: "osint",
+    difficulty: "TBA",
+    points: 150,
+    descriptionEn:
+      "A pin has been dropped on a map. Use the panoramic imagery and environmental clues in the GEOSINT environment to work out where it is.",
+    descriptionEs:
+      "Se dejó un pin en un mapa. Usá las imágenes panorámicas y las pistas del entorno en el entorno GEOSINT para determinar dónde está.",
+    environment: "Browser",
+    availability: "available",
+    skillbitUrl: GEOSINT_URL,
+    order: 17,
+  },
+  {
+    challengeId: 802,
+    scenario: "OSINT",
+    title: "Dropped Pin 2",
+    track: "osint",
+    difficulty: "TBA",
+    points: 150,
+    descriptionEn:
+      "A pin has been dropped on a map. Use the panoramic imagery and environmental clues in the GEOSINT environment to work out where it is.",
+    descriptionEs:
+      "Se dejó un pin en un mapa. Usá las imágenes panorámicas y las pistas del entorno en el entorno GEOSINT para determinar dónde está.",
+    environment: "Browser",
+    availability: "available",
+    skillbitUrl: GEOSINT_URL,
+    order: 18,
+  },
+  {
+    challengeId: 803,
+    scenario: "OSINT",
+    title: "Dropped Pin 3",
+    track: "osint",
+    difficulty: "TBA",
+    points: 150,
+    descriptionEn:
+      "A pin has been dropped on a map. Use the panoramic imagery and environmental clues in the GEOSINT environment to work out where it is.",
+    descriptionEs:
+      "Se dejó un pin en un mapa. Usá las imágenes panorámicas y las pistas del entorno en el entorno GEOSINT para determinar dónde está.",
+    environment: "Browser",
+    availability: "available",
+    skillbitUrl: GEOSINT_URL,
+    order: 19,
+  },
+  {
+    challengeId: 804,
+    scenario: "OSINT",
+    title: "Dropped Pin 4",
+    track: "osint",
+    difficulty: "TBA",
+    points: 150,
+    descriptionEn:
+      "A pin has been dropped on a map. Use the panoramic imagery and environmental clues in the GEOSINT environment to work out where it is.",
+    descriptionEs:
+      "Se dejó un pin en un mapa. Usá las imágenes panorámicas y las pistas del entorno en el entorno GEOSINT para determinar dónde está.",
+    environment: "Browser",
+    availability: "available",
+    skillbitUrl: GEOSINT_URL,
+    order: 20,
+  },
+  {
+    challengeId: 805,
+    scenario: "OSINT",
+    title: "Dropped Pin 5",
+    track: "osint",
+    difficulty: "TBA",
+    points: 150,
+    descriptionEn:
+      "A pin has been dropped on a map. Use the panoramic imagery and environmental clues in the GEOSINT environment to work out where it is.",
+    descriptionEs:
+      "Se dejó un pin en un mapa. Usá las imágenes panorámicas y las pistas del entorno en el entorno GEOSINT para determinar dónde está.",
+    environment: "Browser",
+    availability: "available",
+    skillbitUrl: GEOSINT_URL,
+    order: 21,
+  },
+  {
+    challengeId: 806,
+    scenario: "OSINT",
+    title: "Dropped Pin 6",
+    track: "osint",
+    difficulty: "TBA",
+    points: 150,
+    descriptionEn:
+      "A pin has been dropped on a map. Use the panoramic imagery and environmental clues in the GEOSINT environment to work out where it is.",
+    descriptionEs:
+      "Se dejó un pin en un mapa. Usá las imágenes panorámicas y las pistas del entorno en el entorno GEOSINT para determinar dónde está.",
+    environment: "Browser",
+    availability: "available",
+    skillbitUrl: GEOSINT_URL,
+    order: 22,
+  },
+  {
+    challengeId: 807,
+    scenario: "OSINT",
+    title: "Dropped Pin 7",
+    track: "osint",
+    difficulty: "TBA",
+    points: 150,
+    descriptionEn:
+      "A pin has been dropped on a map. Use the panoramic imagery and environmental clues in the GEOSINT environment to work out where it is.",
+    descriptionEs:
+      "Se dejó un pin en un mapa. Usá las imágenes panorámicas y las pistas del entorno en el entorno GEOSINT para determinar dónde está.",
+    environment: "Browser",
+    availability: "available",
+    skillbitUrl: GEOSINT_URL,
+    order: 23,
+  },
+  {
+    challengeId: 808,
+    scenario: "OSINT",
+    title: "Dropped Pin 8",
+    track: "osint",
+    difficulty: "TBA",
+    points: 150,
+    descriptionEn:
+      "A pin has been dropped on a map. Use the panoramic imagery and environmental clues in the GEOSINT environment to work out where it is.",
+    descriptionEs:
+      "Se dejó un pin en un mapa. Usá las imágenes panorámicas y las pistas del entorno en el entorno GEOSINT para determinar dónde está.",
+    environment: "Browser",
+    availability: "available",
+    skillbitUrl: GEOSINT_URL,
+    order: 24,
   },
 ]
