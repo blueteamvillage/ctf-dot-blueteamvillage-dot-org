@@ -46,8 +46,8 @@ export function Footer({ settings }: { settings: SiteSettings }) {
               <span className="font-black text-white">BTV CTF</span>
             </Link>
             <p className="text-sm leading-relaxed text-haze">
-              Blue Team Village&apos;s defender-focused CTF at DEF CON 34 —
-              Project Obsidian.
+              Blue Team Village&apos;s defender-focused CTF at EkoParty 2026 —
+              BlueSpace, Buenos Aires.
             </p>
           </div>
 
@@ -137,7 +137,7 @@ export function Footer({ settings }: { settings: SiteSettings }) {
         <GradientDivider className="my-8" />
 
         <p className="font-mono text-xs text-haze">
-          © {new Date().getFullYear()} Blue Team Village · DEF CON 34 · Las Vegas
+          © {new Date().getFullYear()} Blue Team Village · EkoParty · Buenos Aires
         </p>
       </div>
     </footer>
