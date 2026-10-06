@@ -51,7 +51,7 @@ const en = {
     scenarios: "Scenarios",
     tracks: "Scored tracks",
     scenariosDetail: "7 malware + INC-030 capstone",
-    note: "OSINT/GEOSINT runs as a separate track. It is not counted in the 16 challenges or the 2,700-point total until its scoring and submission model is confirmed.",
+    note: "Malware Forensics and the Incident Response Capstone are 2,700 points across 16 challenges. OSINT/GEOSINT adds 8 more at 150 points each (1,200 points), for 24 challenges and 3,900 points in total.",
   },
 
   malware: {
@@ -77,11 +77,11 @@ const en = {
     body2:
       "Browser-based and mobile-friendly — no Docker, no virtual machine, no local SIEM. Instructions are available in Spanish and English.",
     cta: "Open the GEOSINT environment",
-    pending: "The number of OSINT challenges will be published once the lineup is final.",
+    meta: "8 challenges · 150 points each · 1,200 points",
   },
 
   lineup: {
-    eyebrow: "All 16 challenges",
+    eyebrow: "All 24 challenges",
     heading: "Challenge Lineup",
     intro:
       "Grouped by track and scenario. A challenge can be listed here before it is launchable — the button stays disabled until its evidence and scoring have passed validation.",
@@ -126,12 +126,12 @@ const en = {
     heading: "How to Participate",
     steps: [
       "Register or sign in through SkillBit.",
-      "Join or create a team if team participation is enabled.",
+      "Compete solo or join or create a team of up to 4.",
       "Select a challenge track.",
       "Open the provided container, evidence package, or OSINT environment.",
       "Analyze the evidence and determine the answer.",
       "Submit the flag through SkillBit.",
-      "Use the published support channel if you need assistance.",
+      "Ask in the BTV Discord if you need assistance.",
     ],
     notice:
       "Challenge availability may change while the BTV team completes final validation and event preparation.",
@@ -171,13 +171,11 @@ const en = {
     eyebrow: "When things happen",
     heading: "Event Schedule",
     tz: "All times are Argentina Time (ART, UTC−3).",
-    tbd: "To be confirmed",
     rows: [
-      { day: "Wednesday, October 7", what: "Registration opens · CTF opens" },
-      { day: "Thursday, October 8", what: "Competition continues · support at BlueSpace" },
-      { day: "Friday, October 9", what: "Final submissions · scoring closes · results" },
+      { day: "Wednesday, October 7", what: "CTF start", time: "09:00" },
+      { day: "Friday, October 9", what: "Scoreboard hidden", time: "14:00" },
+      { day: "Friday, October 9", what: "CTF end", time: "17:00" },
     ],
-    note: "Exact opening and closing times are being confirmed with the EkoParty programme and will be published here.",
   },
 
   rules: {
@@ -192,7 +190,9 @@ const en = {
       "The Blue Team Village Code of Conduct applies for the whole event.",
     ],
     teamSize: "Maximum team size",
+    teamSizeValue: "4",
     prizes: "Prize eligibility",
+    prizesValue: "In-person attendance required",
   },
 
   skillbit: {
@@ -200,21 +200,13 @@ const en = {
     heading: "SkillBit Access",
     body: "Registration, challenge launch, flag submission, scoring, and the leaderboard all run through SkillBit. You need an account before the competition opens.",
     cta: "Open SkillBit",
-    pendingHeading: "Still being confirmed",
-    pending: [
-      "Registration opening time",
-      "Competition opening and closing times",
-      "Maximum team size",
-      "Leaderboard visibility",
-      "Prize eligibility",
-    ],
   },
 
   support: {
     eyebrow: "If you get stuck",
     heading: "Support",
-    body: "BTV staff provide technical support remotely throughout the event, with BlueSpace volunteers on site at the Centro de Convenciones. The support channel will be published here and announced at BlueSpace before the CTF opens.",
-    channelPending: "Support channel to be announced",
+    body: "BTV staff provide technical support remotely throughout the event, with BlueSpace volunteers on site at the Centro de Convenciones. Ask for help in the BTV Discord.",
+    channel: "Join the BTV Discord",
   },
 
   partners: {
@@ -233,11 +225,11 @@ const en = {
     },
     {
       q: "Do I need a team?",
-      a: "You can compete solo. Team participation and maximum team size are being confirmed and will be published here before registration opens.",
+      a: "No. You can compete solo or in a team of up to 4.",
     },
     {
       q: "Is this beginner-friendly?",
-      a: "Yes. Eight of the sixteen challenges are Beginner or Intermediate, and the OSINT track needs nothing but a browser. The Advanced challenges are there if you want them.",
+      a: "Yes. Eight of the sixteen malware and capstone challenges are Beginner or Intermediate, and the OSINT track needs nothing but a browser. The Advanced challenges are there if you want them.",
     },
     {
       q: "Do I need to know Linux?",
@@ -313,7 +305,7 @@ const es: EkopartyCopy = {
     scenarios: "Escenarios",
     tracks: "Pistas puntuadas",
     scenariosDetail: "7 de malware + capstone INC-030",
-    note: "OSINT/GEOSINT funciona como una pista separada. No se cuenta dentro de los 16 desafíos ni del total de 2.700 puntos hasta que se confirme su modelo de puntaje y envío.",
+    note: "Forense de malware y el capstone de respuesta a incidentes suman 2.700 puntos en 16 desafíos. OSINT/GEOSINT agrega 8 desafíos más de 150 puntos cada uno (1.200 puntos), para un total de 24 desafíos y 3.900 puntos.",
   },
 
   malware: {
@@ -339,11 +331,11 @@ const es: EkopartyCopy = {
     body2:
       "Funciona en el navegador y es compatible con dispositivos móviles: sin Docker, sin máquina virtual y sin SIEM local. Las instrucciones están disponibles en español e inglés.",
     cta: "Abrir el entorno GEOSINT",
-    pending: "La cantidad de desafíos OSINT se publicará cuando el conjunto esté definido.",
+    meta: "8 desafíos · 150 puntos cada uno · 1.200 puntos",
   },
 
   lineup: {
-    eyebrow: "Los 16 desafíos",
+    eyebrow: "Los 24 desafíos",
     heading: "Listado de desafíos",
     intro:
       "Agrupados por pista y escenario. Un desafío puede aparecer acá antes de estar disponible: el botón permanece deshabilitado hasta que su evidencia y su puntaje pasen la validación.",
@@ -388,12 +380,12 @@ const es: EkopartyCopy = {
     heading: "Cómo participar",
     steps: [
       "Registrate o iniciá sesión en SkillBit.",
-      "Sumate a un equipo o creá uno, si la participación por equipos está habilitada.",
+      "Competí en solitario o sumate a un equipo, o creá uno, de hasta 4 personas.",
       "Elegí una pista de desafíos.",
       "Abrí el contenedor, el paquete de evidencia o el entorno OSINT provisto.",
       "Analizá la evidencia y determiná la respuesta.",
       "Enviá la flag a través de SkillBit.",
-      "Usá el canal de soporte publicado si necesitás ayuda.",
+      "Preguntá en el Discord de BTV si necesitás ayuda.",
     ],
     notice:
       "La disponibilidad de los desafíos puede cambiar mientras el equipo de BTV completa la validación final y la preparación del evento.",
@@ -433,13 +425,11 @@ const es: EkopartyCopy = {
     eyebrow: "Cuándo pasa cada cosa",
     heading: "Cronograma del evento",
     tz: "Todos los horarios son hora de Argentina (ART, UTC−3).",
-    tbd: "A confirmar",
     rows: [
-      { day: "Miércoles 7 de octubre", what: "Apertura de inscripción · apertura del CTF" },
-      { day: "Jueves 8 de octubre", what: "Continúa la competencia · soporte en BlueSpace" },
-      { day: "Viernes 9 de octubre", what: "Últimos envíos · cierre de puntaje · resultados" },
+      { day: "Miércoles 7 de octubre", what: "Inicio del CTF", time: "09:00" },
+      { day: "Viernes 9 de octubre", what: "Se oculta la tabla de posiciones", time: "14:00" },
+      { day: "Viernes 9 de octubre", what: "Cierre del CTF", time: "17:00" },
     ],
-    note: "Los horarios exactos de apertura y cierre se están confirmando con la programación de EkoParty y se publicarán acá.",
   },
 
   rules: {
@@ -454,7 +444,9 @@ const es: EkopartyCopy = {
       "El Código de Conducta de Blue Team Village rige durante todo el evento.",
     ],
     teamSize: "Tamaño máximo de equipo",
+    teamSizeValue: "4",
     prizes: "Elegibilidad para premios",
+    prizesValue: "Se requiere presencia en el evento",
   },
 
   skillbit: {
@@ -462,21 +454,13 @@ const es: EkopartyCopy = {
     heading: "Acceso a SkillBit",
     body: "La inscripción, el lanzamiento de desafíos, el envío de flags, el puntaje y la tabla de posiciones funcionan a través de SkillBit. Necesitás una cuenta antes de que abra la competencia.",
     cta: "Abrir SkillBit",
-    pendingHeading: "Todavía por confirmar",
-    pending: [
-      "Horario de apertura de la inscripción",
-      "Horarios de apertura y cierre de la competencia",
-      "Tamaño máximo de equipo",
-      "Visibilidad de la tabla de posiciones",
-      "Elegibilidad para premios",
-    ],
   },
 
   support: {
     eyebrow: "Si te trabás",
     heading: "Soporte",
-    body: "El equipo de BTV brinda soporte técnico de forma remota durante todo el evento, con voluntarios de BlueSpace presentes en el Centro de Convenciones. El canal de soporte se publicará acá y se anunciará en BlueSpace antes de que abra el CTF.",
-    channelPending: "Canal de soporte a anunciar",
+    body: "El equipo de BTV brinda soporte técnico de forma remota durante todo el evento, con voluntarios de BlueSpace presentes en el Centro de Convenciones. Pedí ayuda en el Discord de BTV.",
+    channel: "Sumate al Discord de BTV",
   },
 
   partners: {
@@ -495,11 +479,11 @@ const es: EkopartyCopy = {
     },
     {
       q: "¿Necesito un equipo?",
-      a: "Podés competir en solitario. La participación por equipos y el tamaño máximo se están confirmando y se publicarán acá antes de que abra la inscripción.",
+      a: "No. Podés competir en solitario o en un equipo de hasta 4 personas.",
     },
     {
       q: "¿Es apto para principiantes?",
-      a: "Sí. Ocho de los dieciséis desafíos son de nivel principiante o intermedio, y la pista de OSINT no necesita más que un navegador. Los desafíos avanzados están ahí si los querés.",
+      a: "Sí. Ocho de los dieciséis desafíos de malware y capstone son de nivel principiante o intermedio, y la pista de OSINT no necesita más que un navegador. Los desafíos avanzados están ahí si los querés.",
     },
     {
       q: "¿Necesito saber Linux?",

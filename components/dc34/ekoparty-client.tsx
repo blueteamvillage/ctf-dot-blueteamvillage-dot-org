@@ -37,6 +37,7 @@ import {
 import type { EkopartyChallenge } from "@/lib/contentful/types"
 
 const SKILLBIT_URL = "https://mctf.io/ekoparty26"
+const DISCORD_URL = "https://discord.gg/blueteamvillage"
 
 /*
  * The GEOSINT environment URL hasn't been published yet. Leaving it empty
@@ -201,14 +202,14 @@ export function EkopartyClient({
       {/* 3 — Competition overview */}
       <Section eyebrow={copy.overview.eyebrow} heading={copy.overview.heading}>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-          <Stat value="16" label={copy.overview.challenges} />
-          <Stat value="2,700" label={copy.overview.points} />
+          <Stat value="24" label={copy.overview.challenges} />
+          <Stat value="3,900" label={copy.overview.points} />
           <Stat
             value="8"
             label={copy.overview.scenarios}
             detail={copy.overview.scenariosDetail}
           />
-          <Stat value="2" label={copy.overview.tracks} />
+          <Stat value="3" label={copy.overview.tracks} />
         </div>
         <Callout icon={Info} className="mt-6">
           {copy.overview.note}
@@ -254,7 +255,7 @@ export function EkopartyClient({
               {copy.osint.cta}
             </Button>
           )}
-          <span className="text-sm text-haze">{copy.osint.pending}</span>
+          <span className="text-sm text-haze">{copy.osint.meta}</span>
         </div>
       </Section>
 
@@ -357,18 +358,15 @@ export function EkopartyClient({
         <div className="mt-4 divide-y divide-white/[0.06] overflow-hidden rounded-lg border border-white/[0.06] bg-navy-card">
           {copy.schedule.rows.map((row) => (
             <div
-              key={row.day}
+              key={`${row.day}-${row.time}`}
               className="flex flex-col gap-1 p-4 sm:flex-row sm:items-center sm:justify-between"
             >
               <span className="font-bold text-white">{row.day}</span>
               <span className="text-sm text-mist">{row.what}</span>
-              <span className="font-mono text-xs text-haze">
-                {copy.schedule.tbd}
-              </span>
+              <span className="font-mono text-xs text-haze">{row.time}</span>
             </div>
           ))}
         </div>
-        <p className="mt-4 text-sm text-haze">{copy.schedule.note}</p>
       </Section>
 
       {/* 11 — Rules */}
@@ -387,11 +385,11 @@ export function EkopartyClient({
         <div className="mt-6 flex flex-wrap gap-3">
           <PillBadge>
             {copy.rules.teamSize}:{" "}
-            <span className="text-haze">{copy.schedule.tbd}</span>
+            <span className="text-haze">{copy.rules.teamSizeValue}</span>
           </PillBadge>
           <PillBadge>
             {copy.rules.prizes}:{" "}
-            <span className="text-haze">{copy.schedule.tbd}</span>
+            <span className="text-haze">{copy.rules.prizesValue}</span>
           </PillBadge>
         </div>
       </Section>
@@ -411,25 +409,18 @@ export function EkopartyClient({
             </a>
           </Button>
         </div>
-        <div className="mt-6 rounded-lg border border-white/[0.06] bg-navy-deep p-5">
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold">
-            {copy.skillbit.pendingHeading}
-          </p>
-          <ul className="mt-3 space-y-1.5">
-            {copy.skillbit.pending.map((item) => (
-              <li key={item} className="text-sm text-mist">
-                · {item}
-              </li>
-            ))}
-          </ul>
-        </div>
       </Section>
 
       {/* 13 — Support */}
       <Section eyebrow={copy.support.eyebrow} heading={copy.support.heading}>
         <p className="leading-relaxed text-mist">{copy.support.body}</p>
-        <div className="mt-4">
-          <PillBadge>{copy.support.channelPending}</PillBadge>
+        <div className="mt-6">
+          <Button asChild>
+            <a href={DISCORD_URL} target="_blank" rel="noopener noreferrer">
+              {copy.support.channel}
+              <ExternalLink aria-hidden />
+            </a>
+          </Button>
         </div>
       </Section>
 
