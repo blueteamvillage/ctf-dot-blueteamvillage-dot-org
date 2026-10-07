@@ -84,7 +84,7 @@ const en = {
     eyebrow: "All 24 challenges",
     heading: "Challenge Lineup",
     intro:
-      "Grouped by track and scenario. A challenge can be listed here before it is launchable — the button stays disabled until its evidence and scoring have passed validation.",
+      "All 24 challenges are live. Open malware and incident-response problems in MetaCTF/SkillBit, or launch the browser-based GEOSINT environment. Submit answers in the corresponding platform problem.",
     filters: {
       all: "All Challenges",
       malware: "Malware Forensics",
@@ -105,7 +105,8 @@ const en = {
       difficulty: "Difficulty",
       points: "Points",
       environment: "Environment",
-      launch: "Launch in SkillBit",
+      launch: "Open problems in MetaCTF/SkillBit",
+      launchOsint: "Open GEOSINT",
       notYet: "Not yet available",
     },
     availability: {
@@ -131,10 +132,10 @@ const en = {
       "Open the provided container, evidence package, or OSINT environment.",
       "Analyze the evidence and determine the answer.",
       "Submit the flag through SkillBit.",
-      "Ask in the BTV Discord if you need assistance.",
+      "Ask in the BTV Discord’s #bluespace channel if you need assistance. Do not post flags or answers.",
     ],
     notice:
-      "Challenge availability may change while the BTV team completes final validation and event preparation.",
+      "All challenges are live. Read each problem’s instructions for its approved evidence, environment link, exact launch commands, and answer submission. The six INC-030 questions can be attempted in any order.",
   },
 
   tech: {
@@ -165,6 +166,14 @@ const en = {
     ],
     appleSilicon:
       "On Apple Silicon, some images may need AMD64 emulation. Where that applies, the challenge will say so and give you the flag to pass.",
+  },
+
+  setupGuide: {
+    heading: "Run your challenge",
+    body: "Use the exact image, evidence package, paths, and commands provided in your platform problem. Check that the environment starts successfully, investigate the approved evidence, and submit the answer in that same problem. Follow its stop/reset instructions when finished.",
+    context: "The general setup guide describes the DEF CON 34 Kubernetes sandbox. Use it only when your problem specifies that environment; Kubernetes is not required for every EkoParty challenge. Historical download dates and AI-agent guidance do not override this competition’s instructions or AI policy.",
+    cta: "Read the sandbox setup guide",
+    repo: "OS-specific installation and troubleshooting",
   },
 
   schedule: {
@@ -211,8 +220,8 @@ const en = {
   support: {
     eyebrow: "If you get stuck",
     heading: "Support",
-    body: "BTV staff provide technical support remotely throughout the event, with BlueSpace volunteers on site at the Centro de Convenciones. Ask for help in the BTV Discord.",
-    channel: "Join the BTV Discord",
+    body: "BTV staff provide remote technical support throughout the event, with BlueSpace volunteers on site at the Centro de Convenciones. Join the Blue Team Village Discord and ask in #bluespace for setup help, platform issues, or clarifications. Do not post flags or answers.",
+    channel: "Join Discord · #bluespace",
   },
 
   partners: {
@@ -235,7 +244,7 @@ const en = {
     },
     {
       q: "Is this beginner-friendly?",
-      a: "Yes. Eight of the sixteen malware and capstone challenges are Beginner or Intermediate, and the OSINT track needs nothing but a browser. The Advanced challenges are there if you want them.",
+      a: "Yes. The malware track includes Beginner and Intermediate challenges, and the OSINT track needs nothing but a browser. The Advanced challenges are there if you want them.",
     },
     {
       q: "Do I need to know Linux?",
@@ -254,8 +263,8 @@ const en = {
       a: "Challenge descriptions and instructions are available in Spanish and English. Technical identifiers — filenames, paths, commands, hashes — stay unchanged in both.",
     },
     {
-      q: "Why are some launch buttons disabled?",
-      a: "A challenge appears in the lineup once it is confirmed for the event, but its button only activates after its evidence, answer, grader, and SkillBit import have passed validation.",
+      q: "Where do I launch challenges and submit answers?",
+      a: "All 24 challenges are live. Malware and capstone links open the EkoParty problem list in MetaCTF/SkillBit; select the matching title and follow its instructions. OSINT links open GEOSINT. Submit every answer in the corresponding competition problem.",
     },
   ],
 
@@ -344,7 +353,7 @@ const es: EkopartyCopy = {
     eyebrow: "Los 24 desafíos",
     heading: "Listado de desafíos",
     intro:
-      "Agrupados por pista y escenario. Un desafío puede aparecer acá antes de estar disponible: el botón permanece deshabilitado hasta que su evidencia y su puntaje pasen la validación.",
+      "Los 24 desafíos están disponibles. Abrí los problemas de malware y respuesta a incidentes en MetaCTF/SkillBit, o iniciá el entorno GEOSINT en el navegador. Enviá las respuestas en el problema correspondiente de la plataforma.",
     filters: {
       all: "Todos los desafíos",
       malware: "Forense de malware",
@@ -365,7 +374,8 @@ const es: EkopartyCopy = {
       difficulty: "Dificultad",
       points: "Puntos",
       environment: "Entorno",
-      launch: "Abrir en SkillBit",
+      launch: "Abrir problemas en MetaCTF/SkillBit",
+      launchOsint: "Abrir GEOSINT",
       notYet: "Todavía no disponible",
     },
     availability: {
@@ -391,10 +401,10 @@ const es: EkopartyCopy = {
       "Abrí el contenedor, el paquete de evidencia o el entorno OSINT provisto.",
       "Analizá la evidencia y determiná la respuesta.",
       "Enviá la flag a través de SkillBit.",
-      "Preguntá en el Discord de BTV si necesitás ayuda.",
+      "Preguntá en el canal #bluespace del Discord de BTV si necesitás ayuda. No publiques flags ni respuestas.",
     ],
     notice:
-      "La disponibilidad de los desafíos puede cambiar mientras el equipo de BTV completa la validación final y la preparación del evento.",
+      "Todos los desafíos están disponibles. Leé las instrucciones de cada problema para encontrar su evidencia aprobada, enlace al entorno, comandos exactos de ejecución y envío de respuestas. Las seis preguntas de INC-030 se pueden intentar en cualquier orden.",
   },
 
   tech: {
@@ -425,6 +435,14 @@ const es: EkopartyCopy = {
     ],
     appleSilicon:
       "En equipos con Apple Silicon, algunas imágenes pueden requerir emulación AMD64. Cuando corresponda, el desafío te lo indica y te da el flag a utilizar.",
+  },
+
+  setupGuide: {
+    heading: "Ejecutá tu desafío",
+    body: "Usá la imagen, el paquete de evidencia, las rutas y los comandos exactos indicados en el problema de la plataforma. Verificá que el entorno se inicie correctamente, investigá la evidencia aprobada y enviá la respuesta en ese mismo problema. Al terminar, seguí sus instrucciones para detener o reiniciar el entorno.",
+    context: "La guía general de preparación describe el sandbox Kubernetes de DEF CON 34. Usala solamente cuando el problema indique ese entorno: no todos los desafíos de EkoParty requieren Kubernetes. Las fechas históricas de descarga y la guía de agentes de IA no reemplazan las instrucciones ni la política de IA de esta competencia.",
+    cta: "Leé la guía de preparación del sandbox",
+    repo: "Instalación por sistema operativo y resolución de problemas",
   },
 
   schedule: {
@@ -471,8 +489,8 @@ const es: EkopartyCopy = {
   support: {
     eyebrow: "Si te trabás",
     heading: "Soporte",
-    body: "El equipo de BTV brinda soporte técnico de forma remota durante todo el evento, con voluntarios de BlueSpace presentes en el Centro de Convenciones. Pedí ayuda en el Discord de BTV.",
-    channel: "Sumate al Discord de BTV",
+    body: "El equipo de BTV brinda soporte técnico remoto durante el evento, con voluntarios de BlueSpace presentes en el Centro de Convenciones. Sumate al Discord de Blue Team Village y preguntá en #bluespace si necesitás ayuda con la preparación, la plataforma o alguna aclaración. No publiques flags ni respuestas.",
+    channel: "Sumate al Discord · #bluespace",
   },
 
   partners: {
@@ -495,7 +513,7 @@ const es: EkopartyCopy = {
     },
     {
       q: "¿Es apto para principiantes?",
-      a: "Sí. Ocho de los dieciséis desafíos de malware y capstone son de nivel principiante o intermedio, y la pista de OSINT no necesita más que un navegador. Los desafíos avanzados están ahí si los querés.",
+      a: "Sí. La pista de malware incluye desafíos de nivel principiante e intermedio, y la pista de OSINT no necesita más que un navegador. Los desafíos avanzados están ahí si los querés.",
     },
     {
       q: "¿Necesito saber Linux?",
@@ -514,8 +532,8 @@ const es: EkopartyCopy = {
       a: "Las descripciones e instrucciones están disponibles en español e inglés. Los identificadores técnicos (nombres de archivo, rutas, comandos, hashes) se mantienen sin cambios en ambos idiomas.",
     },
     {
-      q: "¿Por qué algunos botones de lanzamiento están deshabilitados?",
-      a: "Un desafío aparece en el listado una vez confirmado para el evento, pero su botón se activa recién cuando su evidencia, respuesta, corrector e importación en SkillBit pasaron la validación.",
+      q: "¿Dónde abro los desafíos y envío las respuestas?",
+      a: "Los 24 desafíos están disponibles. Los enlaces de malware y capstone abren el listado de problemas de EkoParty en MetaCTF/SkillBit: elegí el título correspondiente y seguí sus instrucciones. Los enlaces de OSINT abren GEOSINT. Enviá cada respuesta en el problema correspondiente de la competencia.",
     },
   ],
 

@@ -456,6 +456,7 @@ export const fallbackFaqItems: FaqItem[] = [
   },
 ]
 
+const EKOPARTY_PROBLEMS_URL = "https://compete.metactf.com/665/problems"
 const GEOSINT_URL = "https://geosint.blueteamvillage.org/"
 
 /*
@@ -464,10 +465,9 @@ const GEOSINT_URL = "https://geosint.blueteamvillage.org/"
  * capstone) plus 8 "Dropped Pin" OSINT/GEOSINT challenges at 150 points each.
  *
  * Descriptions are player-facing briefs only: they say what to investigate,
- * never what the answer is. Every malware/capstone entry ships as "coming-soon" with an empty
- * skillbitUrl — a challenge is listed before it is launchable, and the button
- * stays disabled until its evidence, grader, flag and SkillBit import pass
- * validation. Flipping one live is a Contentful edit plus a redeploy.
+ * never what the answer is. Organizers confirmed all 24 challenges are live.
+ * Malware/capstone entries open the EkoParty competition problem list; OSINT
+ * entries open GEOSINT. Answers are submitted through MetaCTF/SkillBit.
  *
  * The OSINT entries launch the browser-based GEOSINT environment and are live.
  */
@@ -484,8 +484,8 @@ export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
     descriptionEs:
       "Algo se está ejecutando en este host y casi no dejó rastro en disco. Recorré los procesos en ejecución y sus archivos de respaldo para determinar qué se está ejecutando y dónde reside.",
     environment: "Docker",
-    availability: "coming-soon",
-    skillbitUrl: "",
+    availability: "available",
+    skillbitUrl: EKOPARTY_PROBLEMS_URL,
     order: 1,
   },
   {
@@ -500,8 +500,8 @@ export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
     descriptionEs:
       "Atribuí la actividad en este host. Correlacioná la ascendencia de procesos, la propiedad de archivos y los artefactos en disco hasta poder identificar con confianza al responsable.",
     environment: "Docker",
-    availability: "coming-soon",
-    skillbitUrl: "",
+    availability: "available",
+    skillbitUrl: EKOPARTY_PROBLEMS_URL,
     order: 2,
   },
   {
@@ -516,8 +516,8 @@ export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
     descriptionEs:
       "La muestra en este host pertenece a una familia conocida. Examiná sus indicadores y su comportamiento, y compará con familias de malware documentadas públicamente para identificarla.",
     environment: "Docker",
-    availability: "coming-soon",
-    skillbitUrl: "",
+    availability: "available",
+    skillbitUrl: EKOPARTY_PROBLEMS_URL,
     order: 3,
   },
   {
@@ -532,8 +532,8 @@ export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
     descriptionEs:
       "Se está cargando una biblioteca en procesos que nunca la solicitaron. Rastreá la configuración del cargador dinámico en este host para descubrir cómo se logró.",
     environment: "Docker",
-    availability: "coming-soon",
-    skillbitUrl: "",
+    availability: "available",
+    skillbitUrl: EKOPARTY_PROBLEMS_URL,
     order: 4,
   },
   {
@@ -548,8 +548,8 @@ export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
     descriptionEs:
       "Una de las entradas de autoarranque de este host se hace pasar por algo legítimo. Revisá los mecanismos de persistencia e identificá el que no corresponde.",
     environment: "Docker",
-    availability: "coming-soon",
-    skillbitUrl: "",
+    availability: "available",
+    skillbitUrl: EKOPARTY_PROBLEMS_URL,
     order: 5,
   },
   {
@@ -564,8 +564,8 @@ export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
     descriptionEs:
       "Seguí la configuración de arranque y de servicios de este host y establecé qué se ejecuta realmente al iniciar.",
     environment: "Docker",
-    availability: "coming-soon",
-    skillbitUrl: "",
+    availability: "available",
+    skillbitUrl: EKOPARTY_PROBLEMS_URL,
     order: 6,
   },
   {
@@ -580,8 +580,8 @@ export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
     descriptionEs:
       "La configuración de una aplicación quedó en un lugar donde no debería estar. Auditá los archivos de configuración de este host y determiná qué quedó expuesto.",
     environment: "Docker",
-    availability: "coming-soon",
-    skillbitUrl: "",
+    availability: "available",
+    skillbitUrl: EKOPARTY_PROBLEMS_URL,
     order: 7,
   },
   {
@@ -596,8 +596,8 @@ export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
     descriptionEs:
       "Trabajá hacia atrás desde la actividad observada en este host hasta el script que la inició, y establecé cómo fue invocado.",
     environment: "Docker",
-    availability: "coming-soon",
-    skillbitUrl: "",
+    availability: "available",
+    skillbitUrl: EKOPARTY_PROBLEMS_URL,
     order: 8,
   },
   {
@@ -612,8 +612,8 @@ export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
     descriptionEs:
       "Este host ejecuta un rootkit de espacio de usuario. Determiná cómo lo alcanza el operador y cómo se ve la ruta de control desde el exterior.",
     environment: "Docker",
-    availability: "coming-soon",
-    skillbitUrl: "",
+    availability: "available",
+    skillbitUrl: EKOPARTY_PROBLEMS_URL,
     order: 9,
   },
   {
@@ -628,8 +628,8 @@ export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
     descriptionEs:
       "Un implante en este host sigue intentando comunicarse y nunca recibe respuesta. Reconstruí su configuración de beaconing a partir de los artefactos que dejó.",
     environment: "Docker",
-    availability: "coming-soon",
-    skillbitUrl: "",
+    availability: "available",
+    skillbitUrl: EKOPARTY_PROBLEMS_URL,
     order: 10,
   },
 
@@ -647,8 +647,8 @@ export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
     descriptionEs:
       "Compará la actividad actual con la línea base del entorno y aislá el tráfico saliente lento y discreto que se esconde dentro del ruido normal de la red.",
     environment: "Docker",
-    availability: "coming-soon",
-    skillbitUrl: "",
+    availability: "available",
+    skillbitUrl: EKOPARTY_PROBLEMS_URL,
     order: 11,
   },
   {
@@ -663,8 +663,8 @@ export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
     descriptionEs:
       "Correlacioná la evidencia de identidad y autenticación para establecer de qué cuenta tomó control el intruso.",
     environment: "Docker",
-    availability: "coming-soon",
-    skillbitUrl: "",
+    availability: "available",
+    skillbitUrl: EKOPARTY_PROBLEMS_URL,
     order: 12,
   },
   {
@@ -679,8 +679,8 @@ export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
     descriptionEs:
       "Determiná el momento exacto en que el atacante ingresó por primera vez. Separá el intento exitoso del ruido que lo rodea y ubicalo en la línea de tiempo.",
     environment: "Docker",
-    availability: "coming-soon",
-    skillbitUrl: "",
+    availability: "available",
+    skillbitUrl: EKOPARTY_PROBLEMS_URL,
     order: 13,
   },
   {
@@ -695,8 +695,8 @@ export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
     descriptionEs:
       "Establecé cómo llegó el intruso al entorno en primer lugar: qué servicio expuesto o qué ruta le permitió entrar.",
     environment: "Docker",
-    availability: "coming-soon",
-    skillbitUrl: "",
+    availability: "available",
+    skillbitUrl: EKOPARTY_PROBLEMS_URL,
     order: 14,
   },
   {
@@ -711,8 +711,8 @@ export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
     descriptionEs:
       "Recuperá la carga útil de primera etapa depositada en el host comprometido y obtené el identificador que la caracteriza de forma única.",
     environment: "Docker",
-    availability: "coming-soon",
-    skillbitUrl: "",
+    availability: "available",
+    skillbitUrl: EKOPARTY_PROBLEMS_URL,
     order: 15,
   },
   {
@@ -727,8 +727,8 @@ export const fallbackEkopartyChallenges: EkopartyChallenge[] = [
     descriptionEs:
       "Seguí al intruso más allá del primer host y determiná la técnica que usó para alcanzar el siguiente.",
     environment: "Docker",
-    availability: "coming-soon",
-    skillbitUrl: "",
+    availability: "available",
+    skillbitUrl: EKOPARTY_PROBLEMS_URL,
     order: 16,
   },
   {

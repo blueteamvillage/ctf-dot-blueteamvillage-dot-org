@@ -27,6 +27,16 @@ pnpm lint     # eslint 9 flat config
 
 ## Content management (Contentful)
 
+The EkoParty 2026 lineup is organizer-confirmed and all 24 challenges are live.
+Its identifiers, points, ordering, availability, and launch destinations are
+maintained in `lib/content/fallback.ts`. Contentful `ekopartyChallenge` entries
+may update bilingual descriptions by `challengeId`; stale or partial entries
+cannot remove challenges or override their launch state. To withdraw a challenge
+or change its destination, update the checked-in catalog and redeploy.
+Malware/capstone cards open the EkoParty MetaCTF problem list; OSINT cards open
+GEOSINT, with answers submitted in the matching competition problem.
+Participant support is in the BTV Discord's `#bluespace` channel.
+
 Layout lives in code; changeable content lives in Contentful
 (space `mgfsp0s6h7v2`, environment `master`). Content models:
 
