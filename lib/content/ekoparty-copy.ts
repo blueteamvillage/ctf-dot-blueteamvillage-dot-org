@@ -193,6 +193,12 @@ const en = {
     teamSizeValue: "4",
     prizes: "Prize eligibility",
     prizesValue: "In-person attendance required",
+    prizesHeading: "Prizes",
+    prizeList: [
+      { place: "1st place", items: "Mate cup + book + Raspberry Pi and screen" },
+      { place: "2nd place", items: "Mate cup + console + book" },
+      { place: "3rd place", items: "Mate cup + book" },
+    ],
   },
 
   skillbit: {
@@ -447,6 +453,12 @@ const es: EkopartyCopy = {
     teamSizeValue: "4",
     prizes: "Elegibilidad para premios",
     prizesValue: "Se requiere presencia en el evento",
+    prizesHeading: "Premios",
+    prizeList: [
+      { place: "1.º puesto", items: "Mate + libro + Raspberry Pi y pantalla" },
+      { place: "2.º puesto", items: "Mate + consola + libro" },
+      { place: "3.º puesto", items: "Mate + libro" },
+    ],
   },
 
   skillbit: {

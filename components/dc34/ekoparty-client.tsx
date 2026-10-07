@@ -388,6 +388,15 @@ export function EkopartyClient({
             <span className="text-haze">{copy.rules.prizesValue}</span>
           </PillBadge>
         </div>
+        <h3 className="mt-8 text-xl font-bold text-white">{copy.rules.prizesHeading}</h3>
+        <ul className="mt-4 space-y-3">
+          {copy.rules.prizeList.map((prize) => (
+            <li key={prize.place} className="rounded-lg border border-white/[0.06] bg-navy-card p-4">
+              <span className="font-bold text-mint">{prize.place}</span>
+              <p className="mt-1 text-fog">{prize.items}</p>
+            </li>
+          ))}
+        </ul>
       </Section>
 
       {/* 12 — SkillBit */}
