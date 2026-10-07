@@ -96,7 +96,7 @@ export function EkopartyChallengeCard({
               rel="noopener noreferrer"
             >
               <ExternalLink aria-hidden />
-              {t.card.launch}
+              {challenge.track === "osint" ? t.card.launchOsint : t.card.launch}
             </a>
           </Button>
         ) : (

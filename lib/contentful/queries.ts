@@ -12,11 +12,8 @@ import {
 } from "@/lib/content/fallback"
 import { getContentfulClient } from "@/lib/contentful/client"
 import type {
-  Availability,
   ChallengeTrack,
   EkopartyChallenge,
-  EkopartyDifficulty,
-  EkopartyTrack,
   EventInfo,
   FaqItem,
   Scenario,
@@ -262,61 +259,29 @@ export function getFaqItems(): Promise<FaqItem[]> {
   )
 }
 
-const EKOPARTY_TRACKS: EkopartyTrack[] = [
-  "malware-forensics",
-  "incident-response",
-  "osint",
-]
-const EKOPARTY_DIFFICULTIES: EkopartyDifficulty[] = [
-  "Beginner",
-  "Intermediate",
-  "Advanced",
-  "TBA",
-]
-const AVAILABILITIES: Availability[] = [
-  "available",
-  "coming-soon",
-  "unavailable",
-]
-
 /*
- * EkoParty 2026 lineup. Unrecognised enum values fall back to the safe end of
- * each scale — an unknown availability becomes "coming-soon" rather than
- * "available", so a typo in Contentful can never enable a launch button for a
- * challenge that hasn't been validated.
+ * The organizer-confirmed live lineup is authoritative for identity, scoring,
+ * availability and destinations. Contentful may enrich bilingual briefs, but
+ * a stale/partial CMS catalog must not hide OSINT or disable live challenges.
  */
 export function getEkopartyChallenges(): Promise<EkopartyChallenge[]> {
   return withFallback(
     "ekopartyChallenge",
     async () => {
       const items = await fetchEntries("ekopartyChallenge")
-      if (items.length === 0) return fallbackEkopartyChallenges
-      return byOrder(
-        items.map((fields, i) => ({
-          challengeId: num(fields, "challengeId", 0),
-          scenario: str(fields, "scenario", ""),
-          title: str(fields, "title", ""),
-          track: (EKOPARTY_TRACKS.includes(fields.track as EkopartyTrack)
-            ? fields.track
-            : "malware-forensics") as EkopartyTrack,
-          difficulty: (EKOPARTY_DIFFICULTIES.includes(
-            fields.difficulty as EkopartyDifficulty
-          )
-            ? fields.difficulty
-            : "TBA") as EkopartyDifficulty,
-          points: num(fields, "points", 0),
-          descriptionEn: str(fields, "descriptionEn", ""),
-          descriptionEs: str(fields, "descriptionEs", ""),
-          environment: str(fields, "environment", ""),
-          availability: (AVAILABILITIES.includes(
-            fields.availability as Availability
-          )
-            ? fields.availability
-            : "coming-soon") as Availability,
-          skillbitUrl: str(fields, "skillbitUrl", ""),
-          order: num(fields, "order", i + 1),
-        }))
+      const briefs = new Map(
+        items.map((fields) => [num(fields, "challengeId", 0), fields])
       )
+      return fallbackEkopartyChallenges.map((challenge) => {
+        const fields = briefs.get(challenge.challengeId)
+        return fields
+          ? {
+              ...challenge,
+              descriptionEn: str(fields, "descriptionEn", challenge.descriptionEn),
+              descriptionEs: str(fields, "descriptionEs", challenge.descriptionEs),
+            }
+          : challenge
+      })
     },
     fallbackEkopartyChallenges
   )
